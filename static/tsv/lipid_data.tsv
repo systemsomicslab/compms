@@ -1,0 +1,214 @@
+FA	Nega Ion Form 1	[M-H]-	FA_[M-H]-.png	-	-
+NAGly	Posi Ion Form 1	[M+NH4]+	NaGly_[M+NH4]+.png	Glycine (m/z 76.039, 1000, C2H6NO2+)	NL of 15:0 Acyl and H2O (m/z 312.25, 650, C18H34NO3+)@16:0 Acyl (m/z 237.222, 810, C16H29O+)@16:0 Acyl -H2O (m/z 219.204, 360, C16H27+)
+NAGly	Nega Ion Form 1	[M-H]-	NAGly_[M-H]-.png	Glycine (m/z 74.025, 140, C2H4NO2-)	15:0 FA (m/z 241.218, 180, C15H29O2-)@NL of 15:0 Acyl and H2O (m/z 310.24, 1000, C18H32NO3-)@NL of 15:0 Acyl and H2O and CO2 (m/z 266.248, 250, C17H32NO-)
+NAGlySer	Posi Ion Form 1	[M+NH4]+	NAGlySer_[M+NH4]+.png	GlySer-O (m/z 145.064, 800, C5H9N2O3+)	NL of 15:0 Acyl and H2O (m/z 399.291, 770, C21H38N2O5+)@16:0 Acyl and Gly (m/z 294.245, 1000, C18H32NO2+)@16:0 Acyl (m/z 237.222, C16H29O+)@Serine (m/z 106.051, 370, C3H8NO3+)
+NAGlySer	Nega Ion Form 1	[M-H]-	NAGlySer_[M-H]-.png	NL of H2O (m/z 635.502, 20, C37H67N2O6-)	15:0 FA (m/z 241.219, 410, C15H29O2-)@NL of 15:0 Acyl and H2O (m/z 411.288, 480, C22H39N2O5-)@NL of 15:0 Acyl and H2O and CH2O (m/z 381.274, 1000, C21H37N2O4-)@NL of 15:0 Acyl and 2H2O and CO2 (m/z 349.285, 270, C21H37N2O2-)
+NAOrn	Posi Ion Form 1	[M+H]+	NAOrn_[M+H]+.png	Ornithine - H2O (m/z 115.086, 1000, C5H11N2O+)@Fragment of ornithine (m/z 70.063, 380, C4H8N+)	NL of 15:0 Acyl and H2O (m/z 383.327, 170, C22H43N2O3+)@NL of 15:0 Acyl and 2H2O (m/z 365.314, 400, C22H41N2O2+)@17:0+O Acyl - H2O (m/z 251.23, 130, C17H31O+)
+NAE	Posi Ion Form 1	[M+H]+	NAE_[M+H]+.png	-	-
+CAR	Posi Ion Form 1	[M]+	CAR_[M]+.png	Characteristic fragment (m/z 85.028, 1000, C4H5O2+)	-
+FAHFA	Nega Ion Form 1	[M-H]-	FAHFA_[M-H]-.png	-	NL of 16:0 Acyl and H2O (m/z 297.24, 250, C18H33O3-)@16:0 FA (m/z 255.23, 1000, C16H31O2-)
+DG	Posi Ion Form 1	[M+NH4]+	DG_[M+NH4]+.png	NL of H2O (m/z 627.522, 190, C41H71O4+)	20:4 DMAG (m/z 361.280, 400, C23H37O3+)@18:0 DMAG (m/z 341.302, 1000, C21H41O3+)
+EtherDG	Posi Ion Form 1	[M+NH4]+	EtherDG_[M+NH4]+.png	-	18:1 DMAG (m/z 339.293, 1000, C21H39O3+)
+DGDG	Posi Ion Form 1	[M+NH4]+	DGDG_[M+NH4]+.png	NL of C12H21O11 (m/z 577.522, 880, C37H69O4+)	18:1 DMAG (m/z 339.289, 840, C21H39O3+)@16:0 DMAG (m/z 313.275, 1000, C19H37O3+)
+DGDG	Nega Ion Form 1	[M+CH3COO]-	DGDG_[M+CH3COO]-.png	NL of FA x 2 (m/z 397.131, 760, C15H25O12-)@NL of FA x 2 and H2O (m/z 379.127, 1000, C15H23O11-)	16:0 FA (m/z 255.234, 470, C16H31O2-)@18:1 FA (m/z 281.246, 920, C18H33O2-)
+EtherDGDG	Nega Ion Form 1	[M+CH3COO]-	EtherDGDG_[M+CH3COO]-.png	-	NL of 16:0 Acyl (m/z 663.401, 400, C33H59O13-)@16:0 FA (m/z 255.231, 800, C16H31O2-)
+EtherMGDG	Posi Ion Form 1	[M+NH4]+	EtherMGDG_[M+NH4]+.png	NL of C6H11O6 (m/z 537.527, 540, C35H69O3+)	16:0 DMAG (m/z 313.273, 1000, C19H37O3+)
+EtherMGDG	Nega Ion Form 1	[M+CH3COO]-	EtherMGDG_[M+CH3COO]-.png	-	18:1 FA (m/z 281.248, 1000, C18H33O2-)@NL of 18:1 Acyl (m/z 477.344, 450, C25H49O8-)
+MGDG	Posi Ion Form 1	[M+NH4]+	MGDG_[M+NH4]+.png	NL of C6H11O6 (m/z 577.513, 600, C37H69O4+)	18:1 DMAG (m/z 339.289, 1000, C21H39O3+)@16:0 DMAG (m/z 313.276, 920, C19H37O3+)
+MGDG	Nega Ion Form 1	[M+CH3COO]-	MGDG_[M+CH3COO]-.png	-	16:0 FA (m/z 255.233, 770, C16H31O2-)@18:1 FA (m/z 281.251, 1000, C18H33O2-)
+SQDG	Posi Ion Form 1	[M+NH4]+	SQDG_[M+NH4]+.png	NL of C6H10O7S (m/z 595.535, 40, C37H71O5+)	18:1 DMAG (m/z 339.289, 920, C21H39O3+)@16:0 DMAG (m/z 313.271, 990, C19H37O3+)
+SQDG	Nega Ion Form 1	[M-H]-	SQDG_[M-H]-.png	Sulfoquinovosyl -H2O (m/z 225.003, 20, C6H9O7S-)	16:0 FA (m/z 255.232, 20, C16H31O2-)@NL of 16:0 Acyl and H2O (m/z 537.274, 50, C25H45O10S-)
+EtherSMGDG	Nega Ion Form 1	[M-H]-	EtherSMGDG_[M-H]-.png	Hex;S (m/z 241.002, C6H9O8S-), Sulfate (m/z 96.96, HSO4-)	NL of 14:0 Acyl and H2O (m/z 539.29, 1, C25H47O10S-)
+MG	Posi Ion Form 1	[M+NH4]+	MG_[M+NH4]+.png	[M+H]+ (m/z 359.318, 50, C21H43O4+)@NL of H2O (m/z 341.302, 950, C21H41O3+)	-
+ADGGA	Posi Ion Form 1	[M+NH4]+	ADGGA_[M+NH4]+.png	-	16:0 DMAG (m/z 313.274, 350, C19H37O3+)@18:2 DMAG (m/z 337.274, 320, C21H37O3+)@ 16:0 FA +C6H6O7 (m/z 415.269, 1000, C22H39O7+)
+ADGGA	Nega Ion Form 1	[M-H]-	ADGGA_[M-H]-.png	-	16:0 FA (m/z 255.231, 120, C16H31O2-)@18:2 FA (m/z 279.234, 60, C18H31O2-)
+DGCC	Posi Ion Form 1	[M+H]+	DGCC_[M+H]+.png	Characteristic fragment (m/z 132.103, 30, C6H14NO2+)	NL of 16:0 Acyl (m/z 516.386, 3, C28H54NO7+)@NL of 16:0 Acyl and H2O (m/z 498.301, 3, C28H52NO6+)@NL of 18:1 Acyl (m/z 490.374, 4, C26H52NO7+)@NL of 18:1 Acyl and H2O (m/z 472.353, 10, C26H50NO6+)
+DGGA	Posi Ion Form 1	[M+NH4]+	DGGA_[M+NH4]+.png	NL of C6H10O7 (m/z 575.511, 1000, C37H67O4+)	18:2 DMAG (m/z 337.274, 320, C21H37O3+)@16:0 DMAG (m/z 313.274, 350, C19H37O3+)
+DGGA	Nega Ion Form 1	[M-H]-	DGGA_[M-H]-.png	-	16:0 FA (m/z 255.228, 280, C16H31O2-)@18:2 FA (m/z 279.232, 220, C18H31O2-)
+DGTS/A	Posi Ion Form 1	[M+H]+	DGTS_[M+H]+.png	Characteristic fragment (m/z 144.105, 10, C7H14NO2+)@Characteristic fragment (m/z 236.149, 210, C10H22NO5+)	NL of 16:0 Acyl (m/z 500.393, 330, C28H54NO6+)@NL of 16:0 Acyl and H2O (m/z 482.389, 100, C28H52NO5+)@NL of 18:1 Acyl (m/z 474.381, 170, C26H52NO6+)@NL of 18:1 Acyl and H2O (m/z 456.369, 80, C26H50NO5+)
+LDGCC	Posi Ion Form 1	[M+H]+	LDGCC_[M+H]+.png	Characteristic fragment (m/z 132.102, 200, C6H14NO2+)	-
+LDGTS/A	Posi Ion Form 1	[M+H]+	LDGTS_[M+H]+.png	Characteristic fragments (m/z 144.1, 50, C7H14NO2+)@(m/z 236.149, 1000, C10H22NO5+)	-
+EtherTG	Posi Ion Form 1	[M+NH4]+	EtherTG_[M+NH4]+.png	-	NL of 16:0 Ether (m/z 649.503, 100, C43H69O4+)@NL of 18:1 Acyl and H2O (m/z 609.525, 190, C41H69O3+)@NL of 22:6 Acyl and H2O (m/z 565.554, 30, C37H73O3+)
+EtherTG	Posi Ion Form 2	[M+Na]+	EtherTG_[M+Na]+.png	-	NL of 16:0 Acyl and H2O (m/z 659.534, 10, C43H72O3Na+)@NL of 22:6 Acyl and H2O (m/z 587.529, 4, C37H72O3Na+)
+TG	Posi Ion Form 1	[M+NH4]+	TG_[M+NH4]+.png	-	NL of 16:0 Acyl and H2O (m/z 647.502, 320, C43H67O4+)@NL of 18:2 Acyl and H2O (m/z 623.499, 280, C41H67O4+)@NL of 22:6 Acyl and H2O (m/z 575.498, 1000, C37H67O4+)
+TG	Posi Ion Form 2	[M+Na]+	TG_[M+Na]+.png	-	NL of 16:0 Acyl and H2O (m/z 669.497, 110, C43H66O4Na+)@NL of 18:2 Acyl and H2O (m/z 645.477, 70, C41H66O4Na+)@NL of 22:6 Acyl and H2O (m/z 597.485, 110, C37H67O4Na+)
+LPA	Nega Ion Form 1	[M-H]-	LPA_[M-H]-.png	Phosphoglycerol - H2O (m/z 152.994, 1000, C3H6O5P-)	-
+PA	Nega Ion Form 1	[M-H]-	PA_[M-H]-.png	Phosphoglycerol - H2O (m/z 152.996, 310, C3H6O5P-)	16:0 FA (m/z 255.234, 1000, C16H31O2-)@18:1 FA (m/z 281.252, 410, C18H33O2-)
+EtherLPC	Posi Ion Form 1	[M+H]+	EtherLPC_[M+H]+.png	Characteristic fragments (m/z 104.112, 1000, C5H14NO+)@(m/z 125.001, 280, C2H6O4P+)@(m/z 184.07, 330, C5H15NO4P+)	-
+EtherLPC	Nega Ion Form 1	[M+CH3COO]-	EtherLPC_[M+CH3COO]-.png	NL of CH3 (m/z 492.337, 1000, C25H51NO6P-)@Characteristic fragment (m/z 168.043, 110, C4H11NO4P-)	-
+EtherPC	Posi Ion Form 1	[M+H]+	EtherPC_[M+H]+.png	Characteristic fragment (m/z 184.073, 1000, C5H15NO4P+)	-
+EtherPC	Nega Ion Form 1	[M+CH3COO]-	EtherPC_[M+CH3COO]-.png	NL of CH3 (m/z 780.594, 1000, C45H83NO7P-)	20:4 FA (m/z 303.233, 990, C20H31O2-)
+LPC	Posi Ion Form 1	[M+H]+	LPC_[M+H]+.png	Characteristic fragment (m/z 184.068, 1000, C5H15NO4P+)	-
+LPC	Posi Ion Form 2	[M+Na]+	LPC_[M+Na]+.png	NL of C3H9N (m/z 485.264, 1000, C23H43O7PNa+)	-
+LPC	Nega Ion Form 1	[M+CH3COO]-	LPC_[M+CH3COO]-.png	NL of CH3 (m/z 506.324, 340, C25H49NO7P-)	-
+PC	Posi Ion Form 1	[M+H]+	PC_[M+H]+.png	Characteristic fragment (m/z 184.073, 1000, C5H15NO4P+)	NL of 18:0 Acyl (m/z 544.326, 1, C28H51NO7P+)@NL of 18:0 Acyl and H2O (m/z 526.317, 2, C28H49NO6P+)@NL of 20:4 Acyl (m/z 524.367, 6, C26H55NO7P+)@NL of 20:4 Acyl and H2O (m/z 506.364, 2, C26H53NO6P+)
+PC	Posi Ion Form 2	[M+Na]+	PC_[M+Na]+.png	NL of C3H9N (m/z 773.509, 490, C43H75O8PNa+)@NL of C5H14NO4P (m/z 649.516, 720, C41H70O4PNa+)@Characteristic fragment (m/z 146.979, 120, C2H5O4PNa+)	-
+PC	Nega Ion Form 1	[M+CH3COO]-	PC_[M+CH3COO]-.png	NL of CH3 (m/z 794.563, 1000, C45H81NO8P-)	18:0 FA (m/z 283.268, 440, C18H35O2-)@20:4 FA (m/z 303.235, 930, C20H31O2-)
+EtherLPE	Posi Ion Form 1	[M+H]+	EtherLPE_[M+H]+.png	NL of C3H8NO4P (m/z 312.329, 470, C20H42NO+)@NL of C3H10NO5P (m/z 294.315, 1000, C20H40N+)	-
+EtherLPE_O	Nega Ion Form 1	[M-H]-	EtherLPE_[M-H]-.png	Phosphoethanolamine (m/z 140.006, 320, C2H7NO4P-)@NL of C2H6N and H2O (m/z 403.252, 490, C21H40O5P-)	-
+EtherLPE_P				Phosphoethanolamine (m/z 140.009, 310, C2H7NO4P-)@Characteristic fragment (m/z 196.038, 750, C5H11NO5P-)	18:1 Ether (m/z 267.266, 690, C18H35O-)
+EtherPE_O	Posi Ion Form 1	[M+H]+	EtherPE_[M+H]+.png	NL of C2H8NO4P (m/z 563.536, 1000, C37H71O3+)	18:1 Acyl (m/z 265.257, 10, C18H33O+)
+EtherPE_O	Nega Ion Form 1	[M-H]-	EtherPE_[M-H]-.png	-	18:1 FA (m/z 281.254, 1000, C18H33O2-)@NL of 18:1 Acyl (m/z 438.309, 50, C21H45NO6P-)
+EtherPE_P	Posi Ion Form 1	[M+H]+	EtherPE(P)_[M+H]+.png	NL of C2H8NO4P (m/z 613.548, 120, C41H73O3+)	18:0p Ether +C2H8NO3P (m/z 392.288, 290, C20H43NO4P+)@20:3 DMAG (m/z 363.288, 1000, C23H39O3+)
+LNAPE	Nega Ion Form 1	[M-H]-	LNAPE_[M-H]-.png	Phosphoglycerol - H2O (m/z 152.996, 100, C3H6O5P-)	16:0 FA (m/z 255.23, 1000, C16H31O2-)@NL of 16:0 Acyl (m/z 476.285, 20, C23H43NO7P-)@NL of 16:0 Acyl and H2O (m/z 458.268, 90, C23H41NO6P-)
+LPE	Posi Ion Form 1	[M+H]+	LPE_[M+H]+.png	NL of C2H8NO4P (m/z 339.286, 1000, C21H39O3+)	-
+LPE	Nega Ion Form 1	[M-H]-	LPE_[M-H]-.png	NL of C5H12NO5P (as SN1) (m/z 281.243, 1000, C18H33O2-)	-
+PE	Posi Ion Form 1	[M+H]+	PE_[M+H]+.png	NL of C2H8NO4P (m/z 627.536, 1000, C41H71O4+)	18:0 Acyl (m/z 267.263, 10, C18H35O+)@20:4 Acyl (m/z 287.241, 10, C20H31O+)
+PE	Posi Ion Form 2	[M+Na]+	PE_[M+Na]+.png	NL of C2H5N (m/z 747.47, 220, C41H73O8PNa+)@NL of C2H8NO4P (m/z 649.499, 690, C41H70O4Na+)	-
+PE	Nega Ion Form 1	[M-H]-	PE_[M-H]-.png	Characteristic fragment (m/z 196.036, 40, C5H11NO5P-)	18:0 FA (m/z 283.265, 560, C18H35O2-)@20:4 FA (m/z 303.233, 1000, C20H31O2-)
+BMP	Posi Ion Form 1	[M+NH4]+	BMP_[M+NH4]+.png	NL of C3H8O6P (m/z 653.57, 70, C40H77O6+)	18:1 DMAG (m/z 339.287, 1000, C21H39O3+)@22:4 DMAG (m/z 389.305, 530, C25H41O3+)
+EtherLPG	Nega Ion Form 1	[M-H]-	EtherLPG_[M-H]-.png	Phosphoglycerol - H2O (m/z 152.997, 1000, C3H6O5P-)	18:1 Ether (m/z 267.276, 250, C18H35O-)
+EtherPG	Nega Ion Form 1	[M-H]-	EtherPG_[M-H]-.png	Phosphoglycerol - H2O (m/z 152.995, 80, C3H6O5P-)	18:1 Ether + O (m/z 283.265, 290, C18H35O2-)@16:0 FA (m/z 255.232, 1000, C16H31O2-)
+HBMP	Posi Ion Form 1	[M+NH4]+	HBMP_[M+NH4]+.png	-	NL of 18:1 DMAG and H3PO3 and H2O (m/z 575.501, 1000, C37H67O4+)@16:1 DMAG (m/z 311.259, 70, C19H35O3+)@18:1 DMAG (m/z 339.284, 180, C21H39O3+)
+HBMP	Nega Ion Form 1	[M-H]-	HBMP_[M-H]-.png	-	16:0 DMAG + H2PO3 (m/z 391.22, 60, C19H36PO6-)@16:0 FA (m/z 255.232, 230, C16H31O2-)@18:2 FA (m/z 279.23, 460, C18H33O2-)
+LPG	Nega Ion Form 1	[M-H]-	LPG_[M-H]-.png	Phosphoglycerol - H2O (m/z 152.993, 110, C3H6O5P-)	-
+PG	Posi Ion Form 1	[M+NH4]+	PG_[M+NH4]+.png	NL of C3H8O6P (m/z 627.537, 1000, C41H71O4+)	18:0 DMAG (m/z 341.304, 270, C21H41O3+)@20:4 DMAG (m/z 361.275, 90, C23H37O3+)
+PG	Nega Ion Form 1	[M-H]-	PG_[M-H]-.png	Phosphoglycerol - H2O (m/z 152.987, 50, C3H6O5P-)	18:0 FA (m/z 283.259, 260, C18H35O2-)@20:4 FA (m/z 303.231, 740, C20H31O2-)
+CL	Posi Ion Form 1	[M+NH4]+	CL_[M+NH4]+.png	-	(R1+R2 (34:1)) + C3H3 (m/z 577.511, 840, C37H69O4+)@(R3+R4 (36:3)) + C3H3 (m/z 601.513, 1000, C39H69O4+)
+CL	Nega Ion Form 1	[M-H]-	CL_[M-H]-.png	Phosphoglycerol - H2O (m/z 152.989, 230, C3H6O5P-)	16:0 FA + 18:2 FA + C3H6O4P (m/z 673.468, 300, C37H70O8P-)@18:2 FA + 18:2 FA + C3H6O4P (m/z 695.459, 490, C39H68O8P-)@16:0 FA (m/z 255.222, 300, C16H31O2-)@18:1 FA (m/z 281.242, 300, C18H33O2-)@18:2 FA (m/z 279.221, 390, C18H31O2-)
+DLCL	Nega Ion Form 1	[M-H]-	DLCL_[M-H]-.png	Phosphoglycerol - H2O (m/z 152.995, 240, C3H6O5P-)	16:0 FA +C3H6O5P (m/z 409.23, 220, C19H38O7P-)@18:2 FA +C3H6O5P (m/z 433.23, 130, C21H38O7P-)
+MLCL	Nega Ion Form 1	[M-H]-	MLCL_[M-H]-.png	Phosphoglycerol - H2O (m/z 152.993, 50, C3H6O5P-)	16:0 FA + C3H6O5P (m/z 409.23, 110, C19H38O7P-)@16:0 FA + 16:0 FA +C3H4O4P (m/z 647.462, 140, C35H68O8P-)@16:0 FA (m/z 255.228, 50, C16H31O2-)
+EtherPI	Nega Ion Form 1	[M-H]-	EtherPI_[M-H]-.png	Phosphoinositol - H2O (m/z 241.011, 90, C6H10O8P-)	16:0 Ether + C3H5O4P (m/z 377.241, 190, C19H38O5P-)@20:4 FA (m/z 303.228, 190, C20H31O2-)
+LPI	Nega Ion Form 1	[M-H]-	LPI_[M-H]-.png	Phosphoinositol - H2O (m/z 241.008, 380, C6H10O8P-)@Characteristic fragment (m/z 315.049, 240, C9H16O10P-)	18:1 FA (m/z 281.249, 860, C18H33O2-)
+PI	Posi Ion Form 1	[M+NH4]+	PI_[M+NH4]+.png	NL of C6H13O9P (m/z 627.532, 1000, C41H71O4+)	-
+PI	Posi Ion Form 2	[M+Na]+	PI_[M+Na]+.png	NL of C6H13O9P (m/z 649.512, 280, C41H70O4Na+) (m/z 627.538, 380, C41H71O4+)@Phosphoinositol (m/z 283.017, 1000, C6H13O9PNa+)	-
+PI	Nega Ion Form 1	[M-H]-	PI_[M-H]-.png	Phosphoinositol - H2O (m/z 241.013, 140, C6H10O8P-)@Characteristic fragment (m/z 297.035, 30, C9H14O9P-)	18:0 FA (m/z 283.262, 190, C18H35O2-)@20:4 FA (m/z 303.232, 180, C20H31O2-)
+EtherPS	Nega Ion Form 1	[M-H]-	EtherPS_[M-H]-.png	NL of C3H5NO2 (m/z 705.484, 670, C41H70O7P-)	NL of 22:6 Acyl and H2O and C3H5NO2 (m/z 377.242, 1000, C19H38O5P-)@22:6 FA (m/z 327.234, 30, C22H31O2-)
+LNAPS	Nega Ion Form 1	[M-H]-	LNAPS_[M-H]-.png	Phosphoglycerol - H2O (m/z 152.99, 720, C3H6O5P-)	NL of 16:0 Acyl and C3H5NO2 (m/z 437.256, 1000, C21H42O7P-)
+LPS	Nega Ion Form 1	[M-H]-	LPS_[M-H]-.png	NL of C3H6NO2 (m/z 437.264, 390, C21H42O7P-)@Phosphoglycerol - H2O (m/z 152.994, 1000, C3H6O5P-)	-
+PS	Posi Ion Form 1	[M+H]+	PS_[M+H]+.png	NL of C3H8NO6P (m/z 627.534, 1000, C41H71O4+)	NL of 18:0 Acyl (m/z 546.242, 10, C26H45NO9P+)@NL of 18:0 Acyl and H2O (m/z 528.276, 20, C26H43NO8P+)@NL of 20:4 Acyl (m/z 526.305, 30, C24H49NO9P+)@ NL of 20:4 Acyl and H2O (m/z 508.287, 20, C24H47NO8P+)
+PS	Posi Ion Form 2	[M+Na]+	PS_[M+Na]+.png	NL of C3H8NO6P (m/z 649.515, 700, C41H70O4Na+)	-
+PS	Nega Ion Form 1	[M-H]-	PS_[M-H]-.png	NL of C3H6NO2 (m/z 723.5, 660, C41H72O8P-)	18:0 FA (m/z 283.264, 1000, C18H35O2-)@20:4 FA (m/z 303.231, 250, C20H31O2-)
+PEtOH	Nega Ion Form 1	[M-H]-	PEtOH_[M-H]-.png	Phosphoethanol (m/z 125.000, 20, C2H6O4P-)	18:0 FA (m/z 283.264, 570, C18H35O2-)@20:4 FA (m/z 303.229, 1000, C20H31O2-)
+PMeOH	Nega Ion Form 1	[M-H]-	PMeOH_[M-H]-.png	Phosphomethanol (m/z 110.981, 30, CH4O4P-)	16:0 FA (m/z 255.234, 470, C16H31O2-)@18:2 FA (m/z 279.232, 1000, C18H31O2-)
+EtherOxPE	Nega Ion Form 1	[M-H]-	EtherOxPE_[M-H]-.png	-	22:6;O FA (m/z 343.221, 480, C22H31O3-)@22:6;O FA - H2O (m/z 325.212, 120, C22H29O2-)
+OxPC	Nega Ion Form 1	[M+CH3COO]-	OxPC_[M+CH3COO]-.png	NL of CH3 (m/z 758.538, 1000, C41H77NO9P-)	16:0 FA (m/z 255.232, 230, C16H31O2-)@18:2;O FA  (m/z 295.225, 490, C18H31O3-)@18:2;O FA - H2O (m/z 277.212, 50, C18H29O2-)
+OxPE	Nega Ion Form 1	[M-H]-	OxPE_[M-H]-.png	NL of H2O (m/z 812.502, 290, C43H75NO11P-)	18:0 FA (m/z 283.262, 1000, C18H35O2-)@20:4;4O FA (m/z 367.211, 20, C20H31O6-)@20:4;4O FA - H2O (m/z 349.200, 90, C20H29O5-)@20:4;4O FA - 2H2O (m/z 331.192, 210, C20H27O4-)
+OxPG	Nega Ion Form 1	[M-H]-	OxPG_[M-H]-.png	-	16:0 FA (m/z 255.23, 950, C16H31O2-)@18:3;O FA (m/z 293.206, 240, C18H29O3-)@18:3;O FA - H2O (m/z 275.197, 50, C18H27O2-)
+OxPI	Nega Ion Form 1	[M-H]-	OxPI_[M-H]-.png	Phosphoinositol - H2O (m/z 241.012, 90, C6H10O8P-)@Characteristic fragment (m/z 297.03, 20, C9H14O9P-)@NL of H2O (m/z 931.52, 70, C47H80O16P-)	18:0 FA (m/z 283.257, 50, C18H35O2-)@20:4;4O FA (m/z 367.211, 40, C20H31O6-)@20:4;4O FA - H2O (m/z 349.198, 20, C20H29O5-)@20:4;4O FA - 2H2O (m/z 331.187, 20, C20H27O4-)
+OxPS	Nega Ion Form 1	[M-H]-	OxPS_[M-H]-.png	NL of C3H6NO2 (m/z 787.472, 60, C41H72O12P-)@NL of H2O (m/z 856.487, 40, C44H75NO13P-)	18:0 FA (m/z 283.264, 1000, C18H35O2-)@20:4;4O FA (m/z 367.200, 20, C20H31O6-)@20:4;4O FA - H2O (m/z 349.205, 40, C20H29O5-)@20:4;4O FA - 2H2O (m/z 331.190, 90, C20H27O4-)
+VAE	Posi Ion Form 1	[M+Na]+	VAE_[M+Na]+.png	Characteristic fragment 1 (m/z 269.23, 1000, C20H29+)@Characteristic fragment 2 (m/z 119.083, 110, C9H11+)	-
+CoQ	Posi Ion Form 1	[M+H]+	CoQ10_[M+H]+.png	Characteristic fragment (m/z 197.083, 1000, C10H13O4+)	-
+Vitamin E	Nega Ion Form 1	[M+CH3COO]-	Vitamin_E_[M+CH3COO]-.png	Characteristic fragment (m/z 163.072, 1000, C10H11O2-)	-
+GM3	Posi Ion Form 1	[M+NH4]+	GM3_[M+NH4]+.png	NL of H2O (m/z 1163.734, 740, C59H107N2O20+)@NL of H2O and C23H37NO18 (m/z 548.535, 1000, C36H70NO2+)	SPB 18:1;O2 -H2O (m/z 282.294, 120, C18H36NO+)@SPB 18:1;O2 -2H2O (m/z 264.261, 430, C18H34N+)
+GM3	Nega Ion Form 1	[M-H]-	GM3_[M-H]-.png	Characteristic fragment (m/z 290.087, 150, C11H16NO8-)	-
+SHexCer	Posi Ion Form 1	[M+H]+	SHexCer_[M+H]+.png	NL of H2SO4 (m/z 710.608, 910, C42H80NO7+)@NL of H2SO4 and C6H10O5 (m/z 548.526, 720, C36H70NO2+)	SPB 18:1;O2 -H2O (m/z 282.279, 280, C18H36NO+)@SPB 18:1;O2 -2H2O (m/z 264.263, 1000, C18H34N+)@SPB 18:1;O2 -CH4O2 (m/z 252.271, 280, C17H34N+)
+SHexCer	Nega Ion Form 1	[M-H]-	SHexCer_[M-H]-.png	Hydrogensulfate (m/z 96.956, 3, HSO4-)	-
+SHexCer+O	Posi Ion Form 1	[M+H]+	SHexCer+O_[M+H]+.png	NL of H2SO4 (m/z 726.562, 570, C42H80NO8+)@NL of H2SO4 and C6H10O5 (m/z 564.522, 370, C36H70NO3+)	SPB 18:1;O2 -H2O (not observed)@SPB 18:1;O2 -2H2O (m/z 264.277, 1000, C18H34N+)@SPB 18:1;O2 -CH4O2 (not observed)
+SHexCer+O	Nega Ion Form 1	[M-H]-	SHexCer+O_[M-H]-.png	Hydrogensulfate (m/z 96.958, 3, HSO4-)	-
+Cer-ADS	Nega Ion Form 1	[M+CH3COO]-	Cer-ADS_[M+CH3COO]-.png	NL of CH4O2 (m/z 506.478, 30, C33H64NO2-)@NL of H2O (m/z 536.501, 70, C34H66NO3-)	SPB 18:0;O2 (m/z 300.28, 90, C18H38NO2-)@SPB 18:0;O2 - H2O (m/z 282.28, 90, C18H36NO-)@SPB 18:0;O2 - C2H7NO (m/z 239.233, 90, C16H31O-)@16:0;O Acyl - CH2O (m/z 225.217, 120, C15H29O-)@16:0;O Acyl - 2H (m/z 253.209, 70, C16H29O2-)
+Cer-AP	Posi Ion Form 1	[M+H]+	Cer-AP_[M+H]+.png	NL of H2O (m/z 664.625, 1000, C42H82NO4+)@NL of 2H2O (m/z 646.619, 350, C42H80NO3+)	SPB 18:1;O3 (m/z 316.281, 70, C18H38NO3+)@SPB 18:1;O3 -H2O (m/z 298.27, 320, C18H36NO2+)@SPB 18:1;O3 -3H2O (m/z 262.253, 890, C18H32N+)
+Cer-AP	Nega Ion Form 1	[M+CH3COO]-	Cer-AP_[M+CH3COO]-.png	-	20:0;O Acyl - CH2O (m/z 281.288, 80, C19H37O-)@20:0;O Acyl + O (m/z 327.292, 340, C20H39O3-)@20:0;O Acyl + C3H5NO (m/z 382.332, 130, C23H44NO3-)
+Cer-AS	Nega Ion Form 1	[M+CH3COO]-	Cer-AS_[M+CH3COO]-.png	NL of CH4O2 (m/z 504.472, 90, C33H62NO2-)@NL of H2O (m/z 534.467, 40, C34H64NO3-)	d18:1 Sph - H2O (m/z 280.267, 50, C18H34NO-)@d18:1 Sph - C2H7NO (m/z 237.225, 50, C16H29O-)@16:0+O Acyl - CH2O (m/z 225.222, 190, C15H29O-)@16:0+O Acyl - 2H (m/z 253.223, 80, C16H29O2-)
+Cer-BDS	Nega Ion Form 1	[M-H]-	Cer-BDS_[M-H]-.png	-	SPB 18:0;O2 + C2H2O (m/z 342.303, 1000, C20H40NO3-)@SPB 18:0;O2 + C2H2O - CH4O (m/z 310.274, 350, C19H36NO2-)@SPB 18:0;O2 (m/z 300.292, 90, C18H38NO2-)@SPB 18:0;O2 - C2H7NO (m/z 239.238, 270, C16H31O-)
+Cer-BS	Nega Ion Form 1	[M-H]-	Cer-BS_[M-H]-.png	-	SPB 16:1;O2 - C2H7NO (m/z 209.186, 270, C14H25O-)@SPB 16:1;O2 + C2H2O (m/z 312.246, 1000, C18H34NO3-)@SPB 16:1;O2 + C2H2O - CH2O (m/z 282.236, 250, C17H30NO2-)
+Cer-EBDS	Nega Ion Form 1	[M+CH3COO]-	Cer-EBDS_[M+CH3COO]-.png	-	SPB 18:0;O2 +C2H2O (m/z 342.302, 60, C20H40NO3-)@15:0 FA (m/z 241.219, 1000, C15H29O2-)@NL of 15:0 Acyl and H2O  (m/z 550.523, 90, C35H68NO3-)
+Cer-EODS	Nega Ion Form 1	[M-H]-	Cer-EODS_[M-H]-.png	-	15:0 FA (m/z 241.217, 1000, C15H29O2-)@NL of 15:0 Acyl (m/z 554.511, 10, C34H68NO4-)@Acyl amide (without omega acyl chain) (not observed)
+Cer-EOS	Posi Ion Form 1	[M+H]+	Cer-EOS_[M+H]+.png	NL of H2O (m/z 1051.024, 1000, C70H132NO4+)	SPB 18:1;O2 -H2O (m/z 282.282, 130, C18H36NO+)@SPB 18:1;O2 -2H2O (m/z 264.268, 590, C18H34N+)@SPB 18:1;O2 -CH4O2 (m/z 252.263, 190, C17H34N+)
+Cer-EOS	Nega Ion Form 1	[M+CH3COO]-	Cer-EOS_[M+CH3COO]-.png	-	32:0 Acyl amide (without 18:2 FA) (m/z 494.479, 4, C32H64NO2-)@18:2 FA (m/z 279.227, 1000, C18H31O2-)@NL of 18:2 FA (m/z 776.738, 50, C50H98NO4-)
+Cer-HDS	Posi Ion Form 1	[M+H]+	Cer-HDS_[M+H]+.png	-	SPB 19:0;O2 -H2O (m/z 298.308, 590, C19H40NO+)@SPB 19:0;O2 -2H2O (m/z 280.302, 390, C19H38N+)@SPB 19:0;O2 -CH4O2 (m/z 268.265, 160, C18H38N+)
+Cer-HDS	Nega Ion Form 1	[M+CH3COO]-	Cer-HDS_ [M+CH3COO]-.png	-	(case of cannot determine OH position at Cer-ADS, Cer-BDS)
+Cer-HS	Posi Ion Form 1	[M+H]+	Cer-HS_[M+H]+.png	-	SPB 20:1;O2 -H2O (m/z 310.308, 170, C20H40NO+)@SPB 20:1;O2 -2H2O (m/z 292.299, 1000, C20H38N+)@SPB 20:1;O2 -CH4O2 (m/z 280.299, 140, C19H38N+)
+Cer-HS	Nega Ion Form 1	[M+CH3COO]-	Cer-HS_[M+CH3COO]-.png	NL of CH2O (m/z 606.573, 30, C39H76NO3-)@NL of CH4O2 (m/z 588.572, 40, C39H74NO2-)	22:0 Acyl + C2H3N (m/z 380.355, 210, C24H46NO2-)@SPB 18:1;O2 - C2H7NO (m/z 237.216, 30, C16H29O-)
+Cer-NDS	Posi Ion Form 1	[M+H]+	Cer-NDS_[M+H]+.png	NL of H2O (m/z 662.679, 1000, C44H88NO2+)	SPB 18:0;O2 -H2O (m/z 284.299, 390, C18H38NO+)@SPB 18:0;O2 -2H2O (m/z 266.289, 290, C18H36N+)@ SPB 18:0;O2 -CH4O2 (m/z 254.281, 60, C17H34N+)
+Cer-NDS	Nega Ion Form 1	[M+CH3COO]-	Cer-NDS_[M+CH3COO]-.png	NL of CH4O (m/z 506.486, 250, C33H64NO2-)@NL of CH4O2 (m/z 490.489, 200, C33H64NO-)	16:0 Acyl + C2H3N (m/z 280.264, 610, C18H34NO-)@SPB 18:0;O2 - C2H7NO (m/z 239.233, 120, C16H31O-)@16:0 Acyl - 2H  (m/z 237.223, 190, C16H29O-)
+Cer-NP	Nega Ion Form 1	[M+CH3COO]-	Cer-NP_[M+CH3COO]-.png	NL of H2O (m/z 536.5, 50, C34H66NO3-)@NL of 2H2O (m/z 518.534, 10, C34H64NO2-)	16:0 Acyl + C3H5NO (m/z 310.271, 390, C19H36NO2-)@16:0 Acyl amide (m/z 254.249, 190, C16H32NO-)@SPB 18:0;O2 - CH7NO (m/z 267.232, 350, C17H31O2-)
+Cer-NS	Posi Ion Form 1	[M+H]+	Cer-NS_[M+H]+.png	NL of H2O (m/z 632.64, 120, C42H82NO2+)	SPB 18:1;O2 -H2O (m/z 282.28, 180, C18H36NO+)@SPB 18:1;O2 -2H2O (m/z 264.27, 1000, C18H34N+)@SPB 18:1;O2 -CH4O2 (m/z 252.269, 120, C17H34N+)
+Cer-NS	Nega Ion Form 1	[M+CH3COO]-	Cer-NS_[M+CH3COO]-.png	NL of H2O (m/z 518.499, 10, C34H64NO3-)@NL of CH2O (m/z 506.495, 160, C33H64NO2-)	16:0 Acyl + C2H3N (m/z 280.264, 670, C18H34NO-)@SPB 18:1;O2 - C2H7NO (m/z 237.223, 370, C16H29O-)@16:0 Acyl - 2H  (m/z 237.223, 370, C16H29O-)
+CerP	Posi Ion Form 1	[M+H]+	CerP_[M+H]+.png	NL of H3PO4 (m/z 464.444, 150, C30H58NO2+)@NL of H3PO4 and H2O (m/z 446.445, 200, C30H56NO+)	SPB 18:1;O2 -2H2O (m/z 264.265, 1000, C18H34N+)
+CerP	Nega Ion Form 1	[M-H]-	CerP_[M-H]-.png	(m/z 78.96, 550, PO3-)@(m/z 96.97, 150, H2PO4-)	NL of 12:0 Acyl (m/z 378.237, 10, C18H37NO5P-)@NL of 12:0 Acyl and H2O (m/z 360.209, 10, C18H35NO4P-)
+AHexCer	Posi Ion Form 1	[M+H]+	AHexCer_[M+H]+.png	-	NL of 16:0 Acyl and C6H10O5 (m/z 638.611, 120, C40H80NO4+)@NL of 16:0 Acyl and C6H10O5 and H2O (m/z 620.587, 470, C40H78NO3+)@d18:1 Sph - H2O (m/z 282.280, 90, C18H36NO+)@d18:1 Sph - C2H7NO (m/z 239.242, 290, C16H31O+)
+AHexCer	Nega Ion Form 1	[M+CH3COO]-	AHexCer_[M+CH3COO]-.png	-	NL of 16:0 Acyl (m/z 798.647, 530, C46H88NO9-)@NL of 16:0 Acyl and H2O (m/z 780.634, 400, C46H86NO8-)@NL of 16:0 Acyl and C6H10O5 (m/z 636.594, 50, C40H78NO4-)@16:0 FA (m/z 255.233, 90, C16H31O2-)@NL of (d18:1 Sph - C2H7NO) (m/z 798.647, 530, C46H88NO9-)@NL of (d18:1 Sph - C2H7NO) and H2O (m/z 780.634, 400, C46H86NO8-)
+Hex2Cer	Posi Ion Form 1	[M+H]+	Hex2Cer_[M+H]+.png	NL of C6H10O5 (m/z 700.598, 170, C40H78NO8+)@NL of C12H22O11 (m/z 520.498, 990, C34H76NO2+)	SPB 18:1;O2 -H2O (m/z 282.275, 350, C18H36NO+)@SPB 18:1;O2 -2H2O (m/z 264.268, 970, C18H34N+)@SPB 18:1;O2 -CH4O2 (m/z 252.265, 270, C17H34N+)
+Hex2Cer	Nega Ion Form 1	[M+CH3COO]-	Hex2Cer_[M+CH3COO]-.png	NL of C12H20O10 (m/z 536.509, 70, C34H66NO3-)@NL of C6H10O5 (m/z 698.567, 90, C40H76NO8-)	-
+Hex3Cer	Posi Ion Form 1	[M+H]+	Hex3Cer_[M+H]+.png	NL of C6H12O6 (m/z 844.599, 140, C46H86NO12+)@NL of C12H22O11 (m/z 682.557, 240, C40H76NO7+),NL of C18H30O15 (m/z 538.503, 140, C34H68NO3+),NL of C18H30O15 and H2O (m/z 520.5, 1000, C34H66NO2+)	SPB 18:1;O2 -H2O (not observed)@SPB 18:1;O2 -2H2O (m/z 264.261, 280, C18H34N+)@SPB 18:1;O2 -CH4O2 (not observed)
+Hex3Cer	Nega Ion Form 1	[M+CH3COO]-	Hex3Cer_[M+CH3COO]-.png	NL of C18H30O15 (m/z 648.589, 10, C42H83NO3-)@NL of C12H20O10 (m/z 810.671, 50, C48H93NO8-),NL of C6H10O5 (m/z 972.731, 30, C54H103NO13-)	-
+HexCer-AP	Posi Ion Form 1	[M+H]+	HexCer-AP_[M+H]+.png	NL of C6H10O5 (m/z 684.644, 610, C42H86NO5+)@NL of C6H10O5 and H2O (m/z 666.638, 1000, C42H84NO4+)	SPB 18:0;O3 (m/z 318.297, 20, C18H40NO3+)@SPB 18:0;O3 -H2O (m/z 300.29, 100, C18H38NO2+)@SPB 18:0;O3 -3H2O (m/z 264.27, 110, C18H34N+)
+HexCer-AP	Nega Ion Form 1	[M+CH3COO]-	HexCer-AP_[M+CH3COO]-.png	NL of C6H10O5 (m/z 570.501, 70, C34H68NO5-)	16:0 Acyl - CH2O (m/z 225.222, 60, C15H29O-)@16:0 Acyl + O (m/z 271.227, 60, C16H31O3-)@16:0 Acyl + C3H5NO (m/z 326.269, 510, C19H36NO3-)
+HexCer-EOS	Posi Ion Form 1	[M+H]+	HexCer-EOS_[M+H]+.png	NL of C6H10O5 (m/z 1052.988, 300, C16H130NO5+)@NL of C6H10O5 and H2O (m/z 1034.949, 1000, C16H128NO4+)	SPB 17:1;O2 -H2O (m/z 264.266, 110, C17H34NO+)@SPB 17:1;O2 -2H2O (m/z 250.246, 300, C17H32N+)@SPB 17:1;O2 -CH4O2 (m/z 238.262, 110, C16H32N+)
+HexCer-EOS	Nega Ion Form 1	[M+CH3COO]-	HexCer-EOS_[M+CH3COO]-.png	NL of C6H10O5 and 18:2 FA (m/z 776.732, 110, C50H98NO4-)	NL of 18:2 FA (m/z 938.811, 140, C56H108NO9-)@NL of 18:2 FA and C6H10O5 (m/z 776.732, 110, C50H98NO4-)@18:2 FA- (m/z 279.226, 250, C18H31O2-)@32:0 Acyl amide (without omega acyl chain) (m/z 494.458, 20, C32H64NO2-)
+HexCer-HDS	Posi Ion Form 1	[M+H]+	HexCer-HDS_[M+H]+.png	NL of H2O (m/z 700.555, 30, C40H78NO8+)@NL of C6H10O5 and H2O (m/z 520.508, 50, C34H66NO2+)	SPB 18:0;O2 -H2O (m/z 284.300, 160, C18H38NO+)@SPB 18:0;O2 -2H2O (m/z 266.29, 90, C18H36N+)@SPB 18:0;O2 -CH4O2 (m/z 254.285, 30, C17H36N+)
+HexCer-HDS	Nega Ion Form 1	[M+CH3COO]-	HexCer-HDS_[M+CH3COO]-.png	NL of C6H10O5 (m/z 554.504, 320, C34H68NO4-)	-
+HexCer-HS	Posi Ion Form 1	[M+H]+	HexCer-HS_[M+H]+.png	NL of H2O (m/z 808.674, 790, C48H90NO8+)@NL of C6H10O5 and H2O (m/z 646.62, 990, C42H80NO3+)	SPB 18:1;O2 -H2O (m/z 282.282, 400, C18H36NO)@SPB 18:1;O2 -2H2O (m/z 264.259, 1000, C18H34N)@SPB 18:1;O2 -CH4O2 (m/z 252.265, 400, C17H34N)
+HexCer-HS	Nega Ion Form 1	[M+CH3COO]-	HexCer-HS_[M+CH3COO]-.png	NL of C6H10O5 (m/z 662.606, 70, C42H80NO4-)	26:1;O Acylamide -2H (m/z 406.365, 40, C16H48NO2-)
+HexCer-NDS	Posi Ion Form 1	[M+H]+	HexCer-NDS_[M+H]+.png	NL of C6H10O5 and H2O (m/z 606.61, 1000, C40H80NO2+)	SPB 18:0;O2 -H2O (m/z 284.298, 310, C18H38NO+)@SPB 18:0;O2 -2H2O (m/z 266.283, 120, C18H36N+)
+HexCer-NDS	Nega Ion Form 1	[M+CH3COO]-	HexCer-NDS_[M+CH3COO]-.png	NL of C6H10O5 (m/z 538.516, 850, C34H68NO3-)	16:0 Acyl + C2H5N (m/z 280.258, 200, C18H34NO-)@SPB 18:0;O2 - C2H7NO (m/z 239.232, 50, C16H31O-)@16:0 Acyl -2H (m/z 237.22, 100, C16H29O-)
+HexCer-NS	Posi Ion Form 1	[M+H]+	HexCer-NS_[M+H]+.png	NL of H2O (m/z 794.684, 260, C48H92NO7+)@NL of C6H10O5 and H2O (m/z 632.63, 250, C42H82NO2+)	SPB 18:1;O2 -H2O (m/z 282.279, 90, C18H36NO+)@SPB 18:1;O2 -2H2O (m/z 264.268, 1000, C18H34N+)@SPB 18:1;O2 -CH4O2 (m/z 252.27, 70, C17H34N+)
+HexCer-NS	Nega Ion Form 1	[M+CH3COO]-	HexCer-NS_[M+CH3COO]-.png	NL of C6H10O5 (m/z 592.569, 510, C38H74NO3-)	20:0 Acyl + C2H5N (m/z 336.324, 70, C22H42NO-)@ SPB 18:1;O2 - C2H7NO (m/z 237.221, 30, C16H29O-)@20:0 Acyl -2H (m/z 293.285, 30, C20H39O-)
+ASM	Posi Ion Form 1	[M+H]+	ASM_[M+H]+.png	Characteristic fragment (m/z 184.074, 1000, C5H15NO4P+)	NL of 18:0 Acyl and H2O (m/z 685.548, 270, C39H78N2O5P+)
+ASM	Nega Ion Form 1	[M+CH3COO]-	ASM_[M+CH3COO]-.png	NL of CH3 (m/z 953.809, 1000, C56H110N2O7P-)	NL of CH3 and 18:0 Acyl and H2O (m/z 669.534, 170, C38H74N2O5P-)@18:0 FA (m/z 283.266, 100, C18H35O2-)@Acyl amide (without omega acyl chain) (not observed)
+PE-Cer	Nega Ion Form 1	[M-H]-	PE-Cer_[M-H]-.png	Characteristic fragment (m/z 140.008, 350, C2H7NO4P-)	NL of (d18:0 Acyl) (m/z 421.295, 90, C20H42N2O5P-)
+PE-Cer+O	Nega Ion Form 1	[M-H]-	PE-Cer+O_[M-H]-.png	Characteristic fragment (m/z 140.012, 350, C2H7NO4P-)	NL of (17:0 Acyl+O) (m/z 423.294, 40, C20H44N2O5P-)
+PI-Cer+O	Posi Ion Form 1	[M+H]+	PI-Cer+O_[M+H]+.png	NL of C6H13O9P (m/z 538.517, 1000, C34H68NO3+)	-
+PI-Cer+O	Nega Ion Form 1	[M-H]-	PI-Cer+O_[M-H]-.png	Phosphoinositol - H2O (m/z 241.013, 190, C6H10O8P-)@NL of inositol (m/z 634.487, 20, C34H69NO7P-)	NL of 16:0;O Acyl (m/z 542.314, 10, C24H49NO10P-)
+SM	Posi Ion Form 1	[M+H]+	SM_[M+H]+.png	Characteristic fragment (m/z 184.072, 1000, C5H15NO4P+)	SPB 18:1;O2 -2H2O (m/z 264.258, 10, C18H34N+)
+SM	Posi Ion Form 2	[M+Na]+	SM_[M+Na]+.png	NL of C3H9N (m/z 666.49, 760, C36H70NO6PNa+)@NL of C5H14NO4P (m/z 542.487, 1000, C34H65NO2Na+)@NL of C5H16NO5P (m/z 502.499, 40, C34H64NO+)	-
+SM	Nega Ion Form 1	[M+CH3COO]-	SM_[M+CH3COO]-.png	Characteristic fragment (m/z 168.041, 80, C4H11NO4P-)@NL of CH3 (m/z 743.61, 1000, C42H84N2O6P-)	NL of CH3 and 20:0 Acyl (m/z 449.32, 10, C22H46N2O5P-)
+SM+O	Posi Ion Form 1	[M+H]+	SM+O_[M+H]+.png	Characteristic fragment (m/z 184.071, 1000, C5H15NO4P+)	-
+SM+O	Nega Ion Form 1	[M+CH3COO]-	SM+O_[M+CH3COO]-.png	Characteristic fragment (m/z 168.041, 180, C4H11NO4P-)@NL of CH3 (m/z 703.535, 1000, C38H76N2O7P-)	-
+PhytoSph	Posi Ion Form 1	[M+H]+	PhytoSph_[M+H]+.png	NL of H2O ,NL of 2H2O (m/z 282.269, 1000, C18H36NO+)@NL of 3H2O (m/z 264.257, 500, C18H34N+)@NL of CH4O2 (m/z 270.276, 500, C17H36NO+)	-
+SL	Posi Ion Form 1	[M+NH4]+	SL_[M+NH4]+.png	Characteristic fragment (m/z 124.002, 260, C2H6NO3S+)	NL of 15:0 Acyl (m/z 366.264, 600, C18H40NO4S+)@NL of 15:0 Acyl and H2O (m/z 348.258, 1000, C18H38NO3S+)@NL of (SPB 18:0;O - C2H8N) (m/z 352.26, 530, C17H38NO4S+)@NL of (SPB 18:0;O  - C2H8N) and H2O (m/z 334.242, 860, C17H36NO3S+)
+SL	Nega Ion Form 1	[M-H]-	SL_[M-H]-.png	Sulfite (m/z 79.958, 4, SO3-)@Hydrogensulfite (m/z 80.965, 4, HSO3-)	NL of 16:0 Acyl (m/z 364.256, 20, C18H38NO4S-)
+SL+O	Posi Ion Form 1	[M+H]+	SL+O_[M+H]+.png	Characteristic fragment (m/z 124.003, 180, C2H6NO3S+)	NL of 16:1;O Acyl and H2O (m/z 334.237, 1000, C17H36NO3S+)@16:1;O Acyl (m/z 253.217, 760, C16H29O2+)
+SL+O	Nega Ion Form 1	[M-H]-	SL+O_[M-H]-.png	Sulfite (m/z 79.958, 10, SO3- )	NL of 16:1 Acyl+O (m/z 364.254, 1000, C18H38NO4S-)
+DHSph	Posi Ion Form 1	[M+H]+	DHSph_[M+H]+.png	NL of H2O (m/z 270.277, 580, C17H36NO+)@NL of 2H2O (m/z 252.284, 140, C17H34N+)@NL of CH4O2 (m/z 240.271, 1000, C16H34N+)	-
+Sph	Posi Ion Form 1	[M+H]+	Sph_[M+H]+.png	NL of H2O (m/z 282.276, 1000, C18H36NO+)@NL of 2H2O (m/z 264.261, 760, C18H34N+)@NL of CH4O2 (m/z 252.272, 760, C17H34N+)	-
+BASulfate	Nega Ion Form 1	[M-H]-	BASulfate_[M-H]-.png	Hydrogensulfate (m/z 96.959, 200, HSO4-)	-
+BileAcid	Nega Ion Form 1	[M-H]-	BileAcid(GDCA)_ [M-H]-.png	-	-
+BileAcid	Nega Ion Form 2	[M-H]-	BileAcid(TLCA)_ [M-H]-.png	-	-
+DCAE	Posi Ion Form 1	[M+NH4]+	DCAE_[M+NH4]+.png	ST 24:1;O2+ (m/z 357.274, 1000, C24H37O2+)	-
+DCAE	Nega Ion Form 1	[M-H]-	DCAE_[M-H]-.png	ST 24:1;O3- (m/z 373.269, 50, C24H37O3-)	18:1 FA (m/z 281.247, 50, C18H33O2-)
+AHexBRS	Nega Ion Form 1	[M+CH3COO]-	AHexBRS_[M+CH3COO]-.png	-	16:0 FA- (m/z 255.228, 1000, C16H31O2-)
+AHexCAS	Posi Ion Form 1	[M+NH4]+	AHexCAS_[M+NH4]+.png	ST 28:1+ (m/z 383.361, 1000, C28H47+)	-
+AHexCAS	Nega Ion Form 1	[M+CH3COO]-	AHexCAS_[M+CH3COO]-.png	-	18:1 FA (m/z 281.256, 600, C18H33O2-)
+AHexCS	Posi Ion Form 1	[M+NH4]+	AHexCS_[M+NH4]+.png	ST 27:1+ (m/z 369.353, 1000, C27H45+)	-
+AHexCS	Nega Ion Form 1	[M+CH3COO]-	AHexCS_[M+CH3COO]-.png	-	18:1 FA (m/z 281.241, 330, C18H33O2-)
+AHexSIS	Posi Ion Form 1	[M+NH4]+	AHexSIS_[M+NH4]+.png	ST 29:1+ (m/z 397.384, 1000, C29H49+)	-
+AHexSIS	Nega Ion Form 1	[M+CH3COO]-	AHexSIS_[M+CH3COO]-.png	-	18:1 FA (m/z 281.250, 1000, C18H33O2-)
+AHexSTS	Posi Ion Form 1	[M+NH4]+	AHexSTS_[M+NH4]+.png	ST 29:2+ (m/z 395.372, 1000, C29H47+)	-
+AHexSTS	Nega Ion Form 1	[M+CH3COO]-	AHexSTS_[M+CH3COO]-.png	-	16:0 FA- (m/z 255.228, 110, C16H31O2-)
+Vitamin D	Posi Ion Form 1	[M+H]+	Vitamin_D_[M+H]+.png	Precursor (m/z 401.35, 1000, C27H45O2+)@NL of H2O (m/z 383.342, 490, C27H43O+)@NL of 2H2O (m/z 365.318, 510, C27H41+)	-
+SSulfate	Nega Ion Form 1	[M-H]-	SSulfate_[M-H]-.png	Cholesterol sulfate (m/z 465.300, 1000, C27H45O4S-)@Hydrogensulfate (m/z 96.960, 640, HSO4-)	-
+BRSE	Posi Ion Form 1	[M+NH4]+	BRSE_[M+NH4]+.png	ST 28:2+ (m/z 381.341, 1000, C28H45+)	-
+CASE	Posi Ion Form 1	[M+NH4]+	CASE_[M+NH4]+.png	ST 28:1+ (m/z 383.376, 1000, C28H47+)	-
+CE	Posi Ion Form 1	[M+NH4]+	CE_[M+NH4]+.png	ST 27:1+ (m/z 369.349, 1000, C27H45+)	-
+Cholesterol	Posi Ion Form 1	[M-H2O+H]+	Cholesterol_[M-H2O+H]+.png	ST 27:1+ (m/z 369.353, 1000, C27H44+)	-
+SHex	Posi Ion Form 1	[M+NH4]+	SHex_[M+NH4]+.png	ST 29:2+ (m/z 395.367, 1000, C29H47+)	-
+SHex	Nega Ion Form 1	[M+CH3COO]-	SHex_[M+CH3COO]-.png	Hexose (m/z 179.0561, C6H11O6-)	-
+SISE	Posi Ion Form 1	[M+NH4]+	SISE_[M+NH4]+.png	ST 29:1+ (m/z 397.386, 1000, C29H49+)	-
+STSE	Posi Ion Form 1	[M+NH4]+	STSE_[M+NH4]+.png	ST 29:2+ (m/z 395.363, 1000, C29H47+)	-
+DMPE	Posi Ion Form 1	[M+H]+	DMPE_18_1_18_1_[M+H]+.png	NL of C4H12NO4P (m/z 603.534, 1000, C39H71O4+)	18:1 Acyl (m/z 265.258, 50, C18H33O+)
+DMPE	Nega Ion Form 1	[M-H]-	DMPE_18_1_18_1_[M-H]-.png	-	18:1 FA (m/z 281.245, 1000, C18H33O2-)
+MMPE	Posi Ion Form 1	[M+H]+	MMPE_16_0_18_1_[M+H]+.png	NL of C3H10NO4P (m/z 577.521, 1000, C37H69O4+)	16:0 Acyl (m/z 239.237, 50, C16H31O+)@18:1 Acyl (m/z 265.251, 50, C18H33O+)
+MMPE	Nega Ion Form 1	[M-H]-	MMPE_18_1_18_1_[M-H]-.png	-	18:1 FA (m/z 281.250, 1000, C18H33O2-)
+GPNAE	Posi Ion Form 1	[M+H]+	GPNAE_16_0_[M+H]+.png	NL of C3H8O6P (m/z 282.274, 1000, C18H36NO+)	-
+GPNAE	Nega Ion Form 1	[M-H]-	GPNAE_16_0_[M-H]-.png	Characteristic fragment (m/z 170.998, 400, C3H8PO6-; m/z 78.959, 1000, PO3-)	-
+MGMG	Posi Ion Form 1	[M+NH4]+	MGMG_18_2_[M+NH4]+.png	NL of Hexose and H2O  (m/z 337.266, 650, C21H37O3+)	18:2 Acyl (m/z 263.235, 1000, C18H31O+)
+MGMG	Nega Ion Form 1	[M+CH3COO]-	MGMG_16_0_[M+CH3COO]-.png	-	16:0 FA- (m/z 255.232, 1000, C16H31O2-)
+OxFA	Nega Ion Form 1	[M-H]-	FA_18_1_O_[M-H]-.png	NL of H2O (m/z 279.227, 50, C18H31O2)	-
+OxFA_2OH	Nega Ion Form 1	[M-H]-	FA_18_0_(2OH)_[M-H]-.png	NL of H2O (m/z 281.249, 50, C18H31O2)@NL of H2CO2 (m/z 253.250, 1000, C17H31O)	-
+GD1a	Posi Ion Form 1	[M+2NH4]2+	GD1a_18_1_2O_18_0_[M+2NH4]2+.png	Characteristic fragment (m/z 657.235, 300, C25H41N2O18+)	SPB 18:1;O2 -H2O (m/z 282.294, 120, C18H36NO+)@SPB 18:1;O2 -2H2O (m/z 264.261, 430, C18H34N+)
+GD1a	Nega Ion Form 1	[M-2H]2-	GD1a_36_1_2O_[M-2H]2-.png	Characteristic fragment (m/z 290.087, 100, C11H16NO8-)	-
+GD1b	Posi Ion Form 1	[M+2NH4]2+	GD1b_18_1_2O_18_0_[M+2NH4]2+.png	Characteristic fragment (m/z 366.139, 700, C14H24NO10+)	SPB 18:1;O2 -H2O (m/z 282.294, 120, C18H36NO+)@SPB 18:1;O2 -2H2O (m/z 264.261, 430, C18H34N+)
+GD1b	Nega Ion Form 1	[M-2H]2-	GD1b_36_1_2O_[M-2H]2-.png	Characteristic fragment (m/z 290.087, 100, C11H16NO8-)	-
+GD3	Nega Ion Form 1	[M-2H]2-	GD3_36_1_2O_[M-2H]2-.png	Characteristic fragment (m/z 290.087, 1000, C11H16NO8-)	-
+GM1	Posi Ion Form 1	[M+2NH4]2+	GM1_18_1_2O_18_0_[M+2NH4]2+.png	Characteristic fragment (m/z 366.139, 600, C14H24NO10+)	SPB 18:1;O2 -H2O (m/z 282.294, 120, C18H36NO+)@SPB 18:1;O2 -2H2O (m/z 264.261, 430, C18H34N+)
+GM1	Nega Ion Form 1	[M-2H]2-	GM1_36_1_2O_[M-2H]2-.png	Characteristic fragment (m/z 290.087, 1000, C11H16NO8-)	-
+GQ1b	Posi Ion Form 1	[M+2NH4]2+	GQ1b_18_1_2O_18_0_[M+2NH4]2+.png	Characteristic fragment (m/z 657.235, 300, C25H41N2O18+; m/z 366.139, 250, C14H24NO10+)	SPB 18:1;O2 -H2O (m/z 282.294, 120, C18H36NO+)@SPB 18:1;O2 -2H2O (m/z 264.261, 430, C18H34N+)
+GQ1b	Nega Ion Form 1	[M-2H]2-	GQ1b_36_1_2O_[M-2H]2-.png	Characteristic fragment (m/z 290.087, 1000, C11H16NO8-; m/z 581.184, 50, C22H33N2O16-)	-
+GT1b	Posi Ion Form 1	[M+2NH4]2+	GT1b_18_1_2O_18_0_[M+2NH4]2+.png	Characteristic fragment (m/z 657.235, 300, C25H41N2O18+; m/z 366.139, 200, C14H24NO10+)	SPB 18:1;O2 -H2O (m/z 282.294, 120, C18H36NO+)@SPB 18:1;O2 -2H2O (m/z 264.261, 430, C18H34N+)
+GT1b	Nega Ion Form 1	[M-2H]2-	GT1b_36_1_2O_[M-2H]2-.png	Characteristic fragment (m/z 290.087, 1000, C11H16NO8-; m/z 581.184, 50, C22H33N2O16-)	-
+NGcGM3	Posi Ion Form 1	[M+NH4]+	NGcGM3_18_1_2O_24_1_[M+NH4]+.png	NL of C11H16NO9 and H2O (m/z 954.724, 300, C54H100NO12+)@NL of C11H16NO9 and H2O and Hexose (m/z 792.671, 500, C48H90NO7+)	SPB 18:1;O2 -H2O (m/z 282.294, 120, C18H36NO+)@SPB 18:1;O2 -2H2O (m/z 264.261, 430, C18H34N+)
+NGcGM3	Nega Ion Form 1	[M-H]-	NGcGM3_42_2_2O_[M-H]-.png	Characteristic fragment (m/z 306.083, 5, C11H16NO9-)	-
+DEGSE	Posi Ion Form 1	[M+NH4]+	SE_28_4_18_1_[M+NH4]+.png	ST 28:4+(m/z 377.317, 1000, C28H41+)	-
+EGSE	Posi Ion Form 1	[M+NH4]+	SE_28_3_18_1_[M+NH4]+.png	ST 28:3+(m/z 379.336, 1000, C28H43+)	-
+Dihydrocholesterol	Posi Ion Form 1	[M+Na]+	ST_27_0_O_[M+Na]+.png	ST 27:0 and Na+ (m/z 411.369, 300, C27H48ONa+)	-
+Campesterol	Posi Ion Form 1	[M+NH4]+	ST_28_1_O_[M+NH4]+.png	ST 28:1+ (m/z 383.364, 1000, C28H47+)	-
+Brassicasterol	Posi Ion Form 1	[M+H]+	ST_28_2_O_[M+H]+.png	ST 28:2+ (m/z 381.351, 150, C28H45+)	-
+Ergosterol	Posi Ion Form 1	[M-H2O+H]+	ST_28_3_O_[M+H-H2O]+.png	ST 28:3+ (m/z 379.341, 1000, C28H43+)	-
+Dehydroergosterol	Posi Ion Form 1	[M-H2O+H]+	ST_28_4_O_[M+H-H2O]+.png	ST 28:4+ (m/z 377.335, 150, C28H41+)	-
+Sitosterol	Posi Ion Form 1	[M+NH4]+	ST_29_1_O_[M+NH4]+.png	ST 29:1+ (m/z 397.381, 1000, C29H49+)	-
+Stigmasterol	Posi Ion Form 1	[M+H]+	ST_29_2_O_[M+H]+.png	ST 29:2+ (m/z 395.367, 150, C29H47+)	-
+OxTG	Posi Ion Form 1	[M+NH4]+	TG_16_1_18_1_18_1_1O(FA_16_0)_[M+NH4]+.png	-	NL of 18:1 Acyl and H2O (m/z 615.497, 400, C39H67O5+)@NL of 18:2 Acyl and H2O (m/z 617.519, 1000, C39H69O5+)@NL of 18:1 Acyl and 2H2O (m/z 597.520, 5, C39H65O4+)@NL of 18:2 Acyl and 2H2O (m/z 599.495, 300, C39H67O4+)@NL of 18:2 Acyl and O and H2O (m/z 601.523, 400, C39H69O4+)
+TG-EST	Posi Ion Form 1	[M+NH4]+	TG_18_1_18_2_18_2_1O_[M+NH4]+.png	-	NL of 16:1 Acyl and H2O (m/z 857.757, 400, C55H101O6+)@NL of 18:1 Acyl and H2O (m/z 829.730, 500, C53H97O6+)@NL of 16:0 Acyl and H2O (m/z 855.794, 250, C55H99O6+)@NL of 18:1;1O(FA 16:0) and H2O (m/z 575.504, 1000, C37H67O4+)@NL of 16:1 Acyl and 16:0 Acyl and 2H2O (m/z 601.533, 400, C39H69O4+)@NL of 18:1 Acyl and 16:0 Acyl and 2H2O (m/z 573.488, 10, C37H65O4+)
+Desmosterol	Posi Ion Form 1	[M+H]+	ST_27_2_O_[M+H]+.png	ST 27:2+(m/z 367.3359, 150, C27H43+)	-
