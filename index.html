@@ -1,0 +1,1430 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Description" content="Computational mass spectrometry for metabolomics and lipidomics">
+<meta name="Keywords" content="MS-DIAL, MS-FINDER, MRMPROBS, Metabolomics, Lipidomics">
+<meta name="Author" content="Hiroshi Tsugawa, PhD. Center for Sustainable Resource Science (CSRS), RIKEN">
+
+<!-- StyleSheet -->
+<link rel="stylesheet" type="text/css" media="all" href="./static/css/style.css">
+<link rel="stylesheet" type="text/css" media="all" href="./static/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="./static/css/responsive.gs.24col.css">
+
+<!-- JavaScript Library -->
+<script type="text/javascript" src="./static/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./static/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="./static/js/core.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49TTSHPSY4"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-49TTSHPSY4');
+</script>
+
+<!-- Favicon -->
+<link rel="icon" href="./static/favicon.ico">
+
+<!-- Title -->
+<title>Computational mass spectrometry</title>
+
+</head>
+
+<body>
+	<!-- Navigation -->
+	<div class="container" id="sectionNavigation">
+		<div class="row">
+			<div class="col span_24">
+				<nav>
+					<ul class="topMenus">
+						<li><a href="./index.html"><img class="imageLogo-cms" alt="CompMS Home" src="./static/images/imageHome.png"></a></li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Software</b>
+							</div>
+							<ul class="subMenus">
+								<li><a href="./msdial/main.html">MS-DIAL</a></li>
+								<li><a href="./msfinder/main.html">MS-FINDER</a></li>
+								<li><a href="./mrmprobs/main.html">MRMPROBES/MRMDIFF</a></li>
+								<li><a href="./others/main.html">Others</a></li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Database</b>
+							</div>
+							<ul class="subMenus">
+								<li><a href="./msdial/main.html#MSP">MSP spectral database</a></li>
+								<li><a href="./mrmdatabase/main.html">MRM database</a></li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="./index.html#contact"><b>Contact</b></a>
+							</div>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="./licence/main.html"><b>Licence</b></a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div id="page_top"><a href="#"><span class="iconAwesome">&#xf102;</span></a></div>
+
+	<div class="mainFrame" id="sectionMain">
+			<!-- Logo -->
+			<div class="container">
+				<div class="row">
+					<div class="col span_24">
+						<div class="boxMainLogo">
+							<img class="imgLogoScreen" src="./static/images/imagePhotoHome.jpg">
+							<div class="labelLogo">
+								<span class="iconAwesome">&#xf036;</span>CompMS
+							</div>
+							<div class="labelPhrase">Innovative data science in biology.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col span_24">
+						<div>
+							<div class="labelLine">
+								Science webpage of Dr. Hiroshi Tsugawa for <span class="colorGreen"><b>Comp</b></span>utational <span class="colorGreen"><b>M</b></span>ass <span class="colorGreen"><b>S</b></span>pectrometry (<span class="colorGreen"><b>CompMS</b></span>).<br>
+								Visit <span class="iconAwesome">&#xf360;</span><a href="https://github.com/systemsomicslab">our github</a> and <span class="iconAwesome">&#xf360;</span><a href="https://systemsomicslab.github.io/en">homepage</a> for more information!
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- MS-DIAL -->
+			<div class="container">
+				<div class="row" id="contensMsDial">
+					<div class="col span_8">
+						<div class="boxMenu">
+							<div class="boxOrverwidth-left colorMsDial"></div>
+							<div class="boxContents-left">
+								<a href="./msdial/main.html"></a>
+								<div class="labelMenuIcon">
+									<img class="imgIcon-Msdial" src="./static/images/iconMsdial.png">
+								</div>
+								<div class="labelMenuTitle-Overview">MS-DIAL</div>
+								<div class="labelMenuItem-Overview">MS-DIAL is a universal program <br> for untargeted metabolomics- and lipidomics supporting <br> any type of chromatography/mass spectrometry methods (GC/MS, GC-MS/MS, LC/MS, and LC-MS/MS etc.).</div>
+								<div class="labelButton">More</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_16">
+						<div class="boxMenu">
+							<div class="boxImage-right">
+								<img class="imgScreen-right" src="./static/images/imagePhotoMsdial.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col span_8">
+						<div class="boxMenu">
+							<div class="boxContents-News">
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf058;</span>
+								</div>
+								<div class="labelMenuTitle">New features</div>
+								<div class="labelMenuSubTitle">Sep. 12th, 2023</div>
+								<div class="labelMenuItem-News">
+									<span class="iconAwesome">&#xf00c;</span> MS-DIAL 5 new version was uploaded. <br>
+									<span class="iconAwesome">&#xf00c;</span> See the details at <a href="https://github.com/systemsomicslab/MsdialWorkbench">MS-DIAL github page.</a> <br>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_4">
+						<div class="boxMenu">
+							<div class="boxContents">
+								<a href="./msdial/download/repository/MSDIAL ver.4.9.221218 Windowsx64.zip"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu mainIcon">&#xf019;</span>
+									<span class="iconAwesome-SubMenu subIcon">&#xf11c;</span>
+								</div>
+								<div class="labelMenuTitle">4.9.221218</div>
+								<div class="labelMenuSubTitle">Latest version (Windows x64)</div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+						<div class="labelMenuSubTitle"><span class="iconAwesome">&#xf06a;</span><a href="./msdial/main.html#sectionDownload">Download Other OS</a></div>
+					</div>
+					
+					<div class="col span_4">
+						<div class="boxMenu">
+							<div class="boxContents">
+								<a href="./msdial/download/repository/MSDIAL ver.5.1.230912.zip"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu mainIcon">&#xf019;</span>
+									<span class="iconAwesome-SubMenu subIcon">&#xf11c;</span>
+								</div>
+								<div class="labelMenuTitle">5.1.230912</div>
+								<div class="labelMenuSubTitle">Latest version (Windows x64)</div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="col span_4">
+						<div class="boxMenu">
+							<div class="boxContents">
+								<a href="https://systemsomicslab.github.io/mtbinfo.github.io/MS-DIAL/tutorial"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf518;</span>
+								</div>
+								<div class="labelMenuTitle">Tutorial</div>
+								<div class="labelMenuSubTitle"><span class="iconAwesome">&#xf360;</span>mtbinfo-team.github.io</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Link</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_4">
+						<div class="boxMenu">
+							<div class="boxContents">
+								<a href="http://www.metabolomics-forum.com/index.php?board=98.0"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf086;</span>
+								</div>
+								<div class="labelMenuTitle">Forum</div>
+								<div class="labelMenuSubTitle"><span class="iconAwesome">&#xf360;</span>www.metabolomics-forum.com</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Link</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- MS-Finder -->
+			<div class="container">
+				<div class="row" id="contensMsFinder">
+					<div class="col span_16">
+						<div class="boxMenu">
+							<div class="boxImage-left">
+								<img class="imgScreen-left" src="./static/images/imagePhotoMsFinder.jpg">
+							</div>
+						</div>
+					</div>
+					<div class="col span_8">
+						<div class="boxMenu">
+							<div class="boxOrverwidth-right colorMsFinder"></div>
+							<div class="boxContents-right">
+								<a href="./msfinder/main.html"></a>
+								<div class="labelMenuIcon">
+									<img class="imgIcon-Msfinder" src="./static/images/iconMsfinder.png">
+								</div>
+								<div class="labelMenuTitle-Overview">MS-FINDER</div>
+								<div class="labelMenuItem-Overview">MS-FINDER is a universal program <br> for compound annotation supporting EI-MS (GC/MS) and ESI-MS/MS spectra. It aims to provide solutions for 1) spectral searching, 2) formula prediction, and 3) structure elucidation for unknown spectra.</div>
+								<div class="labelButton">More</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col span_12">
+						<div class="boxMenu">
+							<div class="boxContents-News">
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf058;</span>
+								</div>
+								<div class="labelMenuTitle">New features</div>
+								<div class="labelMenuSubTitle">July. 22th, 2023</div>
+								<div class="labelMenuItem-News">
+									<span class="iconAwesome">&#xf00c;</span> See the details at <a href="https://github.com/systemsomicslab/MsdialWorkbench">the github page.</a> <br>
+`								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_6">
+						<div class="boxMenu">
+							<div class="boxContents">
+								<a href="./msfinder/download/repository/MSFINDER ver 3.60.zip"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu mainIcon">&#xf019;</span>
+									<span class="iconAwesome-SubMenu subIcon">&#xf11c;</span>
+								</div>
+								<div class="labelMenuTitle">3.60</div>
+								<div class="labelMenuSubTitle">Latest version (Windows x64)</div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+						<div class="labelMenuSubTitle"><span class="iconAwesome">&#xf06a;</span><a href="./msfinder/main.html#sectionDownload">Download Other OS</a></div>
+					</div>
+					<div class="col span_6">
+						<div class="boxMenu">
+							<div class="boxContents">
+								<a href="https://systemsomicslab.github.io/mtbinfo.github.io/MS-FINDER/tutorial"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf518;</span>
+								</div>
+								<div class="labelMenuTitle">Tutorial</div>
+								<div class="labelMenuSubTitle"><span class="iconAwesome">&#xf360;</span>mtbinfo-team.github.io</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Link</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- MRMPROBS -->
+			<div class="container">
+				<div class="row" id="contensMrmprobs">
+					<div class="col span_8">
+						<div class="boxMenu">
+							<div class="boxOrverwidth-left colorMrmprobs"></div>
+							<div class="boxContents-left">
+								<a href="./mrmprobs/main.html"></a>
+								<div class="labelMenuIcon">
+									<img class="imgIcon" src="./static/images/iconMrmprobs.png">
+								</div>
+								<div class="labelMenuTitle-Overview">MRMPROBS</div>
+								<div class="labelMenuItem-Overview">MRMPROBS is launched as a universal program <br> for targeted metabolomics supporting not only multiple reaction monitoring (MRM) but also SCAN and data independent MS/MS acquisition (DIA) data.</div>
+								<div class="labelButton">More</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_16">
+						<div class="boxMenu">
+							<div class="boxImage-right">
+								<img class="imgScreen-right" src="./static/images/imagePhotoMrmprobs.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col span_12">
+						<div class="boxMenu">
+							<div class="boxContents-News">
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf058;</span>
+								</div>
+								<div class="labelMenuTitle">New features</div>
+								<div class="labelMenuSubTitle">Nov. 1th, 2020</div>
+								<div class="labelMenuItem-News">
+									<span class="iconAwesome">&#xf00c;</span> The max integer problem discussed in <a href="http://www.metabolomics-forum.com/index.php?topic=1562.0">MS-DIAL software forum</a> was fixed.<br>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_6">
+						<div class="boxMenu">
+							<div class="boxContents">
+								<a href="./mrmprobs/download/latest/MRMPROBS program ver. 2.60.zip"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf019;</span>
+								</div>
+								<div class="labelMenuTitle">2.60</div>
+								<div class="labelMenuSubTitle">Latest version</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_6">
+						<div class="boxMenu">
+							<div class="boxContents">
+								<a href="https://systemsomicslab.github.io/mtbinfo.github.io/MRMPROBS/tutorial"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf518;</span>
+								</div>
+								<div class="labelMenuTitle">Tutorial</div>
+								<div class="labelMenuSubTitle"><span class="iconAwesome">&#xf360;</span>mtbinfo-team.github.io</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Link</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Others -->
+			<div class="container">
+				<div class="row" id="contensOthers">
+					<div class="col span_16">
+						<div class="boxMenu">
+							<div class="boxImage-left">
+								<img class="imgScreen-left" src="./static/images/imagePhotoOthers.jpg">
+							</div>
+						</div>
+					</div>
+					<div class="col span_8">
+						<div class="boxMenu">
+							<div class="boxOrverwidth-right colorOthers" ></div>
+							<div class="boxContents-right">
+								<a href="./others/main.html"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf552;</span>
+								</div>
+								<div class="labelMenuTitle-Overview">Others</div>
+								<div class="labelMenuItem-Overview">MassBank to MSP, LOWESS normalization, MetaboloDerivatizer, SmetSearch, AIoutput, and Excel Macro applications.</div>
+								<div class="labelButton">More</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Change log -->
+			<div class="container">
+				<div class="row">
+					<div class="col span_24">
+						<div class="boxMenu">
+							<div class="boxOrverwidth colorChangeLog"></div>
+							<div class="boxChangelog">
+								<a onclick="openDialog(100);" class="goLog"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf1da;</span>
+								</div>
+								<div class="labelMenuTitle">Change log</div>
+								<div class="labelButton">View</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Publications -->
+			<div class="container">
+				<div class="row">
+					<div class="col span_24">
+						<div class="boxPublications">
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf15c;</span>
+							</div>
+							<div class="labelMenuTitle">Publications</div>
+							<div>
+								<ul class="labelPublications">
+
+									<li class="listPublications">
+										Correlation-based deconvolution (CorrDec) to generate high-quality MS2 spectra from data-independent acquisition in multisample studies. <em>Analytical Chemistry</em>, 92, 11310&#8211;11317, 2020 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="https://pubs.acs.org/doi/abs/10.1021/acs.analchem.0c01980">[ACS page]</a>
+									</li>
+
+									<li class="listPublications">
+										MS-CleanR: A feature-filtering workflow for untargeted LC-MS based metabolomics. <em>Analytical Chemistry</em>, 92, 9971&#8211;9981, 2020 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="https://pubs.acs.org/doi/10.1021/acs.analchem.0c01594">[ACS page]</a>
+									</li>
+
+									<li class="listPublications">
+										A lipidome atlas in MS-DIAL 4. <em>Nature Biotechnology</em>, 38, 1159&#8211;1163, 2020 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="https://www.nature.com/articles/s41587-020-0531-2">[NPG link]</a><br>
+										Springer Nature 'SharedIt': <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="https://rdcu.be/b4ULX">full-text access to a view-only version of this paper</a>
+									</li>
+
+									<li class="listPublications">
+										Creating a Reliable Mass Spectral–Retention Time Library for All Ion Fragmentation-Based Metabolomics. <em>Metabolites</em>, 9, 251, 2019 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="https://www.mdpi.com/2218-1989/9/11/251">[MDPI link]</a>
+									</li>
+
+									<li class="listPublications">
+										Characterization of Lipid Profiles after Dietary Intake of Polyunsaturated Fatty Acids Using Integrated Untargeted and Targeted Lipidomics. <em>Metabolites</em>, 9, 241, 2019 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="https://www.mdpi.com/2218-1989/9/10/241">[MDPI link]</a>
+									</li>
+
+									<li class="listPublications">
+										Mass Spectrometry Data Repository Enhances Novel Metabolite Discoveries with Advances in Computational Metabolomics. <em>Metabolites</em>, 9, 119, 2019 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="https://www.mdpi.com/2218-1989/9/6/119/htm">[MDPI link]</a>
+									</li>
+
+									<li class="listPublications">
+										A cheminformatics approach to characterize metabolomes in stable-isotope-labeled organisms. <em>Nature Methods</em>, 16, 295&#8211;298, 2019 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="https://www.nature.com/articles/s41592-019-0358-2">[NPG link]</a><br>
+										Springer Nature 'SharedIt': <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="https://rdcu.be/btDKK">full-text access to a view-only version of this paper</a>
+									</li>
+
+									<li class="listPublications">
+										Advances in computational metabolomics and databases deepen the understanding of metabolisms. <em>Current Opinion in Biotechnology</em>, 54, 10&#8211;17, 2018 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="https://www.sciencedirect.com/science/article/pii/S0958166917302665">[ScienceDirect link]</a>
+									</li>
+
+									<li class="listPublications">
+										Identifying metabolites by integrating metabolome databases with mass spectrometry cheminformatics. <em>Nature Methods</em>, 15, 53&#8211;56, 2018 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="https://www.nature.com/articles/nmeth.4512">[NPG link]</a>
+									</li>
+
+									<li class="listPublications">
+										Integrated strategy for unknown EI–MS identification using quality control calibration curve, multivariate analysis, EI–MS spectral database, and retention index prediction. <em>Analytical Chemistry</em>, 89, 6766&#8211;6773, 2017 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="http://pubs.acs.org/doi/abs/10.1021/acs.analchem.7b01010">[ACS link]</a>
+									</li>
+
+									<li class="listPublications">
+										The importance of bioinformatics for connecting data-driven lipidomics and biological insights. <em>BBA-Molecular and Cell Biology of Lipids</em>, 8, 762&#8211;765, 2017 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="http://www.sciencedirect.com/science/article/pii/S138819811730080X">[ScienceDirect link]</a>
+									</li>
+
+									<li class="listPublications">
+										Comprehensive identification of sphingolipid species by in silico retention time and tandem mass spectral library. <em>Journal of Cheminformatics</em>, 9:19, 2017 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="https://jcheminf.springeropen.com/articles/10.1186/s13321-017-0205-3">[Springer link]</a>
+									</li>
+
+									<li class="listPublications">
+										Automation of chemical assignment for identifying molecular formula of S-containing metabolites by combining metabolomics and chemoinformatics with 34S labeling. <em>Metabolomics</em>, 12:168, 2016 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="http://link.springer.com/article/10.1007/s11306-016-1115-5">[Springer link]</a>
+									</li>
+
+									<li class="listPublications">
+										Hydrogen rearrangement rules: computational MS/MS fragmentation and structure elucidation using MS-FINDER software. <em>Analytical Chemistry</em>, 88, 7946&#8211;7958, 2016 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="http://pubs.acs.org/doi/abs/10.1021/acs.analchem.6b00770">[ACS page]</a>
+									</li>
+
+									<li class="listPublications">
+										MS-DIAL: data independent MS/MS deconvolution for comprehensive metabolome analysis. <em>Nature Methods</em>, 12, 523-526, 2015 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="http://www.ncbi.nlm.nih.gov/pubmed/25938372">[PubMed]</a>
+									</li>
+
+									<li class="listPublications">
+										MRM-DIFF: Data Processing Strategy for Differential Analysis in Large Scale MRM-based Lipidomics Studies. <em>Frontiers in Genetics</em>, 5:471, 2014 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="http://www.ncbi.nlm.nih.gov/pubmed/25688256">[PubMed]</a>
+									</li>
+
+									<li class="listPublications">
+										MRMPROBS Suite for metablomics using large-scale MRM assays. <em>Bioinformatics</em>, 30, 2379-2380, 2014 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="http://www.ncbi.nlm.nih.gov/pubmed/24753485">[PubMed]</a>
+									</li>
+
+									<li class="listPublications">
+										MRMPROBS: A Data Assessment and Metabolite Identification Tool for Large-Scale Multiple Reaction Monitoring Based Widely Targeted Metabolomics. <em>Analytical Chemistry</em>, 85, 5191&#8211;5199, 2013 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="http://www.ncbi.nlm.nih.gov/pubmed/23581547">[PubMed]</a>
+									</li>
+
+									<li class="listPublications">
+										Practical non-targeted gas chromatography/mass spectrometry-based metabolomics platform for metabolic phenotype analysis. <em>J. Biosci. Bioeng.</em> 112, 292&#8211;298, 2011 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="http://www.ncbi.nlm.nih.gov/pubmed/21641865">[PubMed]</a>
+									</li>
+
+									<li class="listPublications">
+										GC/MS based metabolomics: dvelopment of a data mining system for metabolite identification by using soft independent modeling of class analogy (SIMCA). <em>BMC Bioinformatics</em> 12: 131, 2011 <img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png"><a href="http://www.ncbi.nlm.nih.gov/pubmed/21542920">[PubMed]</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container" id="contact">
+				<div class="row">
+					<div class="col span_24">
+						<div class="boxContact">
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf4ad;</span>
+							</div>
+							<div class="labelMenuTitle"> Feedback</div>
+							<div class="labelPublications">
+								Your feedback is welcome. <br>
+								If you report the bug of software tools, please contact out team with the following materials. Especially for MS-DIAL,
+								please use <a href="https://github.com/systemsomicslab/MsdialWorkbench/issues"><img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png">issues</a> and 
+								<a href="https://github.com/systemsomicslab/MsdialWorkbench/discussions"><img height="14" width="14" class="imageExLink" src="./static/images/iconLink.png">discussions</a>.<br>
+								<span class="iconAwesome">&#xf00c;</span> Software name and its version<br>
+								<span class="iconAwesome">&#xf00c;</span> MS raw data file (a representative one)<br>
+								<span class="iconAwesome">&#xf00c;</span> Powerpoint slides to explain your issues.<br>
+								<span class="iconAwesome">&#xf00c;</span> Other materials are welcome for me to understand what you face on.<br>
+								<span class="iconAwesome">&#xf00c;</span> If your comment is something that cannot be shared publickly, please email htsugawa@go.tuat.ac.jp.<br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Contact -->
+			<div class="container">
+				<div class="row">
+					<div class="col span_24">
+						<div class="boxContact">
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf2bd;</span>
+							</div>
+							<div class="labelMenuTitle">Contact</div>
+							<div class="labelMember">
+								<img src="./static/images/hiroshi-tsugawa.png">
+							</div>
+							<div class="labelMember">Dr. Hiroshi Tsugawa, PhD.</div>
+							<div class="labelContact">Tokyo University of Agriculture and Technology (TUAT), <span class="iconAwesome">&#xf3c5;</span>2-24-16 Nakamachi, Koganei, Tokyo 184-8588, Japan</div>
+							<div class="labelContact">RIKEN CSRS/IMS, <span class="iconAwesome">&#xf3c5;</span>1-7-22 Suehiro-cho, Tsurumi-ku, Yokohama, Kanagawa 230-0045, Japan</div>
+							<div class="labelContact">
+								<span class="iconAwesome">&#xf199;</span>htsugawa@go.tuat.ac.jp
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="sectionFooter">
+		<div id="areaLogo-RIKEN">
+			<a href="http://www.yokohama.riken.jp/english/"><img id="imageLogo-RIKEN" alt="RIKEN" src="./static/images/logoRIKEN.gif"></a>
+		</div>
+		<div id="areaLogo-CSRS">
+			<a href="http://www.csrs.riken.jp/en/"><img id="imageLogo-CSRS" alt="CSRS" src="./static/images/logoCSRS.png"></a>
+		</div>
+		<div id="areaLogo-PRIMe">
+			<a href="http://prime.psc.riken.jp/"><img id="imageLogo-PRIMe" alt="PRIMe" src="./static/images/logoPRIMe.png"></a>
+		</div>
+		<div>
+			<div>RIKEN Center for Sustainable Resource Science : Metabolome Informatics Research Team</div>
+			<address>1-7-22 Suehiro-cho, Tsurumi-ku, Yokohama City, Kanagawa, 230-0045, Japan</address>
+		</div>
+		<div>
+			<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img id="imageLogo-CCL" alt="Creative Commons License" src="./static/images/88x31.png"></a>
+		</div>
+	</div>
+
+	<div style="display: none;">
+		<div class="dialog" id="dialogChangeLog" title="Change Log">
+			<div class="boxLog">
+				<dl>
+				
+				    <dt>Oct 27th, 2022</dt>
+					<dd>
+				    <br>MS-DIAL 4/5-alpha raw data parsers now reterive your data as centroid by the vendor's API. So, from this version, please set "centroid" in MS type setting for both MS1 and MS2. <br>
+				    <br> MS-DIAL 5-alpha provides an environment for direct infusion MS (DI-MS), ion mobility MS (IM-MS), LC-MS, and LC-IM-MS (except for GC-MS). <br>
+					<br> MS-DIAL 5-alpha provides more flexible GUI interface for lipidomics than that of MS-DIAL 4. <br>
+					<br>
+					
+					<dt>Dec 31th, 2021</dt>
+					<dd>
+					<b>MS-DIAL 4.80 was released. </b>
+					<br>
+					<b>New features of MS-DIAL:</b>
+					<br>
+					   1. Ready to directly import Shimadzu GC-MS(.qgd) and LC-MS (.lcd).<br>
+					   2. Fixed several bugs found in V4.8.<br>
+					<br>
+					
+					<dt>July 6th, 2021</dt>
+					<dd>
+					<b>MS-DIAL 4.70 was released. </b>
+					<br>
+					<b>New features of MS-DIAL:</b>
+					<br>
+					   1. Ready to directly import Bruker LC-MS (.d/.baf) and LC-IM-MS (.d/.tdf) data.<br>
+					   2. Command line function for LC-IM-DDA (like PASEF) and LC-IM-DIA (like diaPASEF and other AIFs) is now available (method "lcimdda" or "lcimdia"). <br>
+					   3. Direct imports of Agilent, Thermo, Bruker, Waters, and Sciex were validated (by Drag and Drop). <br>
+					   4. Improved and fixed the programs from the feedback (for questions till July 1th) in <a href="http://www.metabolomics-forum.com/index.php?PHPSESSID=b74092e46e54cf88af47594217bd10e8&board=98.0">MS-DIAL software forum</a>.<br>
+					<br>
+					
+					
+					<dt>March 22th, 2021</dt>
+					<dd>
+					<b>MS-DIAL 4.60 was released. </b>
+					<br>
+					<b>New features of MS-DIAL:</b>
+					<br>
+					   1. The MS raw data of SCIEX (.wiff, .wiff2), Thermo (.raw). Agilent (.d), and Waters (.raw) can be imported directly without any data conversion.<br>
+					   2. SWATH-MS type acquisition in SCIEX WIFF1/WIFF2 and Thermo RAW was validated. <br>
+					   3. AIF type acquisition in Agilent data was validated (The abf file format for Waters MSE is still needed. However, it will be fixed soon). <br>
+					   4. Raw data of Agilent and Waters can be imported by "drag and drop" of the analysis files in the analysis file import window. <br>
+					   5. The option "N% detected in at least one group" was added to GCMS project. <br>
+					   6. SIRIUS .ms format was supported as a peak list export option. <br>
+					   7. The peak picking algorithm was improved (see <a href="http://www.metabolomics-forum.com/index.php?topic=1609.0">this topic</a>). <br>
+					   8. Lipidomics platform (including MS/MS search function) was improved. <br>
+					   9. The function of "gap filling by compulsion" was fixed (see <a href="http://www.metabolomics-forum.com/index.php?topic=1469.0">this topic</a>).  <br>
+					   10. Improved and fixed the programs from the feedback (for questions till March 20th) in <a href="http://www.metabolomics-forum.com/index.php?PHPSESSID=b74092e46e54cf88af47594217bd10e8&board=98.0">MS-DIAL software forum</a>.<br>
+					<br>
+					
+					<b>MS-FINDER 3.50 was released. </b>
+					<br>
+					<b>New features of MS-FINDER:</b>
+					<br>
+					   1. COCONUT database was installed.<br>
+					   2. Improved and fixed the programs from the feedback (for questions till March 20th) in <a href="http://www.metabolomics-forum.com/index.php?PHPSESSID=b74092e46e54cf88af47594217bd10e8&board=98.0">MS-DIAL software forum</a>.<br>
+					<br>
+					  </dd>
+
+					  <dt>Jan. 6th, 2021</dt>
+					  <dd>
+						<b>MS-DIAL 4.48 was released. </b>
+						<br>
+						<br>
+						<b>New features of MS-DIAL:</b>
+						<br>
+						   1. The isotope grouping and peak alignment functions were improved.<br>
+						   2. Bugs in lipid spectral libraries were fixed. <br>
+						   3. MS-DIAL console application is now available at Mac and Linux OS. <br>
+						   4. Improved and fixed the programs from the feedback (for questions till Jan. 4th) in <a href="http://www.metabolomics-forum.com/index.php?PHPSESSID=b74092e46e54cf88af47594217bd10e8&board=98.0">MS-DIAL software forum</a>.<br>
+						<br>
+					  </dd>
+
+
+					  <dt>Nov. 1th, 2020</dt>
+					  <dd>
+						<b>MS-DIAL 4.36 was released. </b>
+						<br>
+						<br>
+						<b>New features of MS-DIAL:</b>
+						<br>
+						   1. The bug for plasmalogen-PE annotation in positive ion mode was fixed.<br>
+						   2. The bug of DIA data processing in the command line version was fixed. <br>
+						   3. The bug of mTIC normalization was fixed. <br>
+						   4. Improved and fixed the programs from the feedback (for questions till Nov. 1th) in MS-DIAL software forum.<br>
+						<br>
+						<br>
+						<b>New features of MS-FINDER:</b>
+						<br>
+						   1. The in silico fragmenter program using NCDK was improved. <br>
+						   2. The bug in processing TMS-derivative compounds was fixed.<br>
+						<br>
+					  </dd>
+
+					<dt>Oct 19th, 2020</dt>
+					<dd>
+						<b>MS-DIAL 4.36 was released. </b>
+						<br>
+						<br>
+						<b>New features of MS-DIAL:</b>
+						<br>
+						   1. Several lipid subclasses (steryl esters, oxidized TG, TG estlides, header derivatives of PE etc) were added.<br>
+						   2. IBF converter is now available as a command line tool. <br>
+						   3. Pathway mapping and isotope estimators are improved. <br>
+						   4. Improved and fixed the programs from the feedback (for questions till Oct 1th) in <a href="http://www.metabolomics-forum.com/index.php?PHPSESSID=b74092e46e54cf88af47594217bd10e8&board=98.0">MS-DIAL software forum</a>.<br>
+						<br>
+						<br>
+
+					</dd>
+
+					<dt>June 12th, 2020</dt>
+					<dd>
+						<b>MS-DIAL 4.24 and MS-FINDER 3.44 were released. </b>
+						<br>
+						<br>
+						<b>New features of MS-DIAL:</b>
+						<br>
+						   1. MZ exclusions are now available in GC-MS project.<br>
+						   2. HCA GUI was improved.<br>
+						   3. Lipid tandem MS atlas version 68 was released by ASCII format.<br>
+						   4. Improved and fixed the programs from the feedback (for questions till June 1th) in <a href="http://www.metabolomics-forum.com/index.php?PHPSESSID=b74092e46e54cf88af47594217bd10e8&board=98.0">MS-DIAL software forum</a>.<br>
+						<br>
+						<br>
+						<b>New features of MS-FINDER:</b>
+						<br>
+						   1. Bugs in command line application were fixed. <br>
+						   2. Bugs in rest protocols for Pubchem and Classyfire were fixed.<br>
+						<br>
+						<br>
+
+					</dd>
+
+					<dt>May 1th, 2020</dt>
+					<dd>
+						<b>MS-DIAL 4.20 and MS-FINDER 3.40 were released. </b>
+						<br>
+						<br>
+						<b>New features of MS-DIAL:</b>
+						<br>
+						   1. Workbench was reformated to .net standard 2.0 and .net framework 4.7.2.<br>
+						   2. HCA is available from this version.<br>
+						   3. Improved and fixed the programs from the feedback (for questions till April 20th) in <a href="http://www.metabolomics-forum.com/index.php?PHPSESSID=b74092e46e54cf88af47594217bd10e8&board=98.0">MS-DIAL software forum</a>.<br>
+						<br>
+						<br>
+						<b>New features of MS-FINDER:</b>
+						<br>
+						   1. Workbench was reformated to .net standard 2.0 and .net framework 4.7.2. <br>
+						   2. IKVM-CDK is not imported anymore. Instead, NCDK is used in MS-FINDER program.<br>
+						<br>
+						<br>
+
+					</dd>
+
+					<dt>March 20th, 2020</dt>
+					<dd>
+						<b>MS-DIAL 4.18 and MS-FINDER 3.32 were released. MS-DIAL tutorial was also updated.</b>
+						<br>
+						<br>
+						<b>New features of MS-DIAL:</b>
+						<br>
+						   1. Improved the algorithm to efficiently select quant mass values in GC-MS project.<br>
+						   2. Total 117 lipid subclasses are now annotatable in lipidomics project. See <a href="msdial/lipidnomenclature.html">lipid nomenclature page</a> for the detail.<br>
+						   3. Improved and fixed the programs from the feedback in <a href="http://www.metabolomics-forum.com/index.php?PHPSESSID=b74092e46e54cf88af47594217bd10e8&board=98.0">MS-DIAL software forum</a>.<br>
+						<br>
+						<br>
+						<b>New features of MS-FINDER:</b>
+						<br>
+						   1. Retention time and collision cross section (CCS) libraries can be used for filtering structure candidates (see the library template at <a href="msfinder/main.html">MS-FINDER main page</a>). <br>
+						   2. Several bugs were fixed.<br>
+						<br>
+						<br>
+
+					</dd>
+
+					<dt>Feb. 9th, 2020</dt>
+					<dd>
+						<b>MS-DIAL 4.16 and MS-FINDER 3.30 were released.</b>
+						<br>
+						<br>
+						<b>New features of MS-DIAL:</b>
+						<br>
+						   1. Modified IBF converter program to accurately calculate the decimal of ion mobility data's m/z values for accumulated MS1 spectra.<br>
+						   2. The normalization functions are now fully supported in ion mobility data processing.<br>
+						   3. Fixed the theoretical spectra of [M+Na]+ ion form of LPC and PC. <br>
+						   4. Fragment rule based lipid annotations were improved for several lipid subclasses especially in [M+Na]+ form. <br>
+						   5. Improved and fixed the programs from the feedback in <a href="http://www.metabolomics-forum.com/index.php?PHPSESSID=b74092e46e54cf88af47594217bd10e8&board=98.0">MS-DIAL software forum</a>.<br>
+						<br>
+						<br>
+						<b>New features of MS-FINDER:</b>
+						<br>
+						   1. <a href="https://ehp.niehs.nih.gov/doi/10.1289/EHP4713">Blood Exposome Database<img height="14" width="14" class="exlink" src="./static/images/iconLink.png"></a> was incorporated in MS-FINDER. <br>
+						   2. Several bugs were fixed.<br>
+						<br>
+						<br>
+					</dd>
+
+					<dt>Jan. 7th, 2020</dt>
+					<dd>
+						<b>MS-DIAL 4.12 and MS-FINDER 3.26 were released.</b><br>
+						(*NOTE:  The full lipid tandem mass spectral atlas is still in private until paper publication.)<br>
+						(**NOTE:  Version 4.10 was withdrawed due to a bug in alignment result export process.)<br><br>
+						<b>New features of MS-DIAL:</b> <br>
+						1. MS-DIAL lipidomics uses <a href="http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/lipidnomenclature.html">new lipid nomenclature</a> supported by lipidomics standards initiative (LSI). <br>
+					    2. MS-DIAL supports the mztab-M format as an option for alignment result export.<br>
+					    3. New GNPS export function for FBMN x IIN was developed. <br>
+					    4. Utilities, GUIs, parallel processing methods were improved. <br>
+					    5. CorrDec (mass spectral deconvolution using sample correlation) algorithm was improved, which also supports MS/MS deconvolutions in normal LC-DDA and SWATH. <br>
+					    6. Several bugs were fixed, and utilities were added from the suggestions in <a href="http://www.metabolomics-forum.com/index.php?PHPSESSID=b74092e46e54cf88af47594217bd10e8&board=98.0">MS-DIAL software forum</a>.<br>
+						<br>
+					    <br>
+					    <b>New features of MS-FINDER:</b> <br>
+					    1. Users can use 'reflect msfinder result to msp/mat files' in 'Tool' menu bar to reflect msfinder results to original raw data files. Then, the file can be exported as msp format file as well from the export option. <br>
+					    2. Several bugs were fixed.<br>
+					    <br>
+					    <br>
+					</dd>
+
+					<dt>2019-11-5</dt>
+					<dd>
+						<b>MS-DIAL 4.00 is started where ion mobility (IM) data processing for IM-MS, IM-DDA, and IM-DIA is supported.</b><br>
+						(*NOTE: For IM-MS users, please give me your feedback to improve MS-DIAL for using IM-MS in metabolomics/lipidomics.)<br><br>
+						<b>New features:</b> <br>
+						1. MS-DIAL requires IBF data format for IM-MS data processing, and the ibf file converter is also enveloped in MS-DIAL folder.<br>
+						2. MS-DIAL supports conventional IM-MS, Bruker PASEF-DDA, Agilent DIA, and Waters DIA.<br>
+						3. Lipidomics annotation was improved (lipidomics DB VS63 was released). <br>
+						4. MS-DIAL export also provides average and standard deviations for each class. <br>
+						5. GNPS export was updated to export the edge table for the use in <a href="https://ccms-ucsd.github.io/GNPSDocumentation/featurebasedmolecularnetworking-with-ms-dial/"><img height="14" width="14" class="imageExlink" src="./static/images/iconLink.png">GNPS-FBMN approach</a>.<br>
+						6. Several bugs were fixed, and several utilities were improved.
+					</dd>
+
+					<dt>2019-9-14</dt>
+					<dd>
+						<b>MS-DIAL 3.98 was RELEASED.</b><br>
+						 (*NOTE: MS-DIAL 4.0 series supporting ion mobility data and enriched lipidomics workflow will be released in next month.)<br><br>
+						<b>New features:</b> <br>
+						1. Lipidomics annotation was improved (lipidomics DB VS60 was released). <br>
+						2. MSP format file libraries in MS-DIAL section now contain CCS value for each metabolite. <br>
+						3. Export format of MS-DIAL was a bit changed. Four columns were added (RT matched, CCS matched, m/z matched, MS/MS matched). <br>
+						4. MS-DIAL uses the original 'annotation' code for easily checking the quality of mass spectral annotations. See <a href="./MS-DIAL/index3.html">MS-DIAL FAQ.</a> <br>
+						5. GNPS export was updated to be used in <a href="https://ccms-ucsd.github.io/GNPSDocumentation/featurebasedmolecularnetworking-with-ms-dial/"> <img height="14" width="14" class="imageExlink" src="./static/images/iconLink.png">GNPS-FBMN approach</a>.<br>
+						6. CorrDec deconvolution program was improved for all ion fragmentation data.<br>
+						7. The bugs in processing 500-2000 abf files were fixed. <br>
+						8. An option 'Only report the top hit' is now available in GC-MS project.<br>
+						9. Several bugs were fixed, and several utilities were improved.
+					</dd>
+
+					<dt>2019-8-9</dt>
+					<dd>
+						<b>MS-DIAL 3.96 was RELEASED.</b><br><br>
+						<b>New features:</b> <br>
+						1. Lipidomics annotation was improved (lipidomics DB VS54 was released). <br>
+						2. "Color picker" was prepared. Now, users can change the order/color of graphs in MS-DIAL. Check "Class property setting" in Option menu. <br>
+						3. GNPS export was fixed to be used in <a href="https://ccms-ucsd.github.io/GNPSDocumentation/featurebasedmolecularnetworking-with-ms-dial/"><img height="14" width="14" class="imageExlink" src="./static/images/iconLink.png">GNPS-FBMN approach </a>.<br>
+						4. The file reader for mzML was fixed.<br>
+						5. Molecular spectrum networking function in MS-DIAL was fixed for the current situation of FireFox browser.<br>
+						6. The MS-DIAL "version" is recorded in each alignment result: check parameter export result from alignment result export option.
+					</dd>
+
+					<dt>2019-7-15</dt>
+					<dd>
+						<b>MS-DIAL 3.90 was RELEASED</b>.<br><br>
+						<b>New features:</b> <br>
+						1. Lipidomics annotation was improved.<br>
+						2. Annotation for some lipid types such as SHexCer+O, LCL, and SM was fixed.<br>
+						3. Bugs in manual peak modification were fixed.<br>
+						4. Data export formats in GC-MS and LC-MS projects were changed to be used in mzTab-M format in near future.<br>
+						5. Fixed the bug in GC-MS project: Quant mass information in MSP format library is now successfully used.<br>
+						6. Many utilities were improved.
+					</dd>
+
+					<dt>2019-6-10</dt>
+					<dd>
+						<b>MS-FINDER 3.24 was RELEASED.<br>New experimentally acquired MS/MS spectra were uploaded with the collaboration with Gunma University (GIAR) (see MS-DIAL section).</b><br><br>
+						<b>New feature for MS-FINDER:</b> <br>
+						1. Fixed bugs, and updated several utilities for manuscript submission.
+					</dd>
+
+					<dt>2019-6-1</dt>
+					<dd>
+						<b>MS-DIAL 3.82 was RELEASED.<br> MS-FINDER 3.22 was RELEASED.</b><br><br>
+						<b>New features for MS-DIAL:</b> <br>
+						1. The rule-based lipid representation is now applied to all lipid classes. <br>
+						2. The query exporter to MS-FINDER is updated (check the buttun of MS-FINDER on the alignment 'table' viewer). <br>
+						3. 'Box plot' is now supported. (Right click at the bar chart window on the top panel of MS-DIAL. In large scale studies, Box-plot is set as default.) 4. Fixed bugs, and updated several utilities. <br><br>
+						<b>New features for MS-FINDER:</b> <br>
+						1. 'Time-out' setting is now available so that a query which requires very long time for calculation is skipped. <br>
+						2. New functions for annotating adduct forms in MS/MS spectra were created for all-ion fragmentation (AIF) data. <br>
+						3. Fixed bugs, and updated several utilities.
+					</dd>
+
+					<dt>2019-4-17</dt>
+					<dd>
+						<b>MS-DIAL 3.70 was RELEASED.<br></b><br>
+						<b>New features for MS-DIAL:</b> <br>
+						1. Several lipids such as EtherPS, EtherPE, PI-Cer, and PE-Cer are added for lipidomics annotation pipline. <br>
+						2. Please try to click the "LQ (LipoQuality database)" button to browse the biological statistics of known/unknown lipids in various cells/tissues (lipidomics project). <br>
+						3. Bug fixed for LPC lipids.<br> 4. Bug fixed in GC-MS project
+					</dd>
+
+					<dt>2019-4-2</dt>
+					<dd>
+						--The study using MS-DIAL/MS-FINDER 3.0 using the isotope tracking function, metabolite class recommendation, and molecular spectrum networking is available online.<br>
+						<b>A cheminformatics approach to characterize metabolomes in stable-isotope-labeled organisms.</b>
+						<em>Nature Methods</em>, 16, 295&#8211;298, 2019 <a href="https://www.nature.com/articles/s41592-019-0358-2"><img height="14" width="14" class="imageExlink" src="./static/images/iconLink.png">[NPG link]</a><br>
+						Springer Nature 'SharedIt': <a href="https://rdcu.be/btDKK"><img height="14" width="14" class="imageExlink" src="./static/images/iconLink.png">full-text access to a view-only version of this paper</a>
+					</dd>
+
+					<dd>
+						<b>MS-DIAL 3.66 was RELEASED.</b><br><br>
+						<b>New features for MS-DIAL:</b> <br>
+						1. Bugs for DIA-MS project were fixed. <br>
+						2. DGCC and LDGCC lipids were added in lipidomics project.
+					</dd>
+
+					<dt>2019-3-28</dt>
+					<dd>
+						<b>MS-DIAL 3.64 was RELEASED.<br> MS-FINDER 3.20 was RELEASED.<br></b><br>
+						<b>New features for MS-DIAL:</b> <br>
+						1. The CorrDec algorithm for all ion fragmentation (AIF)-data was improved. <br>
+						2. A targeted metabolomics pipline was created as the command-line application. <br>
+						3. A new normalization method using SPLASH lipidomics standard kit was created. <br>
+						4. The ether-linked DAG and TAG lipids can be grasped in the lipidomics project. <br>
+						5. All of lipid structure representation is now evaluated in the acquired MS/MS spectra.<br>
+						6. Fixed bugs, and updated several utilities. <br> <br>
+						<b>New features for MS-FINDER:</b> <br>
+						1. It can import the list of InChIKey and predicted retention time for elucidating structures. <br>
+						2. Fixed bugs, and updated several utilities.
+					</dd>
+
+					<dt>2019-2-6</dt>
+					<dd>
+						<b>MS-DIAL 3.52 was RELEASED.<br>MS-FINDER 3.16 was RELEASED.<br>MRMPROBS 2.50 was RELEASED.</b><br><br>
+						<b>New features for MS-DIAL:</b><br>
+						1. The metabolic pathway was improved (mostly for lipid pathways). <br>
+						2. The InChIKey of text library can be reflected for metabolic pathway. <br>
+						3. Several bugs were fixed. <br><br>
+						<b>New features for MS-FINDER:</b><br>
+						1. The parameter file for batch processes is automatically saved in the same working directory. <br>
+						2. Several bugs were fixed. <br><br>
+						<b>New features for MRMPROBS:</b><br>
+						1. Peak picking method was improved.<br>
+						2. Several bugs were fixed.
+					</dd>
+
+					<dt>2019-2-1</dt>
+					<dd>
+						<b>MS-DIAL 3.50 was RELEASED.</b><br><br>
+						<b>New features:</b><br>
+						1. The metabolic pathway analysis is now available. Moreover, multiple MS-DIAL projects (e.g. GC-MS and LC-MS lipids) can be loaded simultaneously. <br>
+						2. The coverage of acylchains was increased (C8-C44) for several lipid classes in lipidomics project. <br>
+						3. The theoretical spectra for ether PE in positive ion mode were modified. <br>
+						4. Multiple functions including peak picking and alignment were improved.
+					</dd>
+
+					<dt>2019-1-8</dt>
+					<dd>
+						<b>MS-DIAL 3.40 was RELEASED.</b><br><br>
+						<b>New features:</b><br>
+						1. One parameter 'gap filling by compulsion' is added: if unchecked, gap-filling is performed only when local maximum exists. <br>
+						2. MS-DIAL now evaluates signal to noise (S/N) ratios to improve the peak picking results. <br>
+						3. PLS-regression, PLS-DA, OPLS-regression, and OPLS-DA are now available at MS-DIAL. <br>
+						4. Pathway mapping is executable in lipidomics project (please wait a bit for metabolomics project). <br>
+						5. Rule-based lipid annotations are implemented in this program (e.g. SM d18:1/24:0 is abbrebated to SM d42:1 when the diagnostic ion is not detected. <br>
+						(The rules are now implemented for PC, PE, PS, PI, PG, BMP, TAG, SM, LNAPS, and LNAPE. The others are also implemented when I have much time.)<br>
+						6. New deconvolution algorighm (correlation-based deconvolution) is implemented for DIA-MS data, which is optimized for MSE, all-ions, and all ion fragmentation technologies.<br>
+						7. Several lipid classes and adduct forms are also implemented especially in positive ion mode.
+					</dd>
+
+					<dt>2018-11-11</dt>
+					<dd>
+						<b>MS-DIAL 3.30, MS-FINDER 3.12 were RELEASED.</b><br><br>
+						<b>MS-DIAL 3.30 new features:</b><br>
+						1. MS-DIAL allows users to edit peaks in the result of peak alignment: check 'right click' feature on the 'aligned EIC' tab of the top panel of MS-DIAL.<br>
+						2. New lipid theoretical MS/MS database (version 39) was released, which includes Ether LPC/LPE, sphingosine, SPLASH standards, LipidA etc. <br>
+						3. Many bugs were fixed and many minor utility updates were performed for MS-DIAL lecture in Japan. <br>
+						4. An option not to use the criteria of monotonically decreasing ions in isotope recognition process was created to deal with Br and Cl containing metabolites.<br>
+						<b>MS-FINDER 3.12:</b><br>
+						1. Bug fixed in parsing MSP and MAT files.
+					</dd>
+
+					<dt>2018-10-12</dt>
+					<dd>
+						<b>MS-DIAL 3.20, MS-FINDER 3.10 and MRMPROBS 2.46 were RELEASED.</b><br> In addition, EI-MS and MS/MS spectral databases were also updated to define the metabolite ontology for metabolites. <br> <br> <b>MS-DIAL 3.20 new features:</b> <br> 1. The quant mass manager for GC-MS based metabolomics was created where users can quantify the targeted metabolite by the defined m/z value. <br> 2. The function for retention time correction by using diagnostic marker ions (basically authentic standard ions) was created. <br> 3. The function linked to MRMPROBS was improved for DIA-MRM based metabolomics approach. <br> <br> <b>MS-FINDER 3.10 new features (in the command line application):</b> <br> 1. The 'annotate' function was added where users can assign ion substructures to mass spectra
+						by importing the metabolite Formula and SMILES code and spectral information. <br> 2. The 'generate' function was created, which provide all of possible substructure fragments as the neutralized form by importing SMILES code. <br> The 'generate' function was made for an education purpose.<br> <br> <b>MRMPROBS 2.46 new features:</b> <br> The clash bug in analyzing 'empty' chroatogram was fixed.
+					</dd>
+
+					<dt>2018-10-1</dt>
+					<dd>
+						<b>MS-DIAL 3.12 and MRMPROBS 2.44 were RELEASED. <br></b> MS-DIAL 3.12 new features (the bug in importing the previous project at 3.10 was fixed): <br> 1. The mzML parser was fixed to correctly import the mzML format from Shimadzu QTOFMS. <br> 2. The isotope tracking function was improved by considering users feedback. <br> 3. The functions for adduct picking, gap-filling, and duplicate peak recognition were improved. <br> <br> MRMPROBS 2.44 new features: <br> The bug not matching the result in chromatogram viewers with the raw data matrix was fixed.
+					</dd>
+
+					<dt>2018-9-10</dt>
+					<dd>
+						<b>MS-DIAL 3.08 and MS-FINDER 3.04 were RELEASED. <br></b> Bug fixed: <br> The export function for isotope labeled tracking result in MS-DIAL was fixed. <br> GUIs of MS-DIAL and MS-FINDER were fixed. <br> BinVestigate searcher was fixed.
+					</dd>
+
+					<dt>2018-8-30</dt>
+					<dd>
+						<b>MS-DIAL 3.06 WAS RELEASED. <br></b> Bug fixed: <br> Several bugs in MS-DIAL graphical user interface for GC-MS and LC-MS projects were fixed. <br> The report function of identification process in GC-MS project with "after peak alignment" option was fixed. (The metabolite name was actually wrong although the other metadata such as InChIKey was correct.) <br> <br> FUNCTION: <br> Blank filtering is now available. <br> If users have a suitable procedure 'blank' sample, MS-DIAL can consider the ion features of blank samples to remove the redundant ions. <br> Note that users have to set the analysis type as 'Blank' in file setting window to use this function. <br> <br> USER INTERFACE AND
+						OTHERS: <br> MS-DIAL parameters are divided into 'basic' and 'advanced' sections.
+					</dd>
+
+					<dt>2018-8-14</dt>
+					<dd>
+						<b>We released version 3 series of MS-DIAL and MS-FINDER. <br></b> Many functions were updated or newly created, and the upgrades will provide more accurate data analysis in addition to faster data processing speed. <br> We hope that our tools are furthor contributed to mass spectrometry-based metabolomics and lipidomics. <br> Importantly, we no longer support the Windows XP OS, and the programs require .Net Framework 4.5 or later. <br> (The .NET framework should have been installed in Windows 7, 8, and 10.)<br> Below is the release note.
+					</dd>
+					<dd>
+						<b>MS-DIAL 3.04 WAS RELEASED. </b><br>
+						(3.00 &amp; 3.02 were replaced by 3.04 for minor revision.) <br>
+						Major upgrades compared to the previously reported <a href="https://www.nature.com/articles/nmeth.4512"><img height="14" width="14" class="imageExlink" src="./static/images/iconLink.png">MS-DIAL version 2 series</a> are summarized.<br><br>
+						DATA FORMAT: <br>
+						The extensions (*.mtd, *.med, *.pai, *.arf) created in MS-DIAL project are changed to *.*2 (*.mtd2, *.med2, *.pai2, *.arf2). <br>
+						There is the compatibility for the previous projects, and all of storages will automatically be reorganized with new formats when you import a previous project.<br> <br>
+						FUNCTION: <br>
+						Peak character evaluatior: it concatenates the different ion types of one metabolite such as isotope, adduct, and in source fragment ions by the deisotoping, the adduct-ion picking, the chromatogram correlation, and the partial MS1 and MS/MS spectral comparison techniques. <br>
+						Ion feature amalgamator: for example, the list of retention time and m/z for monoisotopic ions detected in negative ion mode can be imported to the project of positive ion mode, which is useful for curating the adduct type. <br>
+						Labeled metabolite tracking: the function is designed to group the same metabolite ions from partially labelled, fully-labelled, and time-course labeling experiments using carbon (13C), deuterium (D), nitrogen (15N), oxygen (18O), sulfur (34S), or combinations thereof. <br>
+						Molecular spectrum network: the known- and unknown metabolite features are mapped to the network based on the spectrum similarity (as used in GNPS and MS2LDA) and/or ion abundance correlation among samples. <br>
+						Searching unique product ions and neutral losses: the precursor ions containing user-defined product ions and/or neutral losses can be queried easily. <br> <br>
+						MASS SPECTRAL DATABASES: <br>
+						MS-DIAL package contains the spectra of MassBank, MassBankEU, GNPS, ReSpect, MetaboBASE, FiehnHILIC, CASMI2016, RIKEN oxidized phospholipids, and RIKEN PlaSMA standard compounds.<br>
+						It can be used as the "start-up kit" for untargeted metabolomics. <br>
+						Moreover, we also manage the "bio mass spectral database" from plant extracts. (see the detail at <a href="http://plasma.riken.jp/"><img height="14" width="14" class="imageExlink" src="./static/images/iconLink.png">PlaSMA website</a>)<br>
+						Now, a total of 29,269 and 17,810 spectral records can be used for positive- and negative ion mode data, respectively. <br>
+						For lipidomics, MS-DIAL package contains the theoretical tandem mass spectra for a total of 56 lipid classes (197,527 lipid molecules). <br>
+						Dr. Tomas Cajka and Dr. Jeremy Koelmel always help the curations for lipid theoretical mass spectra. <br>
+						No update for EI-MS database (yet).<br> <br>
+						USER INTERFACE AND OTHERS: <br>
+						Creating a graphical user interface is an important part of science at least I think. <br>
+						A part of GUI was optimized to check the result of isotope tracking function. <br>
+						Moreover, the peak table- and alignment table viewers were developed for the rapid data curation. <br>
+						The parallell processing is available, resulting in faster data processing especially for large-scale dataset.
+					</dd>
+					<dd>
+						<b>MS-FINDER 3.02 WAS RELEASED.</b><br>
+						(3.00 was replaced by 3.02 for minor revision.) <br>
+						Major upgrades compared to the previously reported <a href="https://www.nature.com/articles/nmeth.4512"><img height="14" width="14" class="imageExlink" src="./static/images/iconLink.png">MS-FINDER version 2 series</a> are summarized.<br><br>
+						DATA FORMAT: <br>
+						It accepts two formats, *.msp and *.mat (to import both MS1 and MSMS data). <br>
+						All of queries should be recorded in the separated files, and therefore, we created an easy converter "MspToSeparatedMsps" and "MgfToSeparatedMsps" for users. <br> <br>
+						FUNCTION: <br> Molecular formula calculator: there was a critical issue in the previous versions where some of formula were not computationally generated. The current program will provide all of putative candidates with parallel computing. <br>
+						Metabolite class recommendation (FSEA): new function, fragment set enrichment analysis (FSEA) is officially released to recommend the metabolite classes (ontologies) for unknown spectra. This method does not require any structure databases. <br>
+						New ranking method for structure candidates: In addition to the previously reported method including the approval of hydrogen rearrangement rules and reference count, it incorporates the Jaccard index (similarity) between new molecular fingerprint and MS/MS spectra. Both molecular fingerprint and MS/MS spectra is adjusted to a total of 459 binary vector of fragment ontologies. <br>
+						Integrated molecular spectrum network: the unknown query is further inspected in the network analysis using the modified Bonanza spectral clustering score (for MS/MS similarity), the Levenshtein distance score (for metabolite ontology similarity), and formula based bioreaction linkage as performed in <a href="https://www.ncbi.nlm.nih.gov/pubmed/24685999"><img height="14" width="14" class="imageExlink" src="./static/images/iconLink.png">this papar</a>. <br><br>
+						METABOLOME STRUCTURE DATABASES: <br>
+						MS-FINDER 3.0 encompasses KNApSAcK (45,852), UNPD (166,995), FooDB (21,943), NANPDB (3,882), STOFF-IDENT (10,231), PlantCyc (3,817), LipidMAPS (34,466), ChEBI (53,746), PubChem biosynthetic pathway (8,285), DrugBank (6,273), SMPDB (1,490), YMDB (1,840), ECMDB (1,342), T3DB (2,499), BMDB (7,232), and the HMDB family including HMDB (95,924), Urine (3,929), Saliva (1,129), Fecal (1,073), CSF (360), and Serum (23,138). The count of structure records is cited in parentheses. Now, the total count of structures is 321,616. An enzymatically expanded in silico structure database MINE (643,307) is also incorporated. We also use the direct parent term of <a href="http://classyfire.wishartlab.com/"><img height="14" width="14" class="imageExlink" src="./static/images/iconLink.png">ClassyFire</a> as the name of metabolite ontology for each structure. <b>Note that the name of metabolite class used in FSEA is not assigned by ClassyFire, but determined manually by our curation team that took into account the MS resolution for structure characterization</b>. <br> <br>
+						DATABASE of UNIQUE PRODUCT IONS and NEUTRAL LOSSES for METABOLITE CHARACTERIZATION: <br>
+						Unique product ions (PIs) and neutral losses (NLs) for a certain metabolite class have been used for metabolite annotations. For instance, (1) m/z 78.9585 and m/z 96.9595 are used for searching phosphate (PO3-)- and sulfate (HSO4-)-containing metabolites, respectively; (2) neutral losses of 146.0579 (C6H10O4), 162.05282 (C6H10O5), and 176.0321 (C6H8O6) are used for searching metabolites that contain deoxyhexose (dHex), hexose (Hex), and uronic acid (HexA) moieties; (3) aglycones of the flavonol class, e.g. kaempferol, quercetin, and isorhamnetin can be searched by their specific m/z values, e.g. 285.0405 (C15H9O6-), 301.0354 (C15H9O7-), and 315.051 (C16H11O7-).<br>
+						By means of our computational and manual curations, MS-FINDER 3.0 contains 1,352- and 1,643 product ion queries for positive and negative spectra, respectively. Moreover, 729- and 914 neutral loss queries are also registered. The m/z and neutral loss query contains the information of mass, formula candidates, ontology candidates, and (substructure) InChIKey candidates.
+					</dd>
+					<dd>
+						--Opinions for computational mass spectrometry was published in <a href="https://sciencetrends.com/computational-mass-spectrometry-deepens-the-understanding-of-metabolisms/"><img height="14" width="14" class="imageExlink" src="./static/images/iconLink.png">SCIENCE TRENDS</a>.
+					</dd>
+
+					<dt>2018-6-10</dt>
+					<dd>
+						--MS-DIAL version 2.92 was released. <br> NEWS: <br> (1) Molecular-spectrum networking approach by means of spectrum similarity and ion abundance similarity among samples is now available directly. <br> * please set 'FireFox' as the default html viewer for the quick visualization of networking. <br> (2) The nodes and edges for local cytoscape program can also be generated from alignment result export. <br> (3) Alignment table viewer provides ANOVA-P and fold change values. <br> (4) Lipid MS/MS library version 36 was released: SHexCer and GM3 are now in the scope of <a href="MS-DIAL/index5.html">MS-DIAL lipidomics</a>. <br> (5) Several peak picking and alignment functions were improved.
+					</dd>
+					<dd>
+						--MS-FINDER version 2.42 was released. <br> NEWS: <br> (1) The utility to generate separated msp format files from combined msp or mgf is now available.<br> (2) Several bugs were fixed.
+					</dd>
+
+					<dt>2018-5-5</dt>
+					<dd>
+						--MS-DIAL version 2.90 was released. <br> NEWS: <br> (1) Deisotoping function, which was not performed well in version 2.82, was fixed. <br> (2) New project for DIA-MS with 'multiple CEs (like 0V, 10V, and 30V)' is newly opened. (see the updated tutorial as well) <br> (3) Peak- or alignment table viewers were improved. <br> (4) Export function for molecular spectrum netwokring was added (edge file is created for cytoscape). <br> (5) Lipid MS/MS library version 35 was released. <br> (6) Several crashed problems were solved.
+					</dd>
+					<dd>
+						--MS-FINDER version 2.40 was released. <br> NEWS: <br> (1) The function for de novo formula calculation was improved. Although the computational time has become a little bit longer than that of previous versions, it works well to calculate all of formula combinations.<br> (2) Export layout was a little bit modified.<br> (3) Several bugs were fixed.
+					</dd>
+
+					<dt>2018-4-1</dt>
+					<dd>
+						--MS-DIAL version 2.84 was released. <br> NEWS: <br> (1) Feature detection (peak spotting), spectral matching, and alignment functions were improved. <br> (2) Overlaid chromatograms of multiple sample data, termed as 'aligned EICs' can be seen in the MS-DIAL GUI. <br> (3) 'Show ion table' is created to look at the overview of peak detection and peak alignment result. <br> (4) The searce space of MS-DIAL lipid profiling was expanded. <br> (5) Multithreading for a large scale MS data is supported. <br> (6) Nomenclature in MS-DIAL lipidomics was described <a href="MS-DIAL/index5.html">here</a> <br> (7) The tutorial was updated. See the details in the tutorial.
+					</dd>
+					<dd>
+						--MS-FINDER version 2.30 was released. <br> NEWS: <br> (1) In silico fragmenter was improved.<br> (2) The following metabolome structure databases were supported. KNApSAcK, UNPD, PlantCyc, FooDB, NANPDB, STOFF-IDENT, LipidMAPS, ChEBI, PubChem biosynthetic pathway, DrugBank, SMPDB, YMDB, ECMDB, T3DB, BMDB, MINE, and HMDB family including HMDB4.0, Urine, Saliva, Fecal, CSF, and Serum<br> (3) The tutorial was updated.
+					</dd>
+
+					<dt>2018-2-4</dt>
+					<dd>
+						--MS-DIAL version 2.82 was released. <br> Function updated: <br> (1) New function 'MS/MS fragment searcher' was implemented. <br> (2) Lipid in silico MS/MS spectra were further curated. <br> (3) The reference RI and RT in GC-MS project can be exported in the alignment result.
+					</dd>
+
+					<dt>2018-2-3</dt>
+					<dd>
+						--MRMPROBS version 2.42 was released. <br> Fixed: <br> (1) In the previous version, the program was clashed if parenthesis '( )' is used as metabolite name. Now, MRMPROBS will accept the use.
+					</dd>
+
+					<dt>2018-1-15</dt>
+					<dd>
+						--MRMPROBS version 2.40 was released. <br> Fixed: <br> (1) The issue (fatal) that scan-type MS data by negative ion mode could not be imported correctly was fixed.
+					</dd>
+
+					<dt>2018-1-15</dt>
+					<dd>
+						--MRMPROBS version 2.40 was released. <br> Fixed: <br> (1) The issue (fatal) that scan-type MS data by negative ion mode could not be imported correctly was fixed.
+					</dd>
+					<dd>
+						--MS-DIAL version 2.80 was released. <br> Function updated: <br> (1) Scoring method for MS/MS matching for lipids was modified. <br> (2) Some utilities in MS-DIAL GUI were improved. <br> (3) The theoretical MS/MS spectra for EtherPC and EtherPE (formerly named as plasmenyl-PC and plasmenyl-PE) were improved. <br> (4) Naming of lipid classes was organized (see the detail in MS-DIAL web page).
+					</dd>
+
+					<dt>2018-1-15</dt>
+					<dd>
+						--MS-FINDER version 2.28 was released. <br> Fixed: <br> (1) The link between MS-DIAL and MS-FINDER was fixed.
+					</dd>
+
+					<dt>2017-12-30</dt>
+					<dd>
+						--MS-DIAL version 2.78 was released. <br> Function updated: <br> (1) The function for de-isotoping was improved to deal with multiple charged ions especially targeted in Proteomics and small RNA assays. <br> (2) The peak detection algorithm was modified so that the user defined parameter like minimum peak width can be reflected in the result. <br> (3) MoNA export function was modified. <br> (4) The theoretical MS/MS spectrum for Cardiolipin and HemiBMP was included in lipidomics project. <br> (5) The function for peak identification in GC-MS project was modified to correctly reflect the RT/RI tolerance that users defined.<br> (6) The MS2Dec function was modified to keep the precursor's isotopic ions in DIA-MS
+						deconvoluted result.<br> (7) The export function to MS-FINDER was improved.
+					</dd>
+					<dd>
+						--MS-FINDER version 2.26 was released. <br> Function updated: <br> (1) The function for computational fragmentation was improved to deal with complecated- and cleaved aromatic bonds. <br> (2) The chemical ontologies for all of structures included in MS-FINDER metabolome structure database were assigned. <br> (3) The function of fragment set enrichment analysis (FSEA) was improved.
+					</dd>
+
+					<dt>2017-11-28</dt>
+					<dd>
+						--Our latest achievement related to MS-DIAL and MS-FINDER was published in Nature Methods. <img height="14" width="14" class="imageExlink" src="./static/images/iconLink.png"><a href="https://www.nature.com/articles/nmeth.4512">[NPG link]</a>
+					</dd>
+					<dd>
+						--MS-DIAL version 2.76 was released. <br> Function updated: <br> (1) A filtering option of 'at least N% in one sample group' was added in LC-MS aligner. <br> (2) An option to keep isotope ions of precursors in DIA-MS is added in LC-MS project. <br> <br> Fixed: <br> (1) The format bug of peak list's export function in GC-MS project was fixed. <br> (2) The mis-labeling problem for post identification in LC-MS project was fixed.
+					</dd>
+
+					<dt>2017-11-28</dt>
+					<dd>
+						--MS-FINDER version 2.24 was released. <br> Function updated: <br> (1) The scoring system of MS-FINDER structure elucidation was improved.
+					</dd>
+
+					<dt>2017-11-5</dt>
+					<dd>
+						--MS-DIAL version 2.74 was released. <br> Function updated: <br> (1) The isotope ions are also exported by the export functions. <br> (2) The clean-up efficiency for reducing duplicate alignment spots is improved. <br> (3) The MoNA uploader was improved.
+					</dd>
+					<dd>
+						--MS-FINDER version 2.22 was released. <br> Function updated: <br> (1) The retention time prediction was now available by a simple regression model based on XLogP. <br> (2) The retention time/index can be used as the diagnostic criteria for spectral searching. <br> (3) Structure ontologies by means of ClassyFire are constructed. <br> (4) Fragment set enrichment analysis (FSEA) is now available for ontology prediction. (contact me for the trial)
+					</dd>
+
+					<dt>2017-10-16</dt>
+					<dd>
+						--MS-DIAL version 2.72 was released. <br> Fixed: <br> (1) some bugs in alignment results were fixed. <br> (2) the criterion of fragment percentage in the MS/MS matching calculations was fixed. <br> <br> Function updated: <br> (1) the peak alignment function for LC-MS data was improved. <br> (2) the gap filling method in GC-MS project was improved.
+					</dd>
+
+					<dt>2017-9-22</dt>
+					<dd>
+						--MRMPROBS version 2.38/MRMDIFF version 2.13 were released. <br> Fixed: <br> The bug where the left panel in MRM-DIFF function was sometimes empty was fixed.
+					</dd>
+
+					<dt>2017-9-5</dt>
+					<dd>
+						--MS-FINDER console application was released.
+					</dd>
+
+					<dt>2017-9-1</dt>
+					<dd>
+						--MS-DIAL version 2.70 was released. <br> Fixed: <br> (1) some bugs in LC-MS alignment function was fixed. <br> (2) wrong precursor m/z information of sphingomyelin lipid species in in silico MS/MS version 24 was fixed. <br> Function updated: <br> (1) an option "-p" was prepared to provide "MTD" format file in console app to be used in MS-DIAL GUI application. <br> (2) parallel source code was improved in MS-DIAL GC-MS spectral searching.
+					</dd>
+					<dd>
+						--MS-FINDER version 2.20 was released. <br> Function updated: <br> (1) the function of molecular formula prediction was drastically improved. <br> (2) the function for in silico fragment annotation was totally improved. All of the source codes was changed. <br> (3) MS-FINDER scoring method in searching structures now uses "fragment fingerprints", which can be monitored in CID-MS/MS, for the calculation of substructure similarities.<br> (4) One natural product database, NANPDB, was imported in MS-FINDER.
+					</dd>
+					<dd>
+						--MRMPROBS version 2.36 was released. <br> Fixed: <br> (1) The library import method was fixed.
+					</dd>
+
+					<dt>2017-8-25</dt>
+					<dd>
+						--MS/MS spectra library of oxidized lipids analyzed in RIKEN IMS was uploaded in MS-DIAL section.
+					</dd>
+
+					<dt>2017-8-21</dt>
+					<dd>
+						--MS-DIAL console application was released.
+					</dd>
+
+					<dt>2017-8-19</dt>
+					<dd>
+						--MS-DIAL version 2.68 was released<br> Function updated: <br> (1) identification for GC-MS data is now performed by parallel processing. <br> (2) isotope labeled tracking is improved. <br> (3) An option where RT information is not used for identification scoring is prepared. <br> (4) GNPS export function was prepared. <br> GUI updated: <br> text boxes on the botom of MSDIAL main window were prepared to easily access the targeted spot that you want to find.
+					</dd>
+
+					<dt>2017-8-5</dt>
+					<dd>
+						--MS-DIAL version 2.66 was released: new lipid classes GlcADG and AcylGlcADG were added for lipid profiling. Also, the functions for isotope labeled tracking, adduct feature detection, and spectrum similarity calculation were improved. The use of version 2.64 is not recommended for GCMS project, where there was not efficient source codes for EI-MS spectrum matching.
+					</dd>
+
+					<dt>2017-7-21</dt>
+					<dd>--MRMPROBS version 2.34 was released: bug fixed in MRM-DIFF function.</dd>
+
+					<dt>2017-7-17</dt>
+					<dd>
+						--MS-DIAL version 2.62 was released: 1) Make sure that a lot of functions (peak spotting, deisotoping, adduct finder, and peak alignment) are improved, so the MS-DIAL result will be drastically changed from the result of previous MS-DIALs. 2) PeakSpoting function was improved to reduce the duplicate peak spots, 3) deisotoping, adduct finding, and isotope tracking functions were improved with the considerations from user's comments, 4) peak alignment function was also improved so that in source fragment spots can be found by the correlation score between spots having similar RTs. <br>
+
+					<dt>2017-6-10</dt>
+					<dd>--LOWESS normalization tool version 1.1 was released: Fixed a bug related to only zero values of QC samples.</dd>
+
+					<dt>2017-6-8</dt>
+					<dd>--MS-DIAL version 2.62 was released: There was a fatal problem in version 2.58 and 2.60 of MS-DIAL. So, please replace them by version 2.62 or former version from MS-DIAL 2.56.</dd>
+
+					<dt>2017-6-6</dt>
+					<dd>--MS-DIAL version 2.60 was released: Major updates: (1) Improved the function for MRMPROBS reference format export. (2) Prepared the 'project' property setting window to register users metadata like instrument, license, authors, comment etc to be uploaded to MoNA or MassBank. (3) Bug fixed for MSP library setting in FAMES method.</dd>
+					<dd>--MS-FINDER version 2.14 was released: The function of neutral loss and product ion assignments was improved.</dd>
+
+					<dt>2017-5-1</dt>
+					<dd>--MS-DIAL version 2.58 was released: BinVestigate API is now available at MS-DIAL GCMS project. MSP export function was improved to correctly export their meta data.</dd>
+					<dd>--MS-FINDER version 2.12 was released: A bug in the result export was fixed.</dd>
+					<dd>--MRMPROBS version 2.32 was released: The program now accepts all of scan type data like survey scan MS only, and data dependent MS/MS acquisition.</dd>
+
+					<dt>2017-4-1</dt>
+					<dd>--MassBank and MoNA EI-MS and 'predicted' retention index library was uploaded in MS-DIAL section.</dd>
+					<dd>--MS-DIAL version 2.56 was released: Bug fixed: MS/MS and EI-MS export function. Some crash problems were fixed. LipidBlast version 23 was imported in MS-DIAL.</dd>
+
+					<dt>2017-3-3</dt>
+					<dd>--LipidBlast ceramides fork version 3 was updated: fixed the specific ion (m/z 184) of Sphingomyelin (SM) in positive ion mode.</dd>
+
+					<dt>2017-3-1</dt>
+					<dd>--MS-DIAL version 2.54 was released: 1) improved peak detection methods to deal with co-eluting chromatographic peaks; 2) bug fixed in peak alignment function to determine the representative spectra for aligned spots; and 3) improved spectral similarity calculation methods for EI-MS data.</dd>
+					<dd>--LipidBlast glycerolipids fork version 7 was updated: it newly contains LysoPA as deprotonated ions ([M-H]-).</dd>
+
+					<dt>2017-2-21</dt>
+					<dd>--LipidBlast glycerolipids fork version 7 was updated: it newly contains LysoPS, LysoPG, and LysoPI classes as deprotonated ions ([M-H]-).</dd>
+
+					<dt>2017-2-11</dt>
+					<dd>--LipidBlast glycerolipids fork version 7 was released: it newly contains PG [M+NH4]+, BMP (Bis(Monoacylglycero)Phosphate) [M+NH4]+, and FAHFA (Fatty Acid ester of Hydroxyl Fatty Acid) molecules.</dd>
+
+					<dt>2017-1-26</dt>
+					<dd>--MS-DIAL 2.52 was released: Isotope recognition is now applied to double chaged ions as well. Bug fixed: GUI problems.</dd>
+					<dd>--MS-FINDER 2.10 was released: New existing structure database (.ESD file) was released to find structure data correctly. Bug fixed: user-defined adduct ion is now available correctly.</dd>
+
+					<dt>2016-12-20</dt>
+					<dd>--MS-DIAL 2.50 was released: Improved peak alignment function, and modified the source code to reduce computational time. Bug fixed: GUI and normalization problems.</dd>
+					<dd>--LOWESS normalization tool was modified: Modified the source code to deal with "all zero" array.</dd>
+
+					<dt>2016-12-7</dt>
+					<dd>--MetaboloDerivatizer section was opened: for getting the TMS- and MeOX structures from the original structure input.</dd>
+
+					<dt>2016-11-25</dt>
+					<dd>--MS-DIAL 2.48 was released: improved peak alignment functions for both GC/MS and LCMS, and improved GUI for MS/MS check.</dd>
+
+					<dt>2016-11-16</dt>
+					<dd>--MRMPROBS and MS-DIAL tutorial were updated.</dd>
+
+					<dt>2016-11-15</dt>
+					<dd>--MRMPROBS 2.30 was released, and it was launched as a universal program for targeted metabolomics.</dd>
+
+					<dt>2016-11-11</dt>
+					<dd>--MS-DIAL 2.46 was released. Bug fixed.</dd>
+
+					<dt>2016-11-10</dt>
+					<dd>--MS-DIAL for GC/MS was released.</dd>
+
+					<dt>2016-11-9</dt>
+					<dd>
+						--MS-FINDER 2.08 was launced as a universal program for compound ‘annotation’ that supports EI-MS (GC/MS) and MS/MS spectral mining. <br> The tutorial was also updated.
+					</dd>
+
+					<dt>2016-11-8</dt>
+					<dd>--MS-DIAL 2.44 was released. The function of peak alignment was improved. Bug fixed.</dd>
+
+					<dt>2016-10-31</dt>
+					<dd>--MS-DIAL 2.42 was released. Major update 1) RI based peak alignment in GC/MS is now available. 2) Parameter file can be exported in each alignment result. 3) some bugs were fixed.</dd>
+
+					<dt>2016-10-24</dt>
+					<dd>--MS-FINDER 2.06 was released: Added spectral search function.</dd>
+					<dd>--MS-DIAL 2.40 was released: bug fixed.</dd>
+
+					<dt>2016-9-29</dt>
+					<dd>--MS-DIAL 2.0 and MS-FINDER 2.0 were updated (private).</dd>
+
+					<dt>2016-9-16</dt>
+					<dd>--Curated EI-MS and MS/MS library (as MSP format) was updated.</dd>
+
+					<dt>2016-9-12</dt>
+					<dd>--MS-DIAL tutorial was updated.</dd>
+
+					<dt>2016-9-2</dt>
+					<dd>--The SmetSearch page was opened.</dd>
+
+					<dt>2016-8-18</dt>
+					<dd>--The MS-DIAL section was improved especially for MSP databases. And it also includes the update of MS-DIAL's LipidBlast to deal with Ceramide species.</dd>
+					<dd>--Hydrogen rearrangement rules (MS-FINDER) paper was formally published.</dd>
+
+					<dt>2016-7-14</dt>
+					<dd>--New curated MS/MS spectra (from MassBank, GNPS, ReSpect) were uploaded in MS-DIAL section.</dd>
+					<dd>--MS-DIAL ver. 2.24 and MS-FINDER ver. 1.76 were released. The current MS-DIAL program accepts all of MS vendor formats and all method types (normal LC/MS, data dependent MS/MS, and data independent MS/MS).</dd>
+
+					<dt>2016-5-26</dt>
+					<dd>--MS-FINDER ver. 1.70 was released. Bug fixed.</dd>
+
+					<dt>2016-5-17</dt>
+					<dd>--MS-FINDER ver. 1.68 was released. And opened the MS-FINDER page.</dd>
+
+					<dt>2016-3-15</dt>
+					<dd>--MS-DIAL ver. 2.06 was released. Debug for export functions and identifications.</dd>
+
+					<dt>2016-2-15</dt>
+					<dd>--SmetSearch ver. 1.01 was newly released.</dd>
+
+					<dt>2016-2-3</dt>
+					<dd>--MS-DIAL ver. 2.02 was released.</dd>
+
+					<dt>2016-1-17</dt>
+					<dd>--Curated MassBank MS/MS page was opened.</dd>
+					<dd>--MS-FINDER ver. 1.54 was released. Improved the function of MS/MS spectral peaks.</dd>
+
+					<dt>2015-12-24</dt>
+					<dd>--MRMPROBS ver. 2.22 was released. Improved the peak detection program.</dd>
+					<dd>--MassBankToMsp ver. 1.02 was released. Improved the retrieve program for GC/MS.</dd>
+
+					<dt>2015-11-24</dt>
+					<dd>--MSDIAL ver. 1.98 was released. Improved the MS2Dec program.</dd>
+					<dd>--MRMPROBS ver. 2.19 was released.</dd>
+
+					<dt>2015-11-11</dt>
+					<dd>--MS-DIAL ver. 1.96 was released. Improved the export function.</dd>
+
+					<dt>2015-10-19</dt>
+					<dd>--MS-FINDER ver. 1.44 was released. Bug fixed.</dd>
+
+					<dt>2015-10-4</dt>
+					<dd>--Novel program, MS-FINDER ver. 1.40 was released. Also, the web page was opened.</dd>
+					<dd>--MS-DIAL ver. 1.94 was released. Connection service to MS-FIDNER program is now available.</dd>
+
+					<dt>2015-8-30</dt>
+					<dd>--MS-DIAL ver. 1.92 was released. The peak detection method was improved to remove peaks from spike noise.</dd>
+
+					<dt>2015-8-12</dt>
+					<dd>--MS-DIAL ver. 1.90 was released. The layout of data matrix exported from the program was modified.</dd>
+
+					<dt>2015-8-6</dt>
+					<dd>--A quick tool to normalize the data matrix by means of QC samples and LOWESS/Spline method was released.</dd>
+
+					<dt>2015-8-4</dt>
+					<dd>--MS-DIAL ver. 1.88 was released. Add the cross validation program to optimize the span of LOWESS-normalization. Bug fixed for alignment results.</dd>
+
+					<dt>2015-7-29</dt>
+					<dd>--InertCap 5MS library for AIoutput was updated.</dd>
+
+					<dt>2015-7-5</dt>
+					<dd>--MS-DIAL ver. 1.82 was released. Bug fixed for export options.</dd>
+					<dd>--The explanation PDF of MS-DIAL mathematics was uploaded in MS-DIAL section.</dd>
+
+					<dt>2015-6-10</dt>
+					<dd>--MS-DIAL ver. 1.80 was released. MS2Dec method was fixed for all ion fragmentation (AIF, Thermo).</dd>
+
+					<dt>2015-5-28</dt>
+					<dd>--MS-DIAL ver. 1.78 was released. Bug fixed for peak alignment.</dd>
+
+					<dt>2015-5-26</dt>
+					<dd>--MS-DIAL ver. 1.76 was released. Bug fixed for data access API and LipidBlast internal Database.</dd>
+
+					<dt>2015-5-2</dt>
+					<dd>--MRMPROBS ver. 2.17 was released. Update the export functions. Bug fixed for MRM-DIFF.</dd>
+
+					<dt>2015-5-1</dt>
+					<dd>--MS-DIAL ver. 1.72 was released.</dd>
+
+					<dt>2015-4-22</dt>
+					<dd>--MRMPROBS ver. 2.14 was released. Update the export functions.</dd>
+
+					<dt>2015-3-5</dt>
+					<dd>--MRMPROBS ver. 2.13 was released. Bug fixes for peak area calculations and LOWESS normalization.</dd>
+
+					<dt>2015-2-16</dt>
+					<dd>--MS-DIAL ver. 1.65 was released. Bug fixes of MSP file parcer.</dd>
+
+					<dt>2015-2-15</dt>
+					<dd>--MassBankToNIST converter was released. This program helps us to convert the download folder including MassBank records to NIST Search MSP format library.</dd>
+					<dd>--AIoutput recommended for Shimadzu GC-MS was released.</dd>
+
+					<dt>2015-2-02</dt>
+					<dd>--MS-DIAL ver. 1.64 was released. Add new normalizations (by TIC or mTIC), add the GUI for lowess parameter setting, and update the copy and paste functions. Bug fixes for loess normalization. Fix adduct ion parser. Add the user-defined adduct ion option.</dd>
+
+					<dt>2015-1-29</dt>
+					<dd>--MS-DIAL ver. 1.63 was released. Modified: Error handling.</dd>
+
+					<dt>2014-12-31</dt>
+					<dd>--MS-DIAL ver. 1.61 was released. Modified: Add sorting functions in GUI.</dd>
+
+					<dt>2014-12-7</dt>
+					<dd>--MS-DIAL ver. 1.59 was released. Modified: See the updated tutorial.</dd>
+
+					<dt>2014-11-19</dt>
+					<dd>--MS-DIAL ver. 1.54 was released. Modified: Adduct ion handling. Error handling.</dd>
+					<dd>--The link of MRM database section was repaired.</dd>
+
+					<dt>2014-10-7</dt>
+					<dd>--MRM-DIFF page was opened.</dd>
+
+					<dt>2014-10-7</dt>
+					<dd>--MRMPROBS ver. 2.11 was released. Error handling.</dd>
+
+					<dt>2014-10-6</dt>
+					<dd>--MS-DIAL ver. 1.43 was released. Error handling.</dd>
+
+					<dt>2014-9-29</dt>
+					<dd>--MRMPROBS ver. 2.10 was released. Error handling and MRM-DIFF algorithm was implemented.</dd>
+
+					<dt>2014-9-20</dt>
+					<dd>--MS-DIAL ver. 1.42 was released.</dd>
+
+					<dt>2014-9-04</dt>
+					<dd>--MRMPROBS ver. 2.08 was released. Error handling.</dd>
+
+					<dt>2014-8-09</dt>
+					<dd>--MS-DIAL ver. 1.38 was released.</dd>
+
+					<dt>2014-8-08</dt>
+					<dd>--AIoutput2 ver. 1.30 was released. Modified: Error handling.</dd>
+
+					<dt>2014-7-26</dt>
+					<dd>--Some bugs of excel macro based statistical analysis tool were fixed.</dd>
+
+					<dt>2014-6-6</dt>
+					<dd>--New MRMPROBS ver. 2.08 was released. Error handling.</dd>
+
+					<dt>2014-3-31</dt>
+					<dd>--New MRMPROBS ver. 2.01 was released. Modified: mzML data format is now available. Error handling. Manual is also updated.</dd>
+
+					<dt>2014-2-15</dt>
+					<dd>--New MRMPROBS ver. 1.21 was released. Modified: Error handling.</dd>
+
+					<dt>2014-2-3</dt>
+					<dd>--MRM database section was opened.</dd>
+
+					<dt>2014-2-1</dt>
+					<dd>--New database for AIoutput was released !!</dd>
+
+					<dt>2013-12-15</dt>
+					<dd>
+						--New MRMPROBS was released !! The GUI and implemented algorithm were innovatively improved.<br> File conversion of Shimadzu, Agilent Technologies, AB Sciex, and Thermo Fisher Scientific became applicable!!
+					</dd>
+
+					<dt>2013-6-19</dt>
+					<dd>--MRMPROBS ver. 1.06 was released. Modified: Error handling. GUI improvement.</dd>
+
+					<dt>2013-5-22</dt>
+					<dd>--Agilent data format is now accepted by the Reifycs file converter for MRMPROBS software.</dd>
+
+					<dt>2013-5-8</dt>
+					<dd>--MRMPROBS ver. 1.04 was released. Modified: Error handling</dd>
+					<dd>--The manual containing the required conditions in LabSolutions software (Shimadzu Inc.) handling LCMS-8030, LCMS-8040 and so on was now prepared.</dd>
+
+					<dt>2013-4-18</dt>
+					<dd>--Tool for statistical analyses on Microsoft Excel was released.</dd>
+
+					<dt>2013-4-15</dt>
+					<dd>--MRMPROBS ver. 1.03 was released. Modified: Area calculation method; Error handling; User interface.</dd>
+
+					<dt>2013-4-1</dt>
+					<dd>--Opened</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
