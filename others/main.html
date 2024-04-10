@@ -1,0 +1,741 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Description" content="Computational mass spectrometry for metabolomics and lipidomics">
+<meta name="Keywords" content="MS-DIAL">
+<meta name="Author" content="Hiroshi Tsugawa, PhD. Center for Sustainable Resource Science (CSRS), RIKEN">
+
+<!-- StyleSheet -->
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/responsive.gs.24col.css">
+
+<!-- JavaScript Library -->
+<script type="text/javascript" src="../static/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../static/js/core.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49TTSHPSY4"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-49TTSHPSY4');
+</script>
+
+<!-- Favicon -->
+<link rel="icon" href="../static/favicon.ico">
+
+<!-- Title -->
+<title>CompMS | Others</title>
+
+</head>
+
+<body>
+	<!-- Navigation -->
+	<div class="container" id="sectionNavigation">
+		<div class="row">
+			<div class="col span_24">
+				<nav>
+					<ul class="topMenus">
+						<li>
+							<a href="../index.html"><img class="imageLogo-cms" alt="Computational mass spectrometry logo" src="../static/images/imageHome.png"></a>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Software</b>
+							</div>
+							<ul class="subMenus">
+								<li>
+									<a href="../msdial/main.html">MS-DIAL</a>
+								</li>
+								<li>
+									<a href="../msfinder/main.html">MS-FINDER</a>
+								</li>
+								<li>
+									<a href="../mrmprobs/main.html">MRMPROBES/MRMDIFF</a>
+								</li>
+								<li>
+									<a href="../others/main.html">Others</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Database</b>
+							</div>
+							<ul class="subMenus">
+								<li>
+									<a href="../msdial/main.html#MSP">MSP spectral database</a>
+								</li>
+								<li>
+									<a href="../mrmdatabase/main.html">MRM database</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="../index.html#contact"><b>Contact</b></a>
+							</div>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="../licence/main.html"><b>Licence</b></a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div id="page_top">
+		<a href="#"><span class="iconAwesome">&#xf102;</span></a>
+	</div>
+
+	<div class="mainFrame" id="sectionMain">
+
+		<div class="container">
+			<div class="row">
+				<div class="col span_8">
+					<div class="boxMainTitle">
+						<div class="boxOrverwidth-left colorOthers"></div>
+						<div class="boxMainContents">
+							<div class="labelMainIcon">
+								<span class="iconAwesome-Menu">&#xf552;</span>
+							</div>
+							<div class="labelMainTitle">Others</div>
+						</div>
+						<div class="boxContents-Objective">
+							<div class="labelSubTitle">Overview</div>
+							<div class="labelMenuItem">
+								Software tools and databases for metabolomics and lipidomics.<br> SmetSearch , AIoutput , MassBank to NIST MSP , LOWESS/Spline normalization , Statistics in Microsoft Excel , MetaboloDerivatizer .
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_16">
+					<div class="boxMainImage-Others">
+						<div class="boxImage-right">
+							<img class="imgScreen" src="../static/images/imageOverview.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Software</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="#SmetSearch"></a>
+							<div class="labelMenuIcon">
+								<img class="imgIcon" src="../static/images/iconSmetsearch.png">
+							</div>
+							<div class="labelMenuTitle">SmetSearch</div>
+							<div class="labelMenuSubTitle">Version 1.01</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link in page</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="#AIoutput"></a>
+							<div class="labelMenuIcon">
+								<img class="imgIcon" src="../static/images/iconAioutput.png">
+							</div>
+							<div class="labelMenuTitle">AIoutput</div>
+							<div class="labelMenuSubTitle">Version 1.30</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link in page</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="#Massbank2msp"></a>
+							<div class="labelMenuIcon">
+								<img class="imgIcon" src="../static/images/iconMassbank2msp.png">
+							</div>
+							<div class="labelMenuTitle">MassBank to NIST MSP</div>
+							<div class="labelMenuSubTitle">Version 1.04</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link in page</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row contensDetail">
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="#Lowess"></a>
+							<div class="labelMenuIcon">
+								<img class="imgIcon" src="../static/images/iconLowess.png">
+							</div>
+							<div class="labelMenuTitle">LOWESS/Spline normalization</div>
+							<div class="labelMenuSubTitle">Version 1.1</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link in page</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="#Statistics"></a>
+							<div class="labelMenuIcon">
+								<img class="imgIcon" src="../static/images/iconStatistics.png">
+							</div>
+							<div class="labelMenuTitle">Statistics in Microsoft Excel</div>
+							<div class="labelMenuSubTitle">Version Stable</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link in page</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="#Derivatizer"></a>
+							<div class="labelMenuIcon">
+								<img class="imgIcon" src="../static/images/iconDerivatizer.png">
+							</div>
+							<div class="labelMenuTitle">MetaboloDerivatizer</div>
+							<div class="labelMenuSubTitle">Version 1.01</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link in page</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="SmetSearch">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">SmetSearch</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_14">
+					<div class="boxContents-OtherObjective">
+						<div class="labelSubTitle">Objective</div>
+						<div class="labelMenuItem">
+							<div>
+								This project is to develop the formula 'identification' method by ultrahigh resolution MS instrument (we used FT-ICR).<br> The point of this program is to utilize two type of data; 1) fully labeled (in our case, by 34S) biological samples; and 2) non-labeled samples as the control.<br> The program generates formula candidates by means of non-labeled biological datum in combination with the strict mass tolerance (less than 2 mDa).<br> The 34S labeled datum is used to check the 'metabolite peak shift' derived from its labeled element with respect to the formula candidates.<br> The users can quickly perform the metabolite screenings from living organisms of interest.
+							</div>
+							<div>
+								<br> Limitation:<br> 1) The program needs two type 'direct infusion MS' data; 1) a 34S labeled biological dadum 2) a non-labeled sample datum.<br> 2) The current SmetSearch program accepts the ASCII format file exported from Brucker DataAnalysis software.<br> <br> Therefore, we produce the source code itself and please let us (hiroshi.tsugawa@riken.jp) know if you are using the different instrument (ex. Orbitrap or QTOF). We can help you as much as possible.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_10">
+					<div class="boxContents-OtherpCite">
+						<div class="labelSubTitle">Please cite</div>
+						<div class="labelMenuItem">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>Automation of chemical assignment for identifying molecular formula of S-containing metabolites by combining metabolomics and chemoinformatics with 34S labeling. <em>Metabolomics</em> <a href="http://link.springer.com/article/10.1007/s11306-016-1115-5"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">[Springer link]</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_6">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/smetsearch/SmetSearch ver. 1.01.zip"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf019;</span>
+							</div>
+							<div class="labelMenuTitle">SmetSearch</div>
+							<div class="labelMenuSubTitle">Latest version</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Download</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_6">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/smetsearch/Demo files.zip"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf56f;</span>
+							</div>
+							<div class="labelMenuTitle">Demonstration</div>
+							<div class="labelMenuSubTitle">.ascii files</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Download</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_6">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/smetsearch/SmetSearch.zip"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf121;</span>
+							</div>
+							<div class="labelMenuTitle">Source code</div>
+							<div class="labelMenuSubTitle">.NET</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Download</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_6">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/smetsearch/SmetSearch_tutorial.pdf"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf518;</span>
+							</div>
+							<div class="labelMenuTitle">Tutorial</div>
+							<div class="labelMenuSubTitle">.pdf file</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Download</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="container" id="AIoutput">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">AIoutput</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_14">
+					<div class="boxContents-OtherObjective">
+						<div class="labelSubTitle">Objective</div>
+						<div class="labelMenuItem">
+							<div>
+								GC/MS is one of the most popular platforms for comprehensive analysis of metabolites in living organisms. The crucial process is to construct an organized two-dimensional data matrix containing compound names and their quantitative values. Because this process is the most complicated and knowledge intensive task in GC/MS-based metabolomics, it is essential to develop a tool for accurate, automatic data processing. We used the <a href="https://www.wur.nl/nl/Onderzoek-Resultaten/Onderzoeksinstituten/food-safety-research/show-rikilt/MetAlign.htm"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">MetAlign</a> (Lommen, 2009) data pre-processing tool. AIoutput can perform the peak identification, prediction, and data
+								integration from the result exported from MetAlign and user defined retention time and spectra library. AIoutput is a non-targeted and targeted analysis tool for GC/MS based metabolomics written in visual basic for application (VBA, excel macro) available in Microsoft Excel Windows versions 2007 and later.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_10">
+					<div class="boxContents-OtherpCite">
+						<div class="labelSubTitle">Please cite</div>
+						<div class="labelMenuItem">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>Practical non-targeted gas chromatography/mass spectrometry-based metabolomics platform for metabolic phenotype analysis. <em>J. Biosci. Bioeng.</em> 112, 292&#8211;298, 2011. <a href="https://www.ncbi.nlm.nih.gov/pubmed/21641865"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">[PubMed]</a>
+							</div>
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>GC/MS based metabolomics: dvelopment of a data mining system for metabolite identification by using soft independent modeling of class analogy (SIMCA). <em>BMC Bioinformatics</em> 12: 131, 2011. <a href="https://www.ncbi.nlm.nih.gov/pubmed/21542920"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">[PubMed]</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_6">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/aioutput/AIoutput for 64 bit and Excel 2010.zip"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf019;</span>
+							</div>
+							<div class="labelMenuTitle">AIoutput</div>
+							<div class="labelMenuSubTitle">Latest version</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Download</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_6">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/aioutput/AIoutput_tutorial.pdf"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf518;</span>
+							</div>
+							<div class="labelMenuTitle">Tutorial</div>
+							<div class="labelMenuSubTitle">.pdf file</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Download</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="Massbank2msp">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">MassBank to NIST MSP</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxContents-OtherObjective">
+						<div class="labelSubTitle">Objective</div>
+						<div class="labelMenuItem">
+							<div>
+								This program helps us to prepare NIST MSP format libraries applicable to a lot of programs (MS-DIAL, NIST MS Search, AMDIS) from MassBank records (also ReSpect).<br> Merging each MassBank text file into MSP is actually easy for the programers though, the end users (even me) are struggling to do this task.<br> If you want other functions to extract MassBank records, please let us know.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row contensDetail">
+					<div class="col span_6">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="./download/massbank2msp/MassBank2Msp program ver. 1.04.zip"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf019;</span>
+								</div>
+								<div class="labelMenuTitle">MassBank to NIST MSP</div>
+								<div class="labelMenuSubTitle">Latest version</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_6">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="./download/massbank2msp/massbank.zip"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf1c0;</span>
+								</div>
+								<div class="labelMenuTitle">MassBank</div>
+								<div class="labelMenuSubTitle">Latest version</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_6">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="./download/massbank2msp/MassBanktoNISTMSP_tutorial.pdf"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf518;</span>
+								</div>
+								<div class="labelMenuTitle">Tutorial</div>
+								<div class="labelMenuSubTitle">.pdf file</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container" id="Lowess">
+				<div class="row contensDetail">
+					<div class="col span_24">
+						<div class="boxLine">
+							<div class="labelLineTitle">LOWESS/Spline normalization</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row contensDetail">
+					<div class="col span_14">
+						<div class="boxContents-OtherObjective">
+							<div class="labelSubTitle">Objective</div>
+							<div class="labelMenuItem">
+								<div>The normalization part of MS-DIAL and MRMPROBS programs was separated. The powerful mathematics especially for cohort studies is essential to normalize the drifts of MS-signal intensities. The basic concept of this method is to use the intensities over an analytical run of 'quality control (QC)' sample which is a mixture of all biological samples.</div>
+								<div>Briefly, measurement data of QC samples are smoothed by the LOWESS of the single-degree least-squares. And then, the coefficient values between QC samples are interpolated by the cubic spline. Lastly, the entire datasets is aligned to the spline result.</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_10">
+						<div class="boxContents-OtherpCite">
+							<div class="labelSubTitle">Please cite</div>
+							<div class="labelMenuItem">
+								<div>
+									<span class="iconAwesome">&#xf00c;</span>MS-DIAL: data independent MS/MS deconvolution for comprehensive metabolome analysis. <em>Nature Methods</em> 12, 523&#8211;526, 2015. <a href="https://www.ncbi.nlm.nih.gov/pubmed/25938372"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">[PubMed]</a>
+								</div>
+								<div>
+									<span class="iconAwesome">&#xf00c;</span>MRMPROBS Suite for metablomics using large-scale MRM assays. <em>Bioinformatics</em> 30, 2379&#8211;2380, 2014. <a href="https://www.ncbi.nlm.nih.gov/pubmed/24753485"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">[PubMed]</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row contensDetail">
+					<div class="col span_6">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="./download/lowessnorm/LOWESS-Normalization-Tool.zip"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf019;</span>
+								</div>
+								<div class="labelMenuTitle">LOWESS/Spline normalization</div>
+								<div class="labelMenuSubTitle">Latest version</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_6">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="./download/lowessnorm/RawData.txt"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf56f;</span>
+								</div>
+								<div class="labelMenuTitle">
+									Data matrix<br> for the demonstration
+								</div>
+								<div class="labelMenuSubTitle">.txt file</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_6">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="./download/lowessnorm/LOWESSnormalization_tutorial.pdf"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf518;</span>
+								</div>
+								<div class="labelMenuTitle">Tutorial</div>
+								<div class="labelMenuSubTitle">.pdf file</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container" id="Statistics">
+				<div class="row contensDetail">
+					<div class="col span_24">
+						<div class="boxLine">
+							<div class="labelLineTitle">Statistics in Microsoft Excel</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row contensDetail">
+					<div class="col span_14">
+						<div class="boxContents-OtherObjective">
+							<div class="labelSubTitle">Objective</div>
+							<div class="labelMenuItem">
+								<div>Principal component analysis (PCA), projection to latent structure regression (PLS-R), and projection to latent structure based discriminant analysis (PLS-DA) are the commonly-used multivariate analysis method in metabolomics study. Of course, there are many platforms for these analyses not only by the commercially available software such as SIMCA-P, but also by freely available software such as statistical language R, MetaboAnalyst. I also use them very much! However, I think that excel based platform should be also required for the approachability and the easily adjustment of Figures. In addition to multivariate analysis, I think that the easy-to-use platform for the graph making and the multiple comparison method is also required
+									although I also know these tasks are possible by some tools like VANTED. I would like to offer the platform such that many researchers can easily do the statistical analysis.</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_10">
+						<div class="boxContents-OtherpCite">
+							<div class="labelSubTitle">Please cite</div>
+							<div class="labelMenuItem">
+								<div>
+									<span class="iconAwesome">&#xf00c;</span>Integrated strategy for unknown EI–MS identification using quality control calibration curve, multivariate analysis, EI–MS spectral database, and retention index prediction. <em>Analytical Chemistry</em> 89, 6766&#8211;6773, 2017. <a href="https://pubs.acs.org/doi/abs/10.1021/acs.analchem.7b01010"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">[ACS link]</a>
+								</div>
+								<div>
+									<span class="iconAwesome">&#xf00c;</span>MS-DIAL: data independent MS/MS deconvolution for comprehensive metabolome analysis. <em>Nature Methods</em> 12, 523&#8211;526, 2015. <a href="https://www.ncbi.nlm.nih.gov/pubmed/25938372"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">[PubMed]</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row contensDetail">
+					<div class="col span_6">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="./download/statistics/Statistical analysis tool for 64 bit and Excel 2010.zip"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf019;</span>
+								</div>
+								<div class="labelMenuTitle">Statistical analysis tool</div>
+								<div class="labelMenuSubTitle">Latest version</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_6">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="./download/statistics/StatisticsinMicrosoftExcel_tutorial.pdf"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf518;</span>
+								</div>
+								<div class="labelMenuTitle">Tutorial</div>
+								<div class="labelMenuSubTitle">.pdf file</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container" id="Derivatizer">
+				<div class="row contensDetail">
+					<div class="col span_24">
+						<div class="boxLine">
+							<div class="labelLineTitle">MetaboloDerivatizer</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row contensDetail">
+					<div class="col span_14">
+						<div class="boxContents-OtherObjective">
+							<div class="labelSubTitle">Objective</div>
+							<div class="labelMenuItem">
+								<div>
+									Methoxyamine hydrochloride (MeOX) and <em>N</em>-Methyl-<em>N</em>-(trimethylsilyl)trifluoroacetamide (MSTFA) are commonly used for the derivatization of small molecules to decrease boiling points and increase stability for GC-MS analysis. Therefore, it is important to theoretically consider the TMS- and MeOX form of small molecules to predict their retention time- and fragmentation behaviours as well as to calculate their chemical properties. Therefore, the converter from the original structure form to the MeOX- and TMS derivative structure was developed. This converter accepts the SMILES code for structure description, and it generates the derivatized form as SMILES.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_10">
+						<div class="boxContents-OtherpCite">
+							<div class="labelSubTitle">Please cite</div>
+							<div class="labelMenuItem">
+								<div>
+									<span class="iconAwesome">&#xf00c;</span>Integrated strategy for unknown EI–MS identification using quality control calibration curve, multivariate analysis, EI–MS spectral database, and retention index prediction. <em>Analytical Chemistry</em> 89, 6766&#8211;6773, 2017. <a href="https://pubs.acs.org/doi/abs/10.1021/acs.analchem.7b01010"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">[ACS link]</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row contensDetail">
+					<div class="col span_6">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="./download/metaboloderivatizer/MetaboloDerivatizer ver. 1.01.zip"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf019;</span>
+								</div>
+								<div class="labelMenuTitle">MetaboloDerivatizer</div>
+								<div class="labelMenuSubTitle">Latest version</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_6">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="./download/metaboloderivatizer/Example.txt"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf56f;</span>
+								</div>
+								<div class="labelMenuTitle">Example(SMILES)</div>
+								<div class="labelMenuSubTitle">.txt file</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_6">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="./download/metaboloderivatizer/MetaboloDerivatizer_tutorial.pdf"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf518;</span>
+								</div>
+								<div class="labelMenuTitle">Tutorial</div>
+								<div class="labelMenuSubTitle">.pdf file</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+	<!-- Footer -->
+	<div id="sectionFooter">
+		<div id="areaLogo-RIKEN">
+			<a href="http://www.yokohama.riken.jp/english/"><img id="imageLogo-RIKEN" alt="RIKEN" src="../static/images/logoRIKEN.gif"></a>
+		</div>
+		<div id="areaLogo-CSRS">
+			<a href="http://www.csrs.riken.jp/en/"><img id="imageLogo-CSRS" alt="CSRS" src="../static/images/logoCSRS.png"></a>
+		</div>
+		<div id="areaLogo-PRIMe">
+			<a href="http://prime.psc.riken.jp/"><img id="imageLogo-PRIMe" alt="PRIMe" src="../static/images/logoPRIMe.png"></a>
+		</div>
+		<div>
+			<div>RIKEN Center for Sustainable Resource Science : Metabolome Informatics Research Team</div>
+			<address>1-7-22 Suehiro-cho, Tsurumi-ku, Yokohama City, Kanagawa, 230-0045, Japan</address>
+		</div>
+		<div>
+			<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img id="imageLogo-CCL" alt="Creative Commons License" src="../static/images/88x31.png"></a>
+		</div>
+	</div>
+</body>
+</html>
+
