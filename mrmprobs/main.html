@@ -1,0 +1,452 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Description" content="Computational mass spectrometry for metabolomics and lipidomics">
+<meta name="Keywords" content="MRMPROBS">
+<meta name="Author" content="Hiroshi Tsugawa, PhD. Center for Sustainable Resource Science (CSRS), RIKEN">
+
+<!-- StyleSheet -->
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/responsive.gs.24col.css">
+
+<!-- JavaScript Library -->
+<script type="text/javascript" src="../static/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../static/js/core.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49TTSHPSY4"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-49TTSHPSY4');
+</script>
+
+<!-- Favicon -->
+<link rel="icon" href="../static/favicon.ico">
+
+<!-- Title -->
+<title>CompMS | MRMPROBS</title>
+
+</head>
+
+<body>
+	<!-- Navigation -->
+	<div class="container" id="sectionNavigation">
+		<div class="row">
+			<div class="col span_24">
+				<nav>
+					<ul class="topMenus">
+						<li>
+							<a href="../index.html"><img class="imageLogo-cms" alt="Computational mass spectrometry logo" src="../static/images/imageHome.png"></a>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Software</b>
+							</div>
+							<ul class="subMenus">
+								<li>
+									<a href="../msdial/main.html">MS-DIAL</a>
+								</li>
+								<li>
+									<a href="../msfinder/main.html">MS-FINDER</a>
+								</li>
+								<li>
+									<a href="../mrmprobs/main.html">MRMPROBES/MRMDIFF</a>
+								</li>
+								<li>
+									<a href="../others/main.html">Others</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Database</b>
+							</div>
+							<ul class="subMenus">
+								<li>
+									<a href="../msdial/main.html#MSP">MSP spectral database</a>
+								</li>
+								<li>
+									<a href="../mrmdatabase/main.html">MRM database</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="../index.html#contact"><b>Contact</b></a>
+							</div>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="../licence/main.html"><b>Licence</b></a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div id="page_top">
+		<a href="#"><span class="iconAwesome">&#xf102;</span></a>
+	</div>
+
+	<div class="mainFrame" id="sectionMain">
+		<!-- MS-DIAL -->
+		<div class="container">
+			<div class="row">
+				<div class="col span_8">
+					<div class="boxMainTitle">
+						<div class="boxOrverwidth-left colorMrmprobs"></div>
+						<div class="boxMainContents">
+							<div class="labelMainIcon">
+								<img class="imgIcon" src="../static/images/iconMrmprobs.png">
+							</div>
+							<div class="labelMainTitle">MRMPROBS</div>
+						</div>
+						<div class="boxContents-Objective">
+							<div class="labelSubTitle">Objective</div>
+							<div class="labelMenuItem">
+								MRMPROBS is launched as a universal program <br>for targeted metabolomics using not only multiple reaction monitoring (MRM)- <br>or selected reaction monitoring (SRM) but also SCAN and data independent MS/MS acquisition (DIA) data.<br> Our objective is to develop a data processing tool for widely targeted metabolomics <br>by means of mass spectrometers such as QqQ-MS, DIA-MS, and just single Q-MS.<br>Although the strategy became increasingly popular for the simultaneous analysis of up to several hundred metabolites at high sensitivity, selectivity, and quantitative capability, software development for the data analysis of MRM transitions lags behind in metabolomics: data assessment usually relies on manual evaluation due to
+								the lack of automated probabilistic measures.<br> Here, we developed a software program,<br> MRMPROBS (Multiple Reaction Monitoring based PROBabilistic System for widely targeted metabolomics), <br>written in C# language for widely targeted metabolomics.<br> It evaluates the metabolite peaks by posterior probability, defined as the odds ratio by means of a newly optimized multivariate logistic regression model, and visualizes large-scale MS data sets with user-friendly graphical user interfaces to allow data curation and statistical analyses.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_16">
+					<div class="boxMainImage">
+						<div class="boxImage-right">
+							<img class="imgScreen" src="../static/images/imageMrmprobs.png">
+						</div>
+						<div class="boxContents-pCite">
+							<div class="labelSubTitle">Please cite</div>
+							<div class="labelMenuItem">
+								<div>
+									<span class="iconAwesome">&#xf00c;</span>MRM-DIFF: Data Processing Strategy for Differential Analysis in Large Scale MRM-based Lipidomics Studies. <em>Frontiers in Genetics</em> 5:471, 2014. <a href="https://www.ncbi.nlm.nih.gov/pubmed/25688256"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">[PubMed]</a>
+								</div>
+								<div>
+									<span class="iconAwesome">&#xf00c;</span>MRMPROBS suite for metablomics using large-scale MRM assays. <em>Bioinformatics</em> 30, 2379&#8211;2380, 2014. <a href="https://www.ncbi.nlm.nih.gov/pubmed/24753485"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">[PubMed]</a>
+								</div>
+								<div>
+									<span class="iconAwesome">&#xf00c;</span>MRMPROBS: A Data Assessment and Metabolite Identification Tool for Large-Scale Multiple Reaction Monitoring Based Widely Targeted Metabolomics. <em>Analytical Chemistry</em> 85, 5191&#8211;5199, 2013. <a href="https://www.ncbi.nlm.nih.gov/pubmed/23581547"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">[PubMed]</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Software</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/latest/MRMPROBS program ver. 2.60.zip"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf019;</span>
+							</div>
+							<div class="labelMenuTitle">MRMPROBS</div>
+							<div class="labelMenuSubTitle">Latest version</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Download</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/repository"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf466;</span>
+							</div>
+							<div class="labelMenuTitle">Repository</div>
+							<div class="labelMenuSubTitle">Old versions</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row contensDetail">
+					<div class="col span_24">
+						<div class="boxLine">
+							<div class="labelLineTitle">File converter</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="https://www.reifycs.com/AbfConverter/"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf031;</span>
+						</div>
+						<div class="labelMenuTitle">Abf file converter</div>
+						<div class="labelMenuSubTitle">
+							<span class="iconAwesome">&#xf360;</span>www.reifycs.com
+						</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link</div>
+					</div>
+				</div>
+			</div>
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="../msdial/faq.html"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf059;</span>
+						</div>
+						<div class="labelMenuTitle">ABF file converter</div>
+						<div class="labelMenuSubTitle">FAQ page</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link</div>
+					</div>
+				</div>
+			</div>
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="http://proteowizard.sourceforge.net/"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf6e8;</span>
+						</div>
+						<div class="labelMenuTitle">ProteoWizard</div>
+						<div class="labelMenuSubTitle">
+							<span class="iconAwesome">&#xf360;</span>proteowizard.sourceforge.net
+						</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Library</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="#Templates"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf15c;</span>
+						</div>
+						<div class="labelMenuTitle">
+							Demonstration files <br>and reference libraries
+						</div>
+						<div class="labelMenuSubTitle">.abf files etc.</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link in page</div>
+					</div>
+				</div>
+			</div>
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="./download/demo/MRM-DIFF demo data.zip"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf56f;</span>
+						</div>
+						<div class="labelMenuTitle">MRM-DIFF Demo</div>
+						<div class="labelMenuSubTitle">.abf files etc.</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Download</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Tutorial</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensMenu">
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="https://systemsomicslab.github.io/mtbinfo.github.io/MRMPROBS/tutorial"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf518;</span>
+							</div>
+							<div class="labelMenuTitle">Tutorial</div>
+							<div class="labelMenuSubTitle">
+								<span class="iconAwesome">&#xf360;</span>mtbinfo-team.github.io
+							</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/tutorial/MRM-DIFF tutorial.pdf"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf518;</span>
+							</div>
+							<div class="labelMenuTitle">MRM-DIFF Tutorial</div>
+							<div class="labelMenuSubTitle">.pdf file</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Download</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Related page</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensMenu">
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="../mrmdatabase/main.html"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf1c0;</span>
+							</div>
+							<div class="labelMenuTitle">MRM database</div>
+							<div class="labelMenuSubTitle">Latest version</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="../others/main.html#Statistics"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf1c3;</span>
+							</div>
+							<div class="labelMenuTitle">Statistics</div>
+							<div class="labelMenuSubTitle">Statistics in Microsoft Excel</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="container" id="Templates">
+				<div class="row contensDetail">
+					<div class="col span_24">
+						<div class="boxLine">
+							<div class="labelLineTitle">Demonstration files</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row contensDetail">
+					<div class="col span_24">
+						<div class="boxTemplates">
+							<div class="labelTempName">MRM demo data.</div>
+							<div class="labelDownloadIcon">
+								<a href="./download/demo/MRM demo data.zip"><span class="iconAwesome">&#xf56d;</span></a>
+							</div>
+						</div>
+						<div class="boxTemplates">
+							<div class="labelTempName">Demo data for data independent MS/MS acqusition (DIA).</div>
+							<div class="labelDownloadIcon">
+								<a href="./download/demo/DIA-MS demo data.zip"><span class="iconAwesome">&#xf56d;</span></a>
+							</div>
+						</div>
+						<div class="boxTemplates">
+							<div class="labelTempName">Demo data for GCMS scan data.</div>
+							<div class="labelDownloadIcon">
+								<a href="./download/demo/SCAN demo data.zip"><span class="iconAwesome">&#xf56d;</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row contensDetail">
+					<div class="col span_24">
+						<div class="boxLine">
+							<div class="labelLineTitle">Acknowledgement</div>
+						</div>
+						<div class="boxSubLine">
+							<div class="labelSubLine">
+								This project was mainly supported <br>by NSF-JST Strategic International Collaborative Research Program (SICORP) for JP-US Metabolomics.
+							</div>
+							<div class="labelSubLine">
+								MS-FINDER is mainly developed between UC Davis Prof.<br>Oliver Fiehn team and RIKEN CSRS (and NIG) Prof. Masanori Arita team.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="sectionFooter">
+		<div id="areaLogo-RIKEN">
+			<a href="http://www.yokohama.riken.jp/english/"><img id="imageLogo-RIKEN" alt="RIKEN" src="../static/images/logoRIKEN.gif"></a>
+		</div>
+		<div id="areaLogo-CSRS">
+			<a href="http://www.csrs.riken.jp/en/"><img id="imageLogo-CSRS" alt="CSRS" src="../static/images/logoCSRS.png"></a>
+		</div>
+		<div id="areaLogo-PRIMe">
+			<a href="http://prime.psc.riken.jp/"><img id="imageLogo-PRIMe" alt="PRIMe" src="../static/images/logoPRIMe.png"></a>
+		</div>
+		<div>
+			<div>RIKEN Center for Sustainable Resource Science : Metabolome Informatics Research Team</div>
+			<address>1-7-22 Suehiro-cho, Tsurumi-ku, Yokohama City, Kanagawa, 230-0045, Japan</address>
+		</div>
+		<div>
+			<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img id="imageLogo-CCL" alt="Creative Commons License" src="../static/images/88x31.png"></a>
+		</div>
+	</div>
+</body>
+</html>
+
