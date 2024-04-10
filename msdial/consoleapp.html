@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Description" content="Computational mass spectrometry for metabolomics and lipidomics">
+<meta name="Keywords" content="MS-DIAL">
+<meta name="Author" content="Hiroshi Tsugawa, PhD. Center for Sustainable Resource Science (CSRS), RIKEN">
+
+<!-- StyleSheet -->
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/responsive.gs.24col.css">
+
+<!-- JavaScript Library -->
+<script type="text/javascript" src="../static/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery-ui.min.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49TTSHPSY4"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-49TTSHPSY4');
+</script>
+
+<!-- Favicon -->
+<link rel="icon" href="../static/favicon.ico">
+
+<!-- Title -->
+<title>CompMS | MS-DIAL console application</title>
+
+</head>
+
+<body>
+	<!-- Navigation -->
+	<div class="container" id="sectionNavigation">
+		<div class="row">
+			<div class="col span_24">
+				<nav>
+					<ul class="topMenus">
+						<li>
+							<a href="../index.html"><img class="imageLogo-cms" alt="Computational mass spectrometry logo" src="../static/images/imageHome.png"></a>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Software</b>
+							</div>
+							<ul class="subMenus">
+								<li>
+									<a href="../msdial/main.html">MS-DIAL</a>
+								</li>
+								<li>
+									<a href="../msfinder/main.html">MS-FINDER</a>
+								</li>
+								<li>
+									<a href="../mrmprobs/main.html">MRMPROBES/MRMDIFF</a>
+								</li>
+								<li>
+									<a href="../others/main.html">Others</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Database</b>
+							</div>
+							<ul class="subMenus">
+								<li>
+									<a href="../msdial/main.html#MSP">MSP spectral database</a>
+								</li>
+								<li>
+									<a href="../mrmdatabase/main.html">MRM database</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="../index.html#contact"><b>Contact</b></a>
+							</div>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="../licence/main.html"><b>Licence</b></a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div id="page_top">
+		<a href="#"><span class="iconAwesome">&#xf102;</span></a>
+	</div>
+
+	<div class="mainFrame" id="sectionMain">
+
+		<div class="container">
+			<div class="row">
+				<div class="col span_24">
+					<div class="boxSub">
+						<div class="boxOrverwidth-left colorMsDial"></div>
+						<div class="boxMainContents">
+							<div class="labelMainIcon">
+								<img class="imgIcon-Msdial" src="../static/images/iconMsdial.png">
+							</div>
+							<div class="labelMainTitle">MS-DIAL</div>
+							<div class="labelMainItem">Console application</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Program download</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine-FAQ">
+							The console application is stored in the same folder of MSDIAL GUI. <a href="./download/repository">MS-DIAL program</a>.<br>See <a href="./main.html">the main page</a> too.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Demonstration files</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine-FAQ">All of demonstration files for GC/MS, LC-MS/MS (data dependent acquisition),and data independent MS/MS acquisition can be downloaded from here.</div>
+					</div>
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/demo/MsdialConsoleApp demo files.zip"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf56f;</span>
+							</div>
+							<div class="labelMenuTitle">MsdialConsoleApp demo files</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Download</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Tutorial</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine-FAQ">This is a quick tutorial of MSDIAL console application. The main processer is stored in the same folder of MS-DIAL GUI program.</div>
+						<div class="labelSubLine-FAQ">
+							Just type MsdialConsoleApp.exe to show the help.<br> <img src="../static/images/figure/ConsoleApp1.PNG">
+						</div>
+						<div class="labelSubLine-FAQ">
+							<div class="iconTag">Note 1</div>
+							<b>All of the results</b> like feature detection, deconvolution, and alignment was stored in <b>"*.msdial" ASCII format file</b>. You can open it in Excel by drag-and-drop of the file.<br>
+						</div>
+						<div class="labelSubLine-FAQ">
+							<div class="iconTag">Note 2</div>
+							If you want to keep <b>MTD format file</b> to be used in MS-DIAL GUI, <b>type "-p"</b> as an option like: <br> <b>&gt; MsdialConsoleApp.exe lcmsdda -i .\LCMS_DDA\ -o .\LCMS_DDA\ -m .\LCMS_DDA\Msdial-lcms-dda-Param.txt -p</b>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine-FAQ">
+						<div class="labelLineTitle-FAQ">1.GC-MS process</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine-FAQ">
+							The program accepts netCDF, mzML, or ABF files. <br> The demonstration is just for a basic processing (just peak detection and alignment). <br> The result is written as the extension of "***.msdial" in the output directory.
+						</div>
+						<div class="labelSubLine-FAQ">
+							<div class="iconTag">Note 1</div>
+							If you want to calculate retention indexes, see <b>FAMEs RT dictionary pathes.txt</b> and <b>FAMEs RT.txt</b> in GCMS folder.<br> The parameter setting for RI calcuation is also written in <b>Msdial-GCMS-Param.txt</b>.
+						</div>
+						<div class="labelSubLine-FAQ">
+							<div class="iconTag">Note 2</div>
+							If you want to identify the targeted metabolites, this program accepts MSP format file. <br> The required field is also written in the parameter file.
+						</div>
+						<div class="labelSubLine-FAQ">
+							<div class="iconTag">Example</div>
+							<b>&gt; MsdialConsoleApp.exe gcms -i .\GCMS\ -o .\GCMS\ -m .\GCMS\Msdial-GCMS-Param.txt</b><br> <br> *below is a quick explanation of how to set MSP file and RI index files.<br> The MSP setting is also the same in LCMS projects.
+						</div>
+						<div class="labelSubLine-FAQ">
+							<img src="../static/images/figure/ConsoleApp2.PNG">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine-FAQ">
+						<div class="labelLineTitle-FAQ">2. LC-MS or LC-MS/MS (data dependent acquisition)</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine-FAQ">
+							The program accepts netCDF, mzML, and ABF files. <br> The result is written as the extension of "***.msdial" in the output directory.<br> Please type <b>lcmsdda</b> unless you process data independent acquisition data like SWATH.
+						</div>
+						<div class="labelSubLine-FAQ">
+							<div class="iconTag">Note 1</div>
+							If you want to identify the targeted metabolites, this program accepts MSP format file. <br> The required field is also written in the parameter file. <br>
+						</div>
+						<div class="labelSubLine-FAQ">
+							<div class="iconTag">Example</div>
+							<b>&gt; MsdialConsoleApp.exe lcmsdda -i .\LCMS_DDA\ -o .\LCMS_DDA\ -m .\LCMS_DDA\Msdial-lcms-dda-Param.txt</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row contensDetail">
+					<div class="col span_24">
+						<div class="boxLine-FAQ">
+							<div class="labelLineTitle-FAQ">3. LC-MS/MS (data independent acquisition)</div>
+						</div>
+						<div class="boxSubLine">
+							<div class="labelSubLine-FAQ">
+								The program accepts ABF format file only. <br> The <b>DIA file</b> path must be required. See the <b>Msdial-lcms-dia-Param.txt</b> and <b>Plasma-HILIC-SWATH-Experiment.txt</b> to check the detail. Also, see the main tutorial for futher detail. <br> The result is written as the extension of "***.msdial" in the output directory.<br> Please type <b>lcmsdia</b> for the processing.
+							</div>
+							<div class="labelSubLine-FAQ">
+								<div class="iconTag">Note 1</div>
+								If you want to identify the targeted metabolites, this program accepts MSP format file. <br> The required field is also written in the parameter file.
+							</div>
+							<div class="labelSubLine-FAQ">
+								<div class="iconTag">Example</div>
+								<b>&gt; MsdialConsoleApp.exe lcmsdia -i .\LCMS_DIA\ -o .\LCMS_DIA\ -m .\LCMS_DIA\Msdial-lcms-dia-Param.txt</b>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="sectionFooter">
+		<div id="areaLogo-RIKEN">
+			<a href="http://www.yokohama.riken.jp/english/"><img id="imageLogo-RIKEN" alt="RIKEN" src="../static/images/logoRIKEN.gif"></a>
+		</div>
+		<div id="areaLogo-CSRS">
+			<a href="http://www.csrs.riken.jp/en/"><img id="imageLogo-CSRS" alt="CSRS" src="../static/images/logoCSRS.png"></a>
+		</div>
+		<div id="areaLogo-PRIMe">
+			<a href="http://prime.psc.riken.jp/"><img id="imageLogo-PRIMe" alt="PRIMe" src="../static/images/logoPRIMe.png"></a>
+		</div>
+		<div>
+			<div>RIKEN Center for Sustainable Resource Science : Metabolome Informatics Research Team</div>
+			<address>1-7-22 Suehiro-cho, Tsurumi-ku, Yokohama City, Kanagawa, 230-0045, Japan</address>
+		</div>
+		<div>
+			<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img id="imageLogo-CCL" alt="Creative Commons License" src="../static/images/88x31.png"></a>
+		</div>
+	</div>
+</body>
+</html>
+

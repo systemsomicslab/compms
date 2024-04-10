@@ -1,0 +1,447 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Description" content="Computational mass spectrometry for metabolomics and lipidomics">
+<meta name="Keywords" content="MS-DIAL">
+<meta name="Author" content="Hiroshi Tsugawa, PhD. Center for Sustainable Resource Science (CSRS), RIKEN">
+
+<!-- StyleSheet -->
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/responsive.gs.24col.css">
+
+<!-- JavaScript Library -->
+<script type="text/javascript" src="../static/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../static/js/core.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49TTSHPSY4"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-49TTSHPSY4');
+</script>
+
+<!-- Favicon -->
+<link rel="icon" href="../static/favicon.ico">
+
+<!-- Title -->
+<title>MS-DIAL | FAQ</title>
+
+</head>
+
+<body>
+	<!-- Navigation -->
+	<div class="container" id="sectionNavigation">
+		<div class="row">
+			<div class="col span_24">
+				<nav>
+					<ul class="topMenus">
+						<li>
+							<a href="../index.html"><img class="imageLogo-cms" alt="Computational mass spectrometry logo" src="../static/images/imageHome.png"></a>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Software</b>
+							</div>
+							<ul class="subMenus">
+								<li>
+									<a href="../msdial/main.html">MS-DIAL</a>
+								</li>
+								<li>
+									<a href="../msfinder/main.html">MS-FINDER</a>
+								</li>
+								<li>
+									<a href="../mrmprobs/main.html">MRMPROBES/MRMDIFF</a>
+								</li>
+								<li>
+									<a href="../others/main.html">Others</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Database</b>
+							</div>
+							<ul class="subMenus">
+								<li>
+									<a href="../msdial/main.html#MSP">MSP spectral database</a>
+								</li>
+								<li>
+									<a href="../mrmdatabase/main.html">MRM database</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="../index.html#contact"><b>Contact</b></a>
+							</div>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="../licence/main.html"><b>Licence</b></a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div id="page_top">
+		<a href="#"><span class="iconAwesome">&#xf102;</span></a>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col span_24">
+				<div class="boxSub">
+					<div class="boxOrverwidth-left colorMsDial"></div>
+					<div class="boxMainContents">
+						<div class="labelMainIcon">
+							<img class="imgIcon-Msdial" src="../static/images/iconMsdial.png">
+						</div>
+						<div class="labelMainTitle">MS-DIAL</div>
+						<div class="labelMainItem">FAQ</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row contensDetail">
+			<div class="col span_24">
+				<div class="boxLine-FAQ">
+					<div class="labelLineTitle-FAQ">
+						<span class="iconAwesome">&#xf059;</span>The condition of ABF file converter
+					</div>
+				</div>
+				<div class="boxSubLine">
+					<div class="labelSubLine-FAQ">To convert files of some MS vendors including Bruker, LECO, Shimadzu, Thermo, and Waters, the specific data access library needs to be installed on your PC.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col span_24">
+				<div class="boxConvert">
+					<div class="labelVendor">
+						<b>Vendor</b>
+					</div>
+					<div class="labelFormats">
+						<b>Formats</b>
+					</div>
+					<div class="labelRequired">
+						<b>Required</b>
+					</div>
+				</div>
+				<hr>
+				<div class="boxConvert">
+					<div class="labelVendor">Agilent</div>
+					<div class="labelFormats">
+						<div class="iconFileType">.D</div>
+					</div>
+					<div class="labelRequired">None, but the files from Chemstation should be converted to netCDF</div>
+				</div>
+				<div class="boxConvert">
+					<div class="labelVendor">Bruker</div>
+					<div class="labelFormats">
+						<div class="iconFileType">.D</div>
+					</div>
+					<div class="labelRequired">CompassXtract</div>
+				</div>
+				<div class="boxConvert">
+					<div class="labelVendor">LECO</div>
+					<div class="labelFormats">
+						<div class="iconFileType">.PEG</div>
+					</div>
+					<div class="labelRequired">All PEG files should be first converted to netCDF (AIA).</div>
+				</div>
+				<div class="boxConvert">
+					<div class="labelVendor">Sciex</div>
+					<div class="labelFormats">
+						<div class="iconFileType">.WIFF</div>
+					</div>
+					<div class="labelRequired">None</div>
+				</div>
+				<div class="boxConvert">
+					<div class="labelVendor">Shimadzu for GC/MS</div>
+					<div class="labelFormats">
+						<div class="iconFileType">.QGD</div>
+					</div>
+					<div class="labelRequired">GCMS solution</div>
+				</div>
+				<div class="boxConvert">
+					<div class="labelVendor">Shimadzu for LC/MS</div>
+					<div class="labelFormats">
+						<div class="iconFileType">.LCD</div>
+					</div>
+					<div class="labelRequired">LCMS solutions</div>
+				</div>
+				<div class="boxConvert">
+					<div class="labelVendor">Thermo</div>
+					<div class="labelFormats">
+						<div class="iconFileType">.RAW</div>
+					</div>
+					<div class="labelRequired">MSFileReader</div>
+				</div>
+				<div class="boxConvert">
+					<div class="labelVendor">Waters</div>
+					<div class="labelFormats">
+						<div class="iconFileType">.RAW</div>
+					</div>
+					<div class="labelRequired">MassLynx Raw Data Reader Interface Library</div>
+				</div>
+				<div class="boxConvert">
+					<div class="labelVendor">netCDF</div>
+					<div class="labelFormats">
+						<div class="iconFileType">.CDF</div>
+					</div>
+					<div class="labelRequired">Microsoft Visual J# 2.0</div>
+				</div>
+				<hr>
+				<div class="boxConvertDesc">
+					<div class="labelVendorName">
+						<b>Agilent</b>
+					</div>
+					<div class="labelConvertDesc">Almost all of Agilent’s raw data (.D) can readily be converted without any additional steps. However, the only exception is GCMS data sets obtained from ChemStation, which cannot be directly converted to ABF. Therefore, you have to convert your files into netCDF (AIA) in ChemStation. Then, convert your AIA files into ABF using our file converter.</div>
+				</div>
+
+				<div class="boxConvertDesc">
+					<div class="labelVendorName">
+						<b>Bruker</b>
+					</div>
+					<div class="labelConvertDesc">
+						Go to <a href="https://www.bruker.com/service/support-upgrades/software-downloads/mass-spectrometry.html"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">Website</a>. You have to register first and obtain the installer. Finally, download and install the version compatible with your operating system environment (32-bit or 64-bit).
+					</div>
+				</div>
+
+				<div class="boxConvertDesc">
+					<div class="labelVendorName">
+						<b>LECO</b>
+					</div>
+					<div class="labelConvertDesc">All of your data has to be converted to netCDF (AIA) first. Then, convert them into ABF using our file converter.</div>
+				</div>
+
+				<div class="boxConvertDesc">
+					<div class="labelVendorName">
+						<b>Shimadzu</b>
+					</div>
+					<div class="labelConvertDesc">
+						In case that you had a direct conversion of raw data, please convert your data into the common data format (netCDF or mzML). For GC/MS, convert your data into netCDF using GCMS solution. For LC-ITTOF/MS, convert your data into mzML using <a href="http://proteowizard.sourceforge.net/index.shtml"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">ProteoWizard</a>. Then, convert them into ABF.
+					</div>
+				</div>
+
+				<div class="boxConvertDesc">
+					<div class="labelVendorName">
+						<b>Thermo</b>
+					</div>
+					<div class="labelConvertDesc">
+						The following link explains how to install <a href="https://www.bruker.com/service/support-upgrades/software-downloads/mass-spectrometry.html"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">MSFileReader</a> <b>version 2.2</b>. For GC/MS data, you may have to convert your data into netCDF. Then, convert them into ABF using our converter. We validated the direct conversion of GC-QExactive raw data to ABF, but some GC/MS data (DSQ etc) had to be converted to netCDF first.
+					</div>
+				</div>
+
+				<div class="boxConvertDesc">
+					<div class="labelVendorName">
+						<b>Waters</b>
+					</div>
+					<div class="labelConvertDesc">
+						<a href="https://www.microsoft.com/en-US/download/details.aspx?id=40784"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">Install C++ Redistributable Package 2013 (ver. 12.0.30501.0 or later)</a><br>NetCDF: When you get an error about the J# dependency problem,<br> download and install the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=15468"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">Microsoft Visual J# 2.0 library</a>.<br> For this, you may need to install <a href="https://www.microsoft.com/ja-jp/download/details.aspx?id=6523"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">Microsoft
+							.net 2.0 package</a>.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row contensDetail">
+			<div class="col span_24">
+				<div class="boxLine-FAQ-Double">
+					<div class="labelLineTitle-FAQ">
+						<span class="iconAwesome">&#xf059;</span>Error message in converting netCDF<br> "Could not load file or assembly 'vjslib, Version=2.0.0.0, ..' or one of its dependencies"
+					</div>
+				</div>
+				<div class="boxSubLine">
+					<div class="labelSubLine-FAQ">The current ABF converter requires J# 2.0 DotNet framework to convert netCDF data. Therefore, please download the J#2.0 package from the below link, and install it.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row contensDetail">
+			<div class="col span_24">
+				<div class="boxLine-FAQ-Double">
+					<div class="labelLineTitle-FAQ">
+						<span class="iconAwesome">&#xf059;</span>Error message in converting netCDF<br> "The type initializer for 'java.lang.System' threw an exception"
+					</div>
+				</div>
+				<div class="boxSubLine">
+					<div class="labelSubLine-FAQ">I got this error when I updated my Windows OS on Oct.4, 2016. I could fix this program after I reinstalled J#2.0 package.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row contensDetail">
+			<div class="col span_24">
+				<div class="boxLine-FAQ">
+					<div class="labelLineTitle-FAQ">
+						<span class="iconAwesome">&#xf059;</span>What is the 'w/o' tag of identification results?
+					</div>
+				</div>
+				<div class="boxSubLine">
+					<div class="labelSubLine-FAQ">
+						1. This program first tries to find a metabolite candidate from a MSP file by means of MS/MS similarity, accurate mass, isotope ratio, and retention time. A metabolite getting 'highest score' in the metabolite candidates is annotated. Note that this score is the total score from retention time similarity, isotope ratio similarity, accurate mass similarity, and MS/MS similarity.<br>
+					</div>
+					<div class="labelSubLine-FAQ">
+						2. But if the 'highest score' is less than user-defined identification cut off, 'non-MS/MS based identification' is performed. That is, this program next tries to find a metabolite candidate by means of accurate mass, isotope ratio, and retention time. Then, a metabolite getting 'highest score' in candidates is annotated. Note that this score is the total score from retention time, isotope ratio, and accurate mass. This result will be shown as 'w/o MS2:***'.<br>
+					</div>
+					<div class="labelSubLine-FAQ">3. If any compounds are not found from the above two criteria, the result will be 'unknown'.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row contensDetail">
+			<div class="col span_24">
+				<div class="boxLine-FAQ">
+					<div class="labelLineTitle-FAQ">
+						<span class="iconAwesome">&#xf059;</span>Can we process Bruker's DIA QTOF data with MS-DIAL?
+					</div>
+				</div>
+				<div class="boxSubLine">
+					<div class="labelSubLine-FAQ">
+						Yes. Note that for DIA (data independent MS/MS acquisition) Bruker QTOF data, the calibration segment needs to be at the end. <br> See page number 10 of MS-DIAL tutorial too.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row contensDetail">
+			<div class="col span_24">
+				<div class="boxLine-FAQ-Double">
+					<div class="labelLineTitle-FAQ">
+						<span class="iconAwesome">&#xf059;</span>Error message in converting Waters Raw data "Could not load file or assembly 'WatersSDKWrapper.dll' or one of its dependencies. The specified module could not be found."
+					</div>
+				</div>
+				<div class="boxSubLine">
+					<div class="labelSubLine-FAQ">
+						The requirement for Waters data conversion is really strict. Please check the following requirements again. Some of them are not listed in Reifycs website.<br> <span class="iconAwesome">&#xf00c;</span> 64-bit machines<br> <span class="iconAwesome">&#xf00c;</span> Windows 8 or later OS<br> <span class="iconAwesome">&#xf00c;</span> <a href="https://www.microsoft.com/en-US/download/details.aspx?id=40784"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">Microsoft Visual C++ Redistributable Package for Visual Studio 2013 for 64-bit version (vcredist_x64)</a> installed<br> <span class="iconAwesome">&#xf00c;</span> Be sure to use MassLynxRaw.dll for 64bit version, to be added to the ABFCvtSvrWtrRw
+						sub-folder in the AbfConverter application folder.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row contensDetail">
+			<div class="col span_24">
+				<div class="boxLine-FAQ">
+					<div class="labelLineTitle-FAQ">Handling Wiff2 format from SCIEX 500R QTOF</div>
+				</div>
+				<div class="boxSubLine">
+					<div class="labelSubLine-FAQ">Recently, SCIEX started to use new format WIFF2 which has already been used in 500R QTOF system. Although the direct conversion from WIFF2 to ABF is not possible yet, the format can be imported by using ProteoWizard MSconvert as follows.</div>
+					<div class="labelSubLine-FAQ">
+						The summary is:<br> 1. Convert WIFF2 to mzML (centroid) using ProteoWizard.<br> 2. Convert mzML to ABF using ABF converter.*<br> 3. Process in MS-DIAL.<br> *Direct import of mzML is also ok in MS-DIAL where the minimum peak hight of peak detection parameter tab should be set to around 1&#8211;10.
+					</div>
+					<div class="labelSubLine-FAQ">
+						Below is the detail.<br> 1. Download <a href="http://proteowizard.sourceforge.net/"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">ProteoWizard</a>.<br> 2. Run MSConvert from ProteoWizard folder.<br> 3. Convert wiff2 files to mzml using setting bellow including also centroiding (this is important otherwise files in mzml profile files would be extremely large).<br> <img src="../static/images/ProteoWizardWiff2.png"><br> 4. Run ABF converter.<br> 5. Convert mzml files to ABF format.<br> 6. Run MS-DIAL.<br> 7. In 'Start up a project', Data type (MS1): Centoid data; Data type (MS/MS): Centoid data<br> 8. In 'Analysis parameter data', Peak detection, Minimum peak
+						height: use values between 5 and 10 (check the results using different values to get a reasonable number of features).
+					</div>
+					<div class="labelSubLine-FAQ">
+						Note:<br> For SCIEX profile data we have found that Minimum peak height of 2,000&#8211;3,000 works well but for mzml centroid -> ABF data much lower values should be used.<br> This procedure works well for data acquired in (i) MS1 only mode and (ii) MS1 with data-dependent acquisition (DDA).<br> Unfortunately, the current work flow does not work for SWATH-MS data yet although it can be processed in MS_DIAL to get MS1 information in MS-DIAL.<br> After SCIEX releases the Software Developer Kit which is needed for modification of ABF converter, the flow will become easier and SWATH-MS data can be also imported.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row contensDetail">
+			<div class="col span_24">
+				<div class="boxLine-FAQ-Double">
+					<div class="labelLineTitle-FAQ">
+						<span class="iconAwesome">&#xf059;</span>Compatibility issue of Windows OS. Identification will not be correctly performed in some language OS using comma as default decimal separator.
+					</div>
+				</div>
+				<div class="boxSubLine">
+					<div class="labelSubLine-FAQ">
+						Recently, several users using a specific language OS (Denmark, France, Italy, etc) for MS-DIAL had the trouble where none of identification result is obtained by text file or msp file.<br> The reason was that several Windows OS use 'comma (,)' as the default decimal separator while the 'dot (.)' separator is used in msp format files.<br> MS-DIAL is written by C#, i.e. .NET framework, and therefore, the behavior is highly dependent on the environment of Microsoft .NET frameworks installed in the user's PC.<br> If you face on the similar issue, i.e. no identification result from MS-DIAL, please check your PC condition.<br> Definetly, English OS should be the best OS for the use of MS-DIAL (in addtion to MRMPROBS, MS-FINDER, and
+						others).
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row contensDetail">
+			<div class="col span_24">
+				<div class="boxLine-FAQ">
+					<div class="labelLineTitle-FAQ">
+						<span class="iconAwesome">&#xf059;</span>What does 'Fill%' mean?
+					</div>
+				</div>
+				<div class="boxSubLine">
+					<div class="labelSubLine-FAQ">
+						The fill % means the "gap-filled" sample % (but 1 means 100% in the output).<br> If you analyzed 10 samples, and if a metabolite is detected in eight samples of them, the fill % value becomes 0.8.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row contensDetail">
+			<div class="col span_24">
+				<div class="boxLine-FAQ">
+					<div class="labelLineTitle-FAQ">
+						<span class="iconAwesome">&#xf059;</span>How can netCDF be imported in MS-DIAL without the conversion to ABF?
+					</div>
+				</div>
+				<div class="boxSubLine">
+					<div class="labelSubLine-FAQ">
+						1. Download and install "netCDFmajor.minor.point-NC4-64.exe" or later version at the <a href="https://www.unidata.ucar.edu/software/netcdf/docs/winbin.html"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">Unidata</a> webpage.<br> 2. Select an option 'Add to PATH'.<br> 3. Now, you can import netCDF in MS-DIAL directly.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="sectionFooter">
+		<div id="areaLogo-RIKEN">
+			<a href="http://www.yokohama.riken.jp/english/"><img id="imageLogo-RIKEN" alt="RIKEN" src="../static/images/logoRIKEN.gif"></a>
+		</div>
+		<div id="areaLogo-CSRS">
+			<a href="http://www.csrs.riken.jp/en/"><img id="imageLogo-CSRS" alt="CSRS" src="../static/images/logoCSRS.png"></a>
+		</div>
+		<div id="areaLogo-PRIMe">
+			<a href="http://prime.psc.riken.jp/"><img id="imageLogo-PRIMe" alt="PRIMe" src="../static/images/logoPRIMe.png"></a>
+		</div>
+		<div>
+			<div>RIKEN Center for Sustainable Resource Science : Metabolome Informatics Research Team</div>
+			<address>1-7-22 Suehiro-cho, Tsurumi-ku, Yokohama City, Kanagawa, 230-0045, Japan</address>
+		</div>
+		<div>
+			<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img id="imageLogo-CCL" alt="Creative Commons License" src="../static/images/88x31.png"></a>
+		</div>
+	</div>
+</body>
+</html>
+

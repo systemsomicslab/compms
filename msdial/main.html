@@ -1,0 +1,1672 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Description" content="Computational mass spectrometry for metabolomics and lipidomics">
+<meta name="Keywords" content="MS-DIAL">
+<meta name="Author" content="Hiroshi Tsugawa, PhD. Center for Sustainable Resource Science (CSRS), RIKEN">
+
+<!-- StyleSheet -->
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/responsive.gs.24col.css">
+
+<!-- JavaScript Library -->
+<script type="text/javascript" src="../static/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../static/js/core.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49TTSHPSY4"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-49TTSHPSY4');
+</script>
+
+<!-- Favicon -->
+<link rel="icon" href="../static/favicon.ico">
+
+<!-- Title -->
+<title>CompMS | MS-DIAL</title>
+
+</head>
+
+<body>
+	<!-- Navigation -->
+	<div class="container" id="sectionNavigation">
+		<div class="row">
+			<div class="col span_24">
+				<nav>
+					<ul class="topMenus">
+						<li>
+							<a href="../index.html"><img class="imageLogo-cms" alt="Computational mass spectrometry logo" src="../static/images/imageHome.png"></a>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Software</b>
+							</div>
+							<ul class="subMenus">
+								<li>
+									<a href="../msdial/main.html">MS-DIAL</a>
+								</li>
+								<li>
+									<a href="../msfinder/main.html">MS-FINDER</a>
+								</li>
+								<li>
+									<a href="../mrmprobs/main.html">MRMPROBES/MRMDIFF</a>
+								</li>
+								<li>
+									<a href="../others/main.html">Others</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Database</b>
+							</div>
+							<ul class="subMenus">
+								<li>
+									<a href="../msdial/main.html#MSP">MSP spectral database</a>
+								</li>
+								<li>
+									<a href="../mrmdatabase/main.html">MRM database</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="../index.html#contact"><b>Contact</b></a>
+							</div>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="../licence/main.html"><b>Licence</b></a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div id="page_top">
+		<a href="#"><span class="iconAwesome">&#xf102;</span></a>
+	</div>
+
+	<div class="mainFrame" id="sectionMain">
+		<!-- MS-DIAL -->
+		<div class="container">
+			<div class="row">
+				<div class="col span_8">
+					<div class="boxMainTitle">
+						<div class="boxOrverwidth-left colorMsDial"></div>
+						<div class="boxMainContents">
+							<div class="labelMainIcon">
+								<img class="imgIcon-Msdial" src="../static/images/iconMsdial.png">
+							</div>
+							<div class="labelMainTitle">MS-DIAL</div>
+						</div>
+						<div class="boxContents-Objective">
+							<div class="labelSubTitle">Objective</div>
+							<div class="labelMenuItem">
+								MS-DIAL was launched as a universal program for untargeted metabolomics that supports multiple instruments (GC/MS, GC/MS/MS, LC/MS, and LC/MS/MS) and MS vendors (Agilent, Bruker, LECO, Sciex, Shimadzu, Thermo, and Waters). Common data formats such as netCDF (AIA) and mzML, can also be managed in our project. In addition, we released several MSP files including both EI- and MS/MS spectra as a ‘start-up kit’. Moreover, MS-DIAL internally has a version of Fiehn lab’s GC/MS database (oriented by FAME RI index), and in silico retention time- and MS/MS database for LC/MS/MS based lipidomics. The isotope labeled tracking can also be executed in LC/MS project. <br>
+								<br> It features <br> (1) spectral deconvolution for both GC/MS and data-independent MS/MS, <br> (2) streamlined criteria for peak identification, <br> (3) support of all data processing steps from raw data import to statistical analysis, <br> and (4) user-friendly graphic user interface.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_16">
+					<div class="boxMainImage">
+						<div class="boxImage-right">
+							<img class="imgScreen" src="../static/images/imageMsdial.png">
+						</div>
+						<div class="boxContents-pCite">
+							<div class="labelSubTitle">Citation</div>
+							<div class="labelMenuItem">
+								<div>
+									<span class="iconAwesome">&#xf00c;</span>General, and lipidomics: A lipidome atlas in MS-DIAL 4. <em>Nature Biotechnology</em>, 38, 1159&#8211;1163, 2020 <img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png"><a href="https://www.nature.com/articles/s41587-020-0531-2"> <img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">[NPG link]
+									</a><br> Springer Nature 'SharedIt': <img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png"><a href="https://rdcu.be/b4ULX">full-text access to a view-only version of this paper</a>
+								</div>
+								<div>
+									<span class="iconAwesome">&#xf00c;</span>Plant metabolomics and stable isotope labeling technology: A cheminformatics approach to characterize metabolomes in stable-isotope-labeled organisms. <em>Nature Methods</em>, 16, 295&#8211;298, 2019 <a href="https://www.nature.com/articles/s41592-019-0358-2"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">[NPG link]</a>
+								</div>
+								<div>
+									Springer Nature 'SharedIt':<a href="https://rdcu.be/btDKK"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">full-text access to a view-only version of this paper</a>
+								</div>
+								<div>
+									<span class="iconAwesome">&#xf00c;</span>GC-MS project: Identifying metabolites by integrating metabolome databases with mass spectrometry cheminformatics. <em>Nature Methods</em>, 15, 53&#8211;56, 2018 <a href="https://www.nature.com/articles/nmeth.4512"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">[NPG link]</a>
+								</div>
+								<div>
+									<span class="iconAwesome">&#xf00c;</span>SWATH-MS/MS and DIA-MS: MS-DIAL: data independent MS/MS deconvolution for comprehensive metabolome analysis. <em>Nature Methods</em>, 12, 523&#8211;526, 2015 <a href="http://www.ncbi.nlm.nih.gov/pubmed/25938372"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png"> [PubMed]</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="sectionDownload">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Software</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_6">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/repository/MSDIAL ver.4.9.221218 Windowsx64.zip"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu mainIcon">&#xf019;</span> <span class="iconAwesome-SubMenu subIcon">&#xf11c;</span>
+							</div>
+							<div class="labelMenuTitle">MS-DIAL 4.9.221218</div>
+							<div class="labelMenuSubTitle">Windows x64</div>
+							<div class="labelButton">Download</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_6">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/repository/MSDIAL ver.5.1.230912.zip"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu mainIcon">&#xf019;</span> <span class="iconAwesome-SubMenu subIcon">&#xf11c;</span>
+							</div>
+							<div class="labelMenuTitle">MSDIAL 5.1.230912</div>
+							<div class="labelMenuSubTitle">Windows x64</div>
+							<div class="labelButton">Download</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col span_6">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/repository/macOS/MSDIAL ver.4.9.221218 OSXx64.zip"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu mainIcon">&#xf019;</span> <span class="iconAwesome-SubMenu subIcon">&#xf102;</span>
+							</div>
+							<div class="labelMenuTitle">Latest version</div>
+							<div class="labelMenuSubTitle">macOS x64</div>
+							<div class="labelButton">Download</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_6">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/repository/Linux/MSDIAL ver.4.9.221218 Linuxx64.zip"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu mainIcon">&#xf019;</span> <span class="iconAwesome-SubMenu subIcon">&#xf119;</span>
+							</div>
+							<div class="labelMenuTitle">Latest version</div>
+							<div class="labelMenuSubTitle">Linux x64</div>
+							<div class="labelButton">Download</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="container">
+				<div class="row contensDetail">
+					<div class="col span_24">
+						<div class="boxLine">
+							<div class="labelLineTitle">Source code and history</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row contensDetail">
+					<div class="col span_8">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="https://github.com/systemsomicslab/MsdialWorkbench"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf121;</span>
+								</div>
+								<div class="labelMenuTitle">Core</div>
+								<div class="labelMenuSubTitle">Souce code</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Link</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col span_8">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="./download/repository"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf466;</span>
+								</div>
+								<div class="labelMenuTitle">Repository</div>
+								<div class="labelMenuSubTitle">Old versions</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Link</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row contensDetail">
+					<div class="col span_24">
+						<div class="boxLine">
+							<div class="labelLineTitle">Library</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="#Templates"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf15c;</span>
+						</div>
+						<div class="labelMenuTitle">Templates</div>
+						<div class="labelMenuSubTitle">.txt files</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link in page</div>
+					</div>
+				</div>
+			</div>
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="#Demonstration"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf56f;</span>
+						</div>
+						<div class="labelMenuTitle">Demonstration</div>
+						<div class="labelMenuSubTitle">.abf files etc.</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link in page</div>
+					</div>
+				</div>
+			</div>
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="#MSP"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf478;</span>
+						</div>
+						<div class="labelMenuTitle">Curated MSP spectral library</div>
+						<div class="labelMenuSubTitle">.msp files</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link in page</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Tutorial</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row contensMenu">
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="https://systemsomicslab.github.io/mtbinfo.github.io/MS-DIAL/tutorial"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf518;</span>
+						</div>
+						<div class="labelMenuTitle">Tutorial</div>
+						<div class="labelMenuSubTitle">
+							<span class="iconAwesome">&#xf360;</span>mtbinfo-team.github.io
+						</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link</div>
+					</div>
+				</div>
+			</div>
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="./download/aifprocessingtutorials/aiftutorial.zip"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf0ad;</span>
+						</div>
+						<div class="labelMenuTitle">
+							AIF data processing <br> and spectral library construction methodology
+						</div>
+						<div class="labelMenuSubTitle">Tutorials and parameter files</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Download</div>
+					</div>
+				</div>
+			</div>
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="./consoleapp.html"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf120;</span>
+						</div>
+						<div class="labelMenuTitle">Console App</div>
+						<div class="labelMenuSubTitle">Terminal operation page</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Forum &amp; FAQ</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row contensMenu">
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="http://www.metabolomics-forum.com/index.php?board=98.0"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf086;</span>
+						</div>
+						<div class="labelMenuTitle">Forum</div>
+						<div class="labelMenuSubTitle">
+							<span class="iconAwesome">&#xf360;</span>www.metabolomics-forum.com
+						</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link</div>
+					</div>
+				</div>
+			</div>
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="./faq.html"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf059;</span>
+						</div>
+						<div class="labelMenuTitle">FAQ</div>
+						<div class="labelMenuSubTitle">FAQ page</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link</div>
+					</div>
+				</div>
+			</div>
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="./download/mathematics/MS-DIAL FAQ-vs2.pdf"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf698;</span>
+						</div>
+						<div class="labelMenuTitle">Mathematics</div>
+						<div class="labelMenuSubTitle">.pdf file</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Download</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Related page</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row contensMenu">
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="./annotationcode.html"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf4fc;</span>
+						</div>
+						<div class="labelMenuTitle">
+							Compound identification <br> and annotation confidence
+						</div>
+						<div class="labelMenuSubTitle">Annotation 'code' page</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link</div>
+					</div>
+				</div>
+			</div>
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="./lipidnomenclature.html"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf5b7;</span>
+						</div>
+						<div class="labelMenuTitle">Lipid nomenclature</div>
+						<div class="labelMenuSubTitle">Nomenclature page</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link</div>
+					</div>
+				</div>
+			</div>
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="https://www.reifycs.com/AbfConverter/"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf031;</span>
+						</div>
+						<div class="labelMenuTitle">ABF file converter</div>
+						<div class="labelMenuSubTitle">
+							<span class="iconAwesome">&#xf360;</span>www.reifycs.com
+						</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="Templates">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Library templates</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							See below for <b>MSP format</b> files.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxTemplates">
+						<div class="labelTempName">Text format library for metabolite identifications.</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/templates/Template for text format based metabolite identification.txt"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxTemplates">
+						<div class="labelTempName">SWATH-MS experiment file.</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/templates/Template for SWATH-MS experiment file.txt"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxTemplates">
+						<div class="labelTempName">All-ions experiment file (MSE, all-ions, all ion fragmentations etc).</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/templates/Template for all-ions experiment file.txt"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxTemplates">
+						<div class="labelTempName">Multiple CEs all-ions experiment file.</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/templates/Template for multiple CEs experimental file.txt"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxTemplates">
+						<div class="labelTempName">Reference library for diagnostic marker ions for retention time correction in LC-MS projects.</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/templates/Template for RT correct standards-neg.txt"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxTemplates">
+						<div class="labelTempName">
+							Peak list file for merging different polarity ions (e.g. in negative ion mode) <br>to determine the adduct type (e.g. in positive ion mode).
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/templates/Template for peak list in negative to determin adducts in positive.txt"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxTemplates">
+						<div class="labelTempName">Text format library for metabolite identifications using CCS. MS/MS Positive.</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/templates/msdial_metabolomics_textlibrary_pos.txt"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxTemplates">
+						<div class="labelTempName">Text format library for metabolite identifications using CCS. MS/MS Negative.</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/templates/msdial_metabolomics_textlibrary_neg.txt"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxTemplates">
+						<div class="labelTempName">
+							<b>(For CCS resources, see <a href="http://allccs.zhulab.cn/"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">AllCCS database</a> and <a href="https://metabolomics.pnnl.gov/ccs/"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">PNNL CCS database</a>).
+							</b>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="Demonstration">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Demonstration files</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxDemo">
+						<div class="labelDemoName">Lipid profiling of algae.</div>
+						<div class="labelDataset">LC-MS/MS Dataset</div>
+						<div class="labelFormat">
+							<div class="iconFileType">.wiff</div>
+							<div class="iconFileType">.wiff.scan</div>
+							<div class="iconFileType">.abf</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="http://prime.psc.riken.jp/menta.cgi/prime/drop_index"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxDemo">
+						<div class="labelDemoName">
+							Hydrophilic metabolome profiling of Wine.<br>(data dependent MS/MS acquisition.)
+						</div>
+						<div class="labelDataset">LC-MS/MS Dataset</div>
+						<div class="labelFormat">
+							<div class="iconFileType">.abf</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/demo/20160805-Wine-DDA-Pos-Demo files.zip"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxDemo">
+						<div class="labelDemoName">Small biomolecule analysis of Arabidopsis thaliana and Alage.</div>
+						<div class="labelDataset">GC-MS Dataset</div>
+						<div class="labelFormat">
+							<div class="iconFileType">.cdf</div>
+							<div class="iconFileType">.abf</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/demo/GCMS-DemoFiles.zip"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxDemo">
+						<div class="labelDemoName">That we used for the explanation of mass spectral deconvolution.</div>
+						<div class="labelDataset">HILIC-SWATH-MS Data</div>
+						<div class="labelFormat">
+							<div class="iconFileType">.wiff</div>
+							<div class="iconFileType">.wiff.scan</div>
+							<div class="iconFileType">.abf</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/demo/HILIC(+)-SWATH-MS.zip"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxDemo">
+						<div class="labelDemoName">
+							Computational metabolomics using stable isotope labeled organisms.<br>(non-labeled and fully 13C labeled Arabidopsis thaliana root samples.)
+						</div>
+						<div class="labelDataset">LC-MS/MS Dataset</div>
+						<div class="labelFormat">
+							<div class="iconFileType">.abf</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/demo/20190210-CompMet demo for stable isotope labeled organisms.zip"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxDemo">
+						<div class="labelDemoName">All ion fragmentation with multiple collision energies.</div>
+						<div class="labelDataset">LC-MS/MS Dataset</div>
+						<div class="labelFormat">
+							<div class="iconFileType">.abf</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/demo/Demo data for all ions with multiple CEs.zip"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxDemo">
+						<div class="labelDemoName">Mouse tissues.(15.8GB)</div>
+						<div class="labelDataset">LC-Ion mobility tandem MS (PASEF) Dataset</div>
+						<div class="labelFormat">
+							<div class="iconFileType">.ibf</div>
+							<div class="iconFileType">RAW</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/demo/IonMobilityDemoFiles.zip"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxDemo">
+						<div class="labelDemoName">Mouse tissues.(3.6GB)</div>
+						<div class="labelDataset">LC-MS/MS Dataset</div>
+						<div class="labelFormat">
+							<div class="iconFileType">.wiff</div>
+							<div class="iconFileType">.wiff.scan</div>
+							<div class="iconFileType">.abf</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/demo/DdaDemoFiles.zip"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxDemo">
+						<div class="labelDemoName">MetID Marathon 2020 using NIST plasma data.(3.0GB)</div>
+						<div class="labelDataset">LC-MS/MS Dataset</div>
+						<div class="labelFormat">
+							<div class="iconFileType">.wiff</div>
+							<div class="iconFileType">.wiff.scan</div>
+							<div class="iconFileType">.abf</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/demo/MetIdMarathon2020_by_SRM1950Lipidomics.zip"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<div class="boxDemo">
+						<div class="labelDemoName">LIPID MAPS Spring School (860MB)</div>
+						<div class="labelDataset">LC-MS/MS Dataset</div>
+						<div class="labelFormat">
+							<div class="iconFileType">.wiff</div>
+							<div class="iconFileType">.wiff.scan</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/demo/LipidmapsSpringSchool_TissueLipidomics.zip"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="MSP">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine-Double">
+						<div class="labelLineTitle">
+							MS-DIAL metabolomics MSP spectral kit<br> containing EI-MS, MS/MS, and CCS values
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">Last edited in Aug. 21th, 2022</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<b>ESI(+)-MS/MS from authentic standards (16,481 unique compounds)</b>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf055;</span>MS/MS Positive
+						</div>
+						<div class="labelRecords">324,191</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel6"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS_Public_EXP_Pos_VS17.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<b>ESI(-)-MS/MS from authentic standards (9,033 unique compounds)</b>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf056;</span>MS/MS Negative
+						</div>
+						<div class="labelRecords">44,669</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel6"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS_Public_EXP_NEG_VS17.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<b>ESI(+)-MS/MS from standards+bio+in silico (16,995 unique compounds)</b>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf055;</span>MS/MS Positive
+						</div>
+						<div class="labelRecords">326,575</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel6"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS_Public_ExpBioInsilico_Pos_VS17.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<b>ESI(-)-MS/MS from standards+bio+in silico (15,245 unique compounds)</b>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf056;</span>MS/MS Negative
+						</div>
+						<div class="labelRecords">53,337</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel6"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS_Public_ExpBioInsilico_NEG_VS17.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<hr>
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/full/10.1002/jms.1777">MassBank</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf055;</span>MS/MS Positive
+						</div>
+						<div class="labelRecords">8,068</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel4"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Pos-MassBank.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/full/10.1002/jms.1777">MassBank</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf056;</span>MS/MS Negative
+						</div>
+						<div class="labelRecords">4,782</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel3"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Neg-MassBank.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://massbank.eu/MassBank/">MassBank-EU</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf055;</span>MS/MS Positive
+						</div>
+						<div class="labelRecords">701</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel2"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Pos-MassBankEU.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://massbank.eu/MassBank/">MassBank-EU</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf056;</span>MS/MS Negative
+						</div>
+						<div class="labelRecords">100</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel1"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Neg-MassBankEU.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://www.sciencedirect.com/science/article/pii/S003194221200310X">ReSpect</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf055;</span>MS/MS Positive
+						</div>
+						<div class="labelRecords">2,737</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel3"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Pos-Respect.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://www.sciencedirect.com/science/article/pii/S003194221200310X">ReSpect</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf056;</span>MS/MS Negative
+						</div>
+						<div class="labelRecords">1,573</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel3"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Neg-Respect.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://www.jlr.org/article/S0022-2275(20)33814-1/abstract">RIKEN IMS oxidized phospholipids</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf056;</span>MS/MS Negative
+						</div>
+						<div class="labelRecords">385</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel2"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Neg-RikenOxPLs.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://www.nature.com/articles/nbt.3597">GNPS</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf055;</span>MS/MS Positive
+						</div>
+						<div class="labelRecords">8,782</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel4"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Pos-GNPS.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://www.nature.com/articles/nbt.3597">GNPS</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf056;</span>MS/MS Negative
+						</div>
+						<div class="labelRecords">2,351</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel3"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Neg-GNPS.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://mona.fiehnlab.ucdavis.edu/">Fiehn HILIC</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf055;</span>MS/MS Positive
+						</div>
+						<div class="labelRecords">1,701</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel3"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Pos-FiehnHILIC.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://mona.fiehnlab.ucdavis.edu/">Fiehn HILIC</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf056;</span>MS/MS Negative
+						</div>
+						<div class="labelRecords">1,341</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel3"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Neg-FiehnHILIC.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://jcheminf.biomedcentral.com/articles/10.1186/s13321-017-0207-1">CASMI2016</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf055;</span>MS/MS Positive
+						</div>
+						<div class="labelRecords">440</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel2"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Pos-CASMI2016.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://jcheminf.biomedcentral.com/articles/10.1186/s13321-017-0207-1">CASMI2016</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf056;</span>MS/MS Negative
+						</div>
+						<div class="labelRecords">178</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel2"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Neg-CASMI2016.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://pubs.acs.org/doi/10.1021/acs.analchem.5b01559">MetaboBASE</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf055;</span>MS/MS Positive
+						</div>
+						<div class="labelRecords">8</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel1"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Pos-MetaboBASE.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://pubs.acs.org/doi/10.1021/acs.analchem.5b01559">MetaboBASE</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf056;</span>MS/MS Negative
+						</div>
+						<div class="labelRecords">1,151</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel3"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Neg-MetaboBASE.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://www.nature.com/articles/s41592-019-0358-2">RIKEN PlaSMA authentic standards</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf055;</span>MS/MS Positive
+						</div>
+						<div class="labelRecords">4,439</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel3"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Pos-PlaSMA.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://www.nature.com/articles/s41592-019-0358-2">RIKEN PlaSMA authentic standards</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf056;</span>MS/MS Negative
+						</div>
+						<div class="labelRecords">4,216</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel3"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Neg-PlaSMA.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://www.nature.com/articles/s41592-019-0358-2">RIKEN PlaSMA bio-MS/MS (MSI level 1,2,3, or 4)<br> from plant tissues
+							</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf055;</span>MS/MS Positive
+						</div>
+						<div class="labelRecords">2,384</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel3"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/BioMSMS-Pos-PlaSMA.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://www.nature.com/articles/s41592-019-0358-2">RIKEN PlaSMA bio-MS/MS (MSI level 1,2,3, or 4)<br> from plant tissues
+							</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf056;</span>MS/MS Negative
+						</div>
+						<div class="labelRecords">1,732</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel3"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/BioMSMS-Neg-PlaSMA.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://www.mdpi.com/2218-1989/9/11/251">Karolinska institute <br>and Gunma (GIAR) zic-HILIC deconvoluted MS2 spectra <br> in data independent acquisition
+							</a>
+						</div>
+
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf055;</span>MS/MS Positive
+						</div>
+						<div class="labelRecords">814</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel2"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/KI-GIAR_zic-HILIC_Pos_v0.90.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://mona.fiehnlab.ucdavis.edu/">Fiehn Pathogen Box</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf055;</span>MS/MS Positive
+						</div>
+						<div class="labelRecords">392</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel2"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Pos-Pathogen_Box_20200109.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://mona.fiehnlab.ucdavis.edu/">Fiehn/Vaniya natural product library</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf055;</span>MS/MS Positive
+						</div>
+						<div class="labelRecords">28,347</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel5"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Pos-Vaniya-Fiehn_Natural_Products_Library_20200109.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://mona.fiehnlab.ucdavis.edu/">Fiehn/Vaniya natural product library</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf056;</span>MS/MS Negative
+						</div>
+						<div class="labelRecords">11,590</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel5"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Neg-Vaniya-Fiehn_Natural_Products_Library_20200109.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://www.sciencedirect.com/science/article/pii/S0031942220302004">BMDMS-NP</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf055;</span>MS/MS Positive
+						</div>
+						<div class="labelRecords">227,307</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel4"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Pos-bmdms-np_20200811.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<span class="iconAwesome">&#xf360;</span> <a href="https://pubs.acs.org/doi/10.1021/acs.analchem.0c01591">PFAS</a>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf056;</span>MS/MS Negative
+						</div>
+						<div class="labelRecords">6,936</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel3"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/MSMS-Neg-PFAS_20200806.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+
+					<hr>
+
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<b>All records with Kovats RI (9062 unique compounds)</b>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf0e7;</span>EI-MS
+						</div>
+						<div class="labelRecords">28,220</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel5"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/GCMS DB-Public-KovatsRI-VS3.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="boxMsp">
+						<div class="labelMspName">Fiehn BinBase DB (Rtx5-Sil MS, predicted Kovats RI)</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf0e7;</span>EI-MS
+						</div>
+						<div class="labelRecords">1,021</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel3"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/GCMS DB_FiehnBinbase-KovatRI-VS2.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">RIKEN DB (Rtx5-Sil MS, Kovats RI)</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf0e7;</span>EI-MS
+						</div>
+						<div class="labelRecords">241</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel2"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/GCMS DB_FiehnBinbase-KovatRI-VS2.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">Kazusa DB (Rtx5-Sil MS, Kovats RI)</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf0e7;</span>EI-MS
+						</div>
+						<div class="labelRecords">273</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel2"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/GCMS DB_MassBank-Restek-Kazusa-VS2.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">GL-Science DB (InertCap 5MS, Kovats RI)</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf0e7;</span>EI-MS
+						</div>
+						<div class="labelRecords">494</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel2"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/GCMS DB_InertCap 5MS_GLscience-VS2.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">Osaka Univ. DB (CPSil-8CB, Kovats RI)</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf0e7;</span>EI-MS
+						</div>
+						<div class="labelRecords">430</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel2"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/GCMS DB_MassBank-CPSil8-OsakaUniv-VS2.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<div class="boxMsp">
+						<div class="labelMspName">MoNA volatile (Kovats RI)</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf0e7;</span>EI-MS
+						</div>
+						<div class="labelRecords">212</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel2"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/GCMS DB_MoNA-Volatile-KovatsRI.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="boxMsp">
+						<div class="labelMspName">
+							<b>All records with Fiehn RI (9062 unique compounds)</b>
+						</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf0e7;</span>EI-MS
+						</div>
+						<div class="labelRecords">28,220</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel5"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/GCMS DB-Public-FiehnRI-VS3.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<hr>
+					<div class="boxMsp">
+						<div class="labelMspName">Fiehn BinBase DB (Rtx5-Sil MS, FAMEs RI)</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf0e7;</span>EI-MS
+						</div>
+						<div class="labelRecords">1,021</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel3"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/GCMS DB_FiehnBinbase-FiehnRI-VS2.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">RIKEN DB (Rtx5-Sil MS, predicted Fiehn RI)</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf0e7;</span>EI-MS
+						</div>
+						<div class="labelRecords">241</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel2"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/GCMS DB_MassBank-Restek-RIKEN-VS2-replacedByFiehnRI.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">Kazusa DB (Rtx5-Sil MS, predicted Fiehn RI)</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf0e7;</span>EI-MS
+						</div>
+						<div class="labelRecords">273</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel2"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/GCMS DB_MassBank-Restek-Kazusa-VS2-replacedByFiehnRI.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">GL-Science DB (InertCap 5MS, predicted Fiehn RI)</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf0e7;</span>EI-MS
+						</div>
+						<div class="labelRecords">494</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel2"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/GCMS DB_InertCap 5MS_GLscience-VS2-replacedByFiehnRI.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxMsp">
+						<div class="labelMspName">Osaka Univ. DB (CPSil-8CB, predicted Fiehn RI)</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf0e7;</span>EI-MS
+						</div>
+						<div class="labelRecords">430</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel2"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/GCMS DB_MassBank-CPSil8-OsakaUniv-VS2-replacedByFiehnRI.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+					<div class="boxMsp">
+						<div class="labelMspName">MoNA volatile (Fiehn RI)</div>
+						<div class="labelPolarity">
+							<span class="iconAwesome">&#xf0e7;</span>EI-MS
+						</div>
+						<div class="labelRecords">212</div>
+						<div class="labelUnit">records</div>
+						<div class="labelBarGrpah">
+							<div class="colorBarLevel2"></div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/msp/GCMS DB_MoNA-Volatile-FiehnRI.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">MS-DIAL LipidBlast (version 68)</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">Last edited in April 21th, 2022.</div>
+						<div class="labelSubLine">
+							MS-DIAL internally has the theoretical MS/MS spectra for lipid annotations.<br> Below is the <a href="http://fiehnlab.ucdavis.edu/projects/LipidBlast"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">LipidBlast</a> (fork) templates that MS-DIAL partially uses.
+						</div>
+						<div class="labelSubLine">
+							The nomenclature for lipid classes in MS-DIAL lipidomics is shown at <a href="lipidnomenclature.html">'Lipid nomenclature in MS-DIAL lipidomics'</a>.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxFork">
+						<div class="labelForkName">MS-DIAL lipidomics (adjusted Oliver Fiehn lab LC-MS method)</div>
+						<div class="labelForkFileType">
+							<div class="iconFileType">.ibm2</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/lipidblast/LipidMsmsBinaryDB-VS68-FiehnO.lbm2"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxFork">
+						<div class="labelForkName">MS-DIAL lipidomics (adjusted Makoto Arita lab LC-MS method)</div>
+						<div class="labelForkFileType">
+							<div class="iconFileType">.ibm2</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/lipidblast/LipidMsmsBinaryDB-VS68-AritaM.lbm2"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxFork">
+						<div class="labelForkName">MS-DIAL lipidomics (adjusted Kazuki Saito lab LC-MS method)</div>
+						<div class="labelForkFileType">
+							<div class="iconFileType">.ibm2</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/lipidblast/LipidMsmsBinaryDB-VS68-SaitoK.lbm2"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxFork">
+						<div class="labelForkName">MS-DIAL lipidomics (adjusted Oliver Fiehn lab LC-MS method)</div>
+						<div class="labelForkFileType">
+							<div class="iconFileType">.ibm</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/lipidblast/MSDIAL-LipidDB-VS66-Public.lbm"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxFork">
+						<div class="labelForkName">LipidBlast template for glycerolipids</div>
+						<div class="labelForkFileType">
+							<div class="iconFileType">.xlsx</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/lipidblast/LipidBlast DBs fork GlyceroLipids VS12.zip"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxFork">
+						<div class="labelForkName">LipidBlast template for sphingolipids</div>
+						<div class="labelForkFileType">
+							<div class="iconFileType">.xlsx</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/lipidblast/LipidBlast DBs fork SphingoLipids VS7.zip"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxFork">
+						<div class="labelForkName">
+							These libraries are also available as MSP format.<br> Positive (81 class, 377,313 molecules, 554,041 spectra)
+						</div>
+						<div class="labelForkFileType">
+							<div class="iconFileType">.msp</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/lipidblast/MSDIAL-TandemMassSpectralAtlas-VS69-Pos.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxFork">
+						<div class="labelForkName">
+							These libraries are also available as MSP format.<br> Negative (94 class, 356,477 molecules, 792,757 spectra)
+						</div>
+						<div class="labelForkFileType">
+							<div class="iconFileType">.msp</div>
+						</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/lipidblast/MSDIAL-TandemMassSpectralAtlas-VS69-Neg.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Programs supporting MS-DIAL output</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+
+					<div class="boxSupport">
+						<div class="labelSupportName">
+							<a href="https://github.com/eMetaboHUB/MS-CleanR"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">MS-CleanR</a>
+						</div>
+						<div class="labelSupportDesc">The MS-CleanR package provides functions for feature filtering and annotation of LC-MS data.</div>
+					</div>
+
+					<div class="boxSupport">
+						<div class="labelSupportName">
+							<a href="http://metdna.zhulab.cn/"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">MetDNA</a>
+						</div>
+						<div class="labelSupportDesc">The program implements a metabolic reaction network (MRN) based recursive algorithm for metabolite annotation using MS/MS.</div>
+					</div>
+
+					<div class="boxSupport">
+						<div class="labelSupportName">
+							<a href="https://ccms-ucsd.github.io/GNPSDocumentation/featurebasedmolecularnetworking-with-ms-dial/"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">GNPS FBMN</a>
+						</div>
+						<div class="labelSupportDesc">The feature-based molecular networking (FBMN) supports the result of MS-DIAL by using "GNPS export" in alignment result export window.</div>
+					</div>
+
+					<div class="boxSupport">
+						<div class="labelSupportName">
+							<a href="https://msbi.ipb-halle.de/MetFamily/"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">MetFamily</a>
+						</div>
+						<div class="labelSupportDesc">This is designed for the identification and classification of regulated metabolite families by MS1 features and MS/MS.</div>
+					</div>
+
+					<div class="boxSupport">
+						<div class="labelSupportName">
+							<a href="http://secim.ufl.edu/secim-tools/"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">LipidMatch</a>
+						</div>
+						<div class="labelSupportDesc">This supports rule based lipid identifications by means of MS/MS library.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Acknowledgement</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							This project was supported <br>by NSF-JST Strategic International Collaborative Research Program (SICORP) for JP-US Metabolomics.
+						</div>
+						<div class="labelSubLine">
+							MS-DIAL is mainly developed between UC Davis Prof.<br>Oliver Fiehn team and RIKEN CSRS (and NIG) Prof. Masanori Arita team.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxAcknowledgement">
+						<div class="labelAcknowledgementRole">Lead developer</div>
+						<div class="labelAcknowledgementName">Hiroshi Tsugawa</div>
+						<div class="labelAcknowledgementOrg">RIKEN</div>
+					</div>
+					<div class="boxAcknowledgement">
+						<div class="labelAcknowledgementRole">Current main developers</div>
+						<div class="labelAcknowledgementName">Hiroshi Tsugawa</div>
+						<div class="labelAcknowledgementOrg">RIKEN</div>
+					</div>
+					<div class="boxAcknowledgement">
+						<div class="labelAcknowledgementRole">Current main developers</div>
+						<div class="labelAcknowledgementName">Yuki Matsuzawa</div>
+						<div class="labelAcknowledgementOrg">RIKEN</div>
+					</div>
+					<div class="boxAcknowledgement">
+						<div class="labelAcknowledgementRole">Current main developers</div>
+						<div class="labelAcknowledgementName">Ipputa Tada</div>
+						<div class="labelAcknowledgementOrg">SOKENDAI</div>
+					</div>
+					<div class="boxAcknowledgement">
+						<div class="labelAcknowledgementRole">Current main developers</div>
+						<div class="labelAcknowledgementName">Mikiko Takahashi</div>
+						<div class="labelAcknowledgementOrg">RIKEN</div>
+					</div>
+					<div class="boxAcknowledgement">
+						<div class="labelAcknowledgementRole">Main contributors</div>
+						<div class="labelAcknowledgementName">Diego Pedrosa</div>
+						<div class="labelAcknowledgementOrg">UC Davis</div>
+					</div>
+					<div class="boxAcknowledgement">
+						<div class="labelAcknowledgementRole">Main contributors</div>
+						<div class="labelAcknowledgementName">Tomas Cajka</div>
+						<div class="labelAcknowledgementOrg">UC Davis</div>
+					</div>
+					<div class="boxAcknowledgement">
+						<div class="labelAcknowledgementRole">Other supporters</div>
+						<div class="labelAcknowledgementName">Haruki Uchino</div>
+						<div class="labelAcknowledgementOrg">RIKEN, Keio Univ.</div>
+					</div>
+					<div class="boxAcknowledgement">
+						<div class="labelAcknowledgementRole">Other supporters</div>
+						<div class="labelAcknowledgementName">Gert Wohlgemuth</div>
+						<div class="labelAcknowledgementOrg">UC Davis</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<!-- Footer -->
+	<div id="sectionFooter">
+		<div id="areaLogo-RIKEN">
+			<a href="http://www.yokohama.riken.jp/english/"><img id="imageLogo-RIKEN" alt="RIKEN" src="../static/images/logoRIKEN.gif"></a>
+		</div>
+		<div id="areaLogo-CSRS">
+			<a href="http://www.csrs.riken.jp/en/"><img id="imageLogo-CSRS" alt="CSRS" src="../static/images/logoCSRS.png"></a>
+		</div>
+		<div id="areaLogo-PRIMe">
+			<a href="http://prime.psc.riken.jp/"><img id="imageLogo-PRIMe" alt="PRIMe" src="../static/images/logoPRIMe.png"></a>
+		</div>
+		<div>
+			<div>RIKEN Center for Sustainable Resource Science : Metabolome Informatics Research Team</div>
+			<address>1-7-22 Suehiro-cho, Tsurumi-ku, Yokohama City, Kanagawa, 230-0045, Japan</address>
+		</div>
+		<div>
+			<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img id="imageLogo-CCL" alt="Creative Commons License" src="../static/images/88x31.png"></a>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,1336 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Description" content="Computational mass spectrometry for metabolomics and lipidomics">
+<meta name="Keywords" content="MS-DIAL">
+<meta name="Author" content="Hiroshi Tsugawa, PhD. Center for Sustainable Resource Science (CSRS), RIKEN">
+
+<!-- StyleSheet -->
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/responsive.gs.24col.css">
+
+<!-- JavaScript Library -->
+<script type="text/javascript" src="../static/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery-ui.min.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49TTSHPSY4"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-49TTSHPSY4');
+</script>
+
+<!-- Favicon -->
+<link rel="icon" href="../static/favicon.ico">
+
+<!-- Title -->
+<title>CompMS | MS-DIAL annotation code</title>
+
+</head>
+
+<body>
+	<!-- Navigation -->
+	<div class="container" id="sectionNavigation">
+		<div class="row">
+			<div class="col span_24">
+				<nav>
+					<ul class="topMenus">
+						<li>
+							<a href="../index.html"><img class="imageLogo-cms" alt="Computational mass spectrometry logo" src="../static/images/imageHome.png"></a>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Software</b>
+							</div>
+							<ul class="subMenus">
+								<li>
+									<a href="../msdial/main.html">MS-DIAL</a>
+								</li>
+								<li>
+									<a href="../msfinder/main.html">MS-FINDER</a>
+								</li>
+								<li>
+									<a href="../mrmprobs/main.html">MRMPROBES/MRMDIFF</a>
+								</li>
+								<li>
+									<a href="../others/main.html">Others</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Database</b>
+							</div>
+							<ul class="subMenus">
+								<li>
+									<a href="../msdial/main.html#MSP">MSP spectral database</a>
+								</li>
+								<li>
+									<a href="../mrmdatabase/main.html">MRM database</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="../index.html#contact"><b>Contact</b></a>
+							</div>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="../licence/main.html"><b>Licence</b></a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div id="page_top">
+		<a href="#"><span class="iconAwesome">&#xf102;</span></a>
+	</div>
+
+	<div class="mainFrame" id="sectionMain">
+
+		<div class="container">
+			<div class="row">
+				<div class="col span_24">
+					<div class="boxSub">
+						<div class="boxOrverwidth-left colorMsDial"></div>
+						<div class="boxMainContents">
+							<div class="labelMainIcon">
+								<img class="imgIcon-Msdial" src="../static/images/iconMsdial.png">
+							</div>
+							<div class="labelMainTitle">MS-DIAL</div>
+							<div class="labelMainItem">Compound identification and annotation confidence</div>
+							<div class="labelMainItem">Annotation code: Version 1.0</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine-Double">
+						<div class="labelLineTitle">
+							LC-IM(ion mobility)-MS/MS, MSP-MS/MS based annotation,<br> lipidomics project
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							RT match should be equal to 0.5 min or less. <br>If less than 0.5 min is used for the RT tolerance, the tolerance is used for level 1 annotation.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div>Code</div>
+						</div>
+						<div class="labelMatch">
+							<div>Retention Time matched</div>
+						</div>
+						<div class="labelMatch">
+							<div>CCS matched</div>
+						</div>
+						<div class="labelMatch">
+							<div>m/z matched</div>
+						</div>
+						<div class="labelMatch">
+							<div>MS/MS matched</div>
+						</div>
+						<div class="labelResolved">
+							<div>Resolved method</div>
+						</div>
+					</div>
+					<hr>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-1">100</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid acyl position</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-1">110</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid acyl chain</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-1">120</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid class</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-2">200</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid acyl position</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-2">210</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid acyl chain</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-2">220</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid class</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-3">300</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid acyl position</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-3">310</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid acyl chain</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-3">320</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid class</div>
+						</div>
+					</div>
+
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-4">400</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid acyl position</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-4">410</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid acyl chain</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-4">420</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid class</div>
+						</div>
+					</div>
+
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-5">500</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelResolved">
+							<div>-</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-5">510</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelResolved">
+							<div>-</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-5">520</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelResolved">
+							<div>-</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-5">530</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelResolved">
+							<div>-</div>
+						</div>
+					</div>
+					<hr>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-9">999</div>
+						</div>
+						<div class="labelMatch">
+							<div>Unknown</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelResolved">
+							<div></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine-Double">
+						<div class="labelLineTitle">
+							LC-IM-MS/MS, MSP-MS/MS based annotation,<br> metabolomics project
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							RT match should be equal to 0.5 min or less.<br>If less than 0.5 min is used for the RT tolerance, the tolerance is used for level 1 annotation.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div>Code</div>
+						</div>
+						<div class="labelMatch">
+							<div>Retention Time matched</div>
+						</div>
+						<div class="labelMatch">
+							<div>CCS matched</div>
+						</div>
+						<div class="labelMatch">
+							<div>m/z matched</div>
+						</div>
+						<div class="labelMatch">
+							<div>MS/MS matched</div>
+						</div>
+					</div>
+					<hr>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-1">130</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-2">230</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-3">330</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-4">430</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-5">500</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-5">510</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-5">520</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-5">530</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+					</div>
+					<hr>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-9">999</div>
+						</div>
+						<div class="labelMatch">
+							<div>Unknown</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine-Double">
+						<div class="labelLineTitle">
+							LC-MS/MS, MSP-MS/MS based annotation,<br> lipidomics project
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							RT match should be equal to 0.5 min or less.<br> If less than 0.5 min is used for the RT tolerance, the tolerance is used for level 1 annotation.
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">"lipid acyl position resolved" is not officially supported yet.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div>Code</div>
+						</div>
+						<div class="labelMatch">
+							<div>Retention Time matched</div>
+						</div>
+						<div class="labelMatch">
+							<div>m/z matched</div>
+						</div>
+						<div class="labelMatch">
+							<div>MS/MS matched</div>
+						</div>
+						<div class="labelResolved">
+							<div>Resolved method</div>
+						</div>
+					</div>
+					<hr>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-3">300</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid acyl position</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-3">310</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid acyl chain</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-3">320</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid class</div>
+						</div>
+					</div>
+
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-4">400</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid acyl position</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-4">410</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid acyl chain</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-4">420</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelResolved">
+							<div>Lipid class</div>
+						</div>
+					</div>
+
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-5">520</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelResolved">
+							<div>-</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-5">530</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelResolved">
+							<div>-</div>
+						</div>
+					</div>
+					<hr>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-9">999</div>
+						</div>
+						<div class="labelMatch">
+							<div>Unknown</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelResolved">
+							<div></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine-Double">
+						<div class="labelLineTitle">
+							LC-MS/MS, MSP-MS/MS based annotation,<br> metabolomics project
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							RT match should be equal to 0.5 min or less.<br> If less than 0.5 min is used for the RT tolerance, the tolerance is used for level 1 annotation.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div>Code</div>
+						</div>
+						<div class="labelMatch">
+							<div>Retention Time matched</div>
+						</div>
+						<div class="labelMatch">
+							<div>m/z matched</div>
+						</div>
+						<div class="labelMatch">
+							<div>MS/MS matched</div>
+						</div>
+					</div>
+					<hr>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-3">330</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-4">430</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-5">520</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-5">530</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-9">999</div>
+						</div>
+						<div class="labelMatch">
+							<div>Unknown</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">LC-MS/MS, text DB based annotation</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">The term "annotated by user-defined text library" is assigned.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">GC-MS project</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							RT match should be equal to 0.1 min or less.<br>If less than 0.1 min is used for the RT tolerance, the tolerance is used for level 1 annotation.
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							Kovats RI match should be equal to 20 or less.<br> If less than 20 is used for the Kovats RI tolerance, the tolerance is used for level 1 annotation.
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							Fiehn RI match should be equal to 2000 or less.<br> If less than 2000 is used for the Fiehn RI tolerance, the tolerance is used for level 1 annotation.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div>Code</div>
+						</div>
+						<div class="labelMatch">
+							<div>RT/RI matched</div>
+						</div>
+						<div class="labelMatch">
+							<div>EI-MS matched</div>
+						</div>
+					</div>
+					<hr>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-3">340</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-4">440</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-9">999</div>
+						</div>
+						<div class="labelMatch">
+							<div>Unknown</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="sectionFooter">
+		<div id="areaLogo-RIKEN">
+			<a href="http://www.yokohama.riken.jp/english/"><img id="imageLogo-RIKEN" alt="RIKEN" src="../static/images/logoRIKEN.gif"></a>
+		</div>
+		<div id="areaLogo-CSRS">
+			<a href="http://www.csrs.riken.jp/en/"><img id="imageLogo-CSRS" alt="CSRS" src="../static/images/logoCSRS.png"></a>
+		</div>
+		<div id="areaLogo-PRIMe">
+			<a href="http://prime.psc.riken.jp/"><img id="imageLogo-PRIMe" alt="PRIMe" src="../static/images/logoPRIMe.png"></a>
+		</div>
+		<div>
+			<div>RIKEN Center for Sustainable Resource Science : Metabolome Informatics Research Team</div>
+			<address>1-7-22 Suehiro-cho, Tsurumi-ku, Yokohama City, Kanagawa, 230-0045, Japan</address>
+		</div>
+		<div>
+			<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img id="imageLogo-CCL" alt="Creative Commons License" src="../static/images/88x31.png"></a>
+		</div>
+	</div>
+
+</body>
+</html>
+
