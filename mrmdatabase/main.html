@@ -1,0 +1,459 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Description" content="Computational mass spectrometry for metabolomics and lipidomics">
+<meta name="Keywords" content="MS-DIAL">
+<meta name="Author" content="Hiroshi Tsugawa, PhD. Center for Sustainable Resource Science (CSRS), RIKEN">
+
+<!-- StyleSheet -->
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/responsive.gs.24col.css">
+
+<!-- JavaScript Library -->
+<script type="text/javascript" src="../static/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../static/js/core.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49TTSHPSY4"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-49TTSHPSY4');
+</script>
+
+<!-- Favicon -->
+<link rel="icon" href="../static/favicon.ico">
+
+<!-- Title -->
+<title>CompMS | MRM database</title>
+
+</head>
+
+<body>
+	<!-- Navigation -->
+	<div class="container" id="sectionNavigation">
+		<div class="row">
+			<div class="col span_24">
+				<nav>
+					<ul class="topMenus">
+						<li>
+							<a href="../index.html"><img class="imageLogo-cms" alt="Computational mass spectrometry logo" src="../static/images/imageHome.png"></a>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Software</b>
+							</div>
+							<ul class="subMenus">
+								<li>
+									<a href="../msdial/main.html">MS-DIAL</a>
+								</li>
+								<li>
+									<a href="../msfinder/main.html">MS-FINDER</a>
+								</li>
+								<li>
+									<a href="../mrmprobs/main.html">MRMPROBES/MRMDIFF</a>
+								</li>
+								<li>
+									<a href="../others/main.html">Others</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Database</b>
+							</div>
+							<ul class="subMenus">
+								<li>
+									<a href="../msdial/main.html#MSP">MSP spectral database</a>
+								</li>
+								<li>
+									<a href="../mrmdatabase/main.html">MRM database</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="../index.html#contact"><b>Contact</b></a>
+							</div>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="../licence/main.html"><b>Licence</b></a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div id="page_top">
+		<a href="#"><span class="iconAwesome">&#xf102;</span></a>
+	</div>
+
+	<div class="mainFrame" id="sectionMain">
+
+		<div class="container">
+			<div class="row">
+				<div class="col span_8">
+					<div class="boxMainTitle">
+						<div class="boxOrverwidth-left colorOthers"></div>
+						<div class="boxMainContents">
+							<div class="labelMainIcon">
+								<span class="iconAwesome-Menu">&#xf1c0;</span>
+							</div>
+							<div class="labelMainTitle">MRM database</div>
+						</div>
+						<div class="boxContents-Objective">
+							<div class="labelSubTitle">Objective</div>
+							<div class="labelMenuItem">
+								<div class="areaParagraph">
+									For the further development of metablomics research, we offer not only a data processing tool but also at least the recommended analytical conditions. Because the "metabolomics" research field is an interdisciplinary area of biology, analytical chemistry, and bioinformatics, both of analytical method and data processing method should be provided. In the MRMPROBS project, the recommended MRM analytical conditions and its reference library are also provided from this site. This database will be continually-revised.<br>
+								</div>
+								License: Creative-Commons By-Attribution (CC-BY)
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_16">
+					<div class="boxMainImage">
+						<div class="boxImage-right">
+							<img class="imgScreen" src="../static/images/imageOverview.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Databases</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="#ionpair"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf1c0;</span>
+							</div>
+							<div class="labelMenuTitle">Ion-pair LC-QqQ/MS</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link in page</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="#reverse"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf1c0;</span>
+							</div>
+							<div class="labelMenuTitle">
+								Reverse phase LC QqQ/MS<br> for lipids
+							</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link in page</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="#zic"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf1c0;</span>
+							</div>
+							<div class="labelMenuTitle">Zic Hilic LC-QqQ/MS</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link in page</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row contensDetail">
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="#pfpp"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf1c0;</span>
+							</div>
+							<div class="labelMenuTitle">PFPP LC-QqQ/MS</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link in page</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_8">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="#gc"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf1c0;</span>
+							</div>
+							<div class="labelMenuTitle">GC-QqQ/MS</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link in page</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container" id="ionpair">
+				<div class="row contensDetail">
+					<div class="col span_24">
+						<div class="boxLine">
+							<div class="labelLineTitle">Ion-pair LC-QqQ/MS</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col span_16">
+						<div class="boxContents-library">
+							<div class="labelSubTitle">Feature</div>
+							<div class="labelMenuItem">
+								<div class="areaParagraph">The ion-pair regent such as tributylamine(TBA) with ODS column have been frequently used especially for the analysis of "central metabolites" including glycolysis, pentose phosphate pathway, TCA cycle, and energy metabolites. This technique can clearly separate the isomeric metabolites such as glucose 6-phosphate, glucose 1-phosphate, and fructose 6-phosphate.</div>
+								<div class="areaParagraph">
+									Target metabolites: sugar phosphate, nucleotide, CoA, and others.<br> MRM transition number: 166 (60 metabolites)
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_8">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="Detail of LCQqQMS method (Ion-pair).xlsx"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf019;</span>
+								</div>
+								<div class="labelMenuTitle">Ion-pair LC-QqQ/MS</div>
+								<div class="labelMenuSubTitle">
+									Detail of LC-QqQ/MS method<br> and reference library (Ion-pair)
+								</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container" id="reverse">
+				<div class="row contensDetail">
+					<div class="col span_24">
+						<div class="boxLine">
+							<div class="labelLineTitle">Reverse phase LC QqQ/MS for lipids</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col span_16">
+						<div class="boxContents-library">
+							<div class="labelSubTitle">Feature</div>
+							<div class="labelMenuItem">
+								<div class="areaParagraph">
+									The target lipid class is phosphatidylcholine (PC), phosphatidylethanolamine (PE), lysoPC, lysoPE, plasmanyl-PC, plasmenyl-PC, plasmanyl-PE, plasmenyl-PE, free fatty acid (FFA), acylcarnitine (AC), and cholic acid (CA).<br> This method in combination with MRM-DIFF program should be powerful for MRM-based lipid profiling.
+								</div>
+								<div class="areaParagraph">
+									Target metabolites: Lipids (PC, PE, FFA, AC, CA).<br> MRM transition number: 284 (284 metabolites)
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col span_8">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="Detail of LCQqQMS method (ODS-lipids).xlsx"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf019;</span>
+								</div>
+								<div class="labelMenuTitle">
+									Reverse phase LC QqQ/MS<br> for lipids
+								</div>
+								<div class="labelMenuSubTitle">
+									Detail of LC-QqQ/MS method<br> and reference library (ODS-lipids)
+								</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container" id="zic">
+				<div class="row contensDetail">
+					<div class="col span_24">
+						<div class="boxLine">
+							<div class="labelLineTitle">Zic Hilic LC-QqQ/MS</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col span_16">
+						<div class="boxContents-library">
+							<div class="labelSubTitle">Feature</div>
+							<div class="labelMenuItem">
+								<div class="areaParagraph">The zic hilic column has also been used for the analysis of central metabolites as well as ion-pair LC. Because the ion-pair regent is strongly retained in the instrument, its platform usually results in the "specialized" machine. Therefore, the zic hilic column is also preferred in order to separate the isomeric metabolites.</div>
+								<div class="areaParagraph">
+									Target metabolites: sugar phosphate, nucleotide, CoA, and others.<br> MRM transition number: 149 (79 metabolites)
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col span_8">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="Detail of LCQqQMS method (Zic Hilic).xlsx"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf019;</span>
+								</div>
+								<div class="labelMenuTitle">Zic Hilic LC-QqQ/MS</div>
+								<div class="labelMenuSubTitle">
+									Detail of LC-QqQ/MS method<br> and reference library (Zic Hilic)
+								</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container" id="pfpp">
+				<div class="row contensDetail">
+					<div class="col span_24">
+						<div class="boxLine">
+							<div class="labelLineTitle">PFPP LC-QqQ/MS</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col span_16">
+						<div class="boxContents-library">
+							<div class="labelSubTitle">Feature</div>
+							<div class="labelMenuItem">
+								<div class="areaParagraph">The pentafluorophenylpropyl (PFPP)-bonded silica column has been used especially for the amino acids, peptides, and nucleic acids. Although the retention time drift is considerably larger than the conventional ODS column, it provides the excellent peak shape and highly quantitative ability.</div>
+								<div class="areaParagraph">
+									Target metabolites: amino acid, nucleic acid, and others.<br> MRM transition number: 175 (59 metabolites)
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col span_8">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="Detail of LCQqQMS method (PFPP).xlsx"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf019;</span>
+								</div>
+								<div class="labelMenuTitle">PFPP LC-QqQ/MS</div>
+								<div class="labelMenuSubTitle">
+									Detail of LC-QqQ/MS method<br> and reference library (PFPP)
+								</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container" id="gc">
+				<div class="row contensDetail">
+					<div class="col span_24">
+						<div class="boxLine">
+							<div class="labelLineTitle">GC-QqQ/MS</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col span_16">
+						<div class="boxContents-library">
+							<div class="labelSubTitle">Feature</div>
+							<div class="labelMenuItem">
+								<div class="areaParagraph">This is the alternative method of conventional GC/MS based metabolomics approach. The metabolite is derivatized by methoxyamine and MSTFA. Moreover, the electron ionization (EI) method is utilized. Although the soft-ionization method such as chemical ionization (CI) or other derivative regent have been frequently used in GC-QqQ/MS, this reported method is always useful for highly sensitive and selective measurement for hydrophilic metabolites.</div>
+								<div class="areaParagraph">
+									Target metabolites: sugar, sugar alcohol, organic acid, amino acid, amides, amine, and others.<br> MRM transition number: 285 (103 metabolites)
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col span_8">
+						<div class="boxMain">
+							<div class="boxContents-Main">
+								<a href="Detail of GCQqQMS methods.xlsx"></a>
+								<div class="labelMenuIcon">
+									<span class="iconAwesome-Menu">&#xf019;</span>
+								</div>
+								<div class="labelMenuTitle">GC-QqQ/MS</div>
+								<div class="labelMenuSubTitle">
+									Detail of GC-QqQ/MS method<br> and reference library
+								</div>
+								<div class="labelMenuItem"></div>
+								<div class="labelButton">Download</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="sectionFooter">
+		<div id="areaLogo-RIKEN">
+			<a href="http://www.yokohama.riken.jp/english/"><img id="imageLogo-RIKEN" alt="RIKEN" src="../static/images/logoRIKEN.gif"></a>
+		</div>
+		<div id="areaLogo-CSRS">
+			<a href="http://www.csrs.riken.jp/en/"><img id="imageLogo-CSRS" alt="CSRS" src="../static/images/logoCSRS.png"></a>
+		</div>
+		<div id="areaLogo-PRIMe">
+			<a href="http://prime.psc.riken.jp/"><img id="imageLogo-PRIMe" alt="PRIMe" src="../static/images/logoPRIMe.png"></a>
+		</div>
+		<div>
+			<div>RIKEN Center for Sustainable Resource Science : Metabolome Informatics Research Team</div>
+			<address>1-7-22 Suehiro-cho, Tsurumi-ku, Yokohama City, Kanagawa, 230-0045, Japan</address>
+		</div>
+		<div>
+			<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img id="imageLogo-CCL" alt="Creative Commons License" src="../static/images/88x31.png"></a>
+		</div>
+	</div>
+
+</body>
+</html>
+
