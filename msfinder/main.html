@@ -1,0 +1,408 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Description" content="Computational mass spectrometry for metabolomics and lipidomics">
+<meta name="Keywords" content="MS-FINDER">
+<meta name="Author" content="Hiroshi Tsugawa, PhD. Center for Sustainable Resource Science (CSRS), RIKEN">
+
+<!-- StyleSheet -->
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/responsive.gs.24col.css">
+
+<!-- JavaScript Library -->
+<script type="text/javascript" src="../static/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../static/js/core.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49TTSHPSY4"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-49TTSHPSY4');
+</script>
+
+<!-- Favicon -->
+<link rel="icon" href="../static/favicon.ico">
+
+<!-- Title -->
+<title>CompMS | MS-FINDER</title>
+
+</head>
+
+<body>
+	<!-- Navigation -->
+	<div class="container" id="sectionNavigation">
+		<div class="row">
+			<div class="col span_24">
+				<nav>
+					<ul class="topMenus">
+						<li>
+							<a href="../index.html"><img class="imageLogo-cms" alt="Computational mass spectrometry logo" src="../static/images/imageHome.png"></a>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Software</b>
+							</div>
+							<ul class="subMenus">
+								<li>
+									<a href="../msdial/main.html">MS-DIAL</a>
+								</li>
+								<li>
+									<a href="../msfinder/main.html">MS-FINDER</a>
+								</li>
+								<li>
+									<a href="../mrmprobs/main.html">MRMPROBES/MRMDIFF</a>
+								</li>
+								<li>
+									<a href="../others/main.html">Others</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<b><span class="topMenu-State">&#xf0da;</span>Database</b>
+							</div>
+							<ul class="subMenus">
+								<li>
+									<a href="../msdial/main.html#MSP">MSP spectral database</a>
+								</li>
+								<li>
+									<a href="../mrmdatabase/main.html">MRM database</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="../index.html#contact"><b>Contact</b></a>
+							</div>
+						</li>
+						<li>
+							<div class="topMenu-Unselect">
+								<a href="../licence/main.html"><b>Licence</b></a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div id="page_top">
+		<a href="#"><span class="iconAwesome">&#xf102;</span></a>
+	</div>
+
+	<div class="mainFrame" id="sectionMain">
+		<!-- MS-DIAL -->
+		<div class="container">
+			<div class="row">
+				<div class="col span_8">
+					<div class="boxMainTitle">
+						<div class="boxOrverwidth-left colorMsFinder"></div>
+						<div class="boxMainContents">
+							<div class="labelMainIcon">
+								<img class="imgIcon-Msfinder" src="../static/images/iconMsfinder.png">
+							</div>
+							<div class="labelMainTitle">MS-FINDER</div>
+						</div>
+						<div class="boxContents-Objective">
+							<div class="labelSubTitle">Objective</div>
+							<div class="labelMenuItem">
+								MS-FINDER was launched as a universal program for compound ‘annotation’ that supports EI-MS (GC/MS) and MS/MS spectral mining.<br> <br> First, MS-FINDER aims to provide solutions for<br> 1) formula predictions, <br> 2) fragment annotations, <br> and 3) structure elucidations by means of unknown spectra.<br> <br> In addition, the program can annotate your unknowns <br>by the public spectral databases such as MassBank, LipidBlast, and GNPS.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_16">
+					<div class="boxMainImage">
+						<div class="boxImage-right">
+							<img class="imgScreen" src="../static/images/imageMsfinder.png">
+						</div>
+						<div class="boxContents-pCite">
+							<div class="labelSubTitle">Please cite</div>
+							<div class="labelMenuItem">
+								<div>
+									<span class="iconAwesome">&#xf00c;</span>Hydrogen rearrangement rules: computational MS/MS fragmentation and structure elucidation using MS-FINDER software. <em>Analytical Chemistry</em> 88, 7946-7958, 2016. <a href="https://pubs.acs.org/doi/abs/10.1021/acs.analchem.6b00770"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">[ACS link]</a>
+								</div>
+								<div>
+									<span class="iconAwesome">&#xf00c;</span>Identifying metabolites by integrating metabolome databases with mass spectrometry cheminformatics. <em>Nature Methods</em>, 15, 53-56, 2018 <a href="https://www.nature.com/articles/nmeth.4512"><img height="14" width="14" class="imageExLink" src="../static/images/iconLink.png">[NPG link]</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="sectionDownload">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Software</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_5">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/repository/MSFINDER ver 3.60.zip"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu mainIcon">&#xf019;</span> <span class="iconAwesome-SubMenu subIcon">&#xf11c;</span>
+							</div>
+							<div class="labelMenuTitle">Latest version</div>
+							<div class="labelMenuSubTitle">Windows x64</div>
+							<div class="labelButton">Download</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_5">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/repository/macOS/MsfinderConsole_v352_mac.zip"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu mainIcon">&#xf019;</span> <span class="iconAwesome-SubMenu subIcon">&#xf102;</span>
+							</div>
+							<div class="labelMenuTitle">Latest version</div>
+							<div class="labelMenuSubTitle">macOS x64</div>
+							<div class="labelButton">Download</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_5">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/repository/Linux/MsfinderConsole_v352_linux.zip"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu mainIcon">&#xf019;</span> <span class="iconAwesome-SubMenu subIcon">&#xf119;</span>
+							</div>
+							<div class="labelMenuTitle">Latest version</div>
+							<div class="labelMenuSubTitle">Linux x64</div>
+							<div class="labelButton">Download</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_5">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="./download/repository"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf466;</span>
+							</div>
+							<div class="labelMenuTitle">Repository</div>
+							<div class="labelMenuSubTitle">Old versions</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link</div>
+						</div>
+					</div>
+				</div>
+				<div class="col span_4">
+					<div class="boxMain">
+						<div class="boxContents-Main">
+							<a href="https://github.com/systemsomicslab/MsdialWorkbench"></a>
+							<div class="labelMenuIcon">
+								<span class="iconAwesome-Menu">&#xf121;</span>
+							</div>
+							<div class="labelMenuTitle">Core</div>
+							<div class="labelMenuSubTitle">Souce code</div>
+							<div class="labelMenuItem"></div>
+							<div class="labelButton">Link</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row contensDetail">
+					<div class="col span_24">
+						<div class="boxLine">
+							<div class="labelLineTitle">Library</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="#Templates"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf15c;</span>
+						</div>
+						<div class="labelMenuTitle">Templates</div>
+						<div class="labelMenuSubTitle">.txt files etc.</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link in page</div>
+					</div>
+				</div>
+			</div>
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="./download/demo/MS-FINDER demo files.zip"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf56f;</span>
+						</div>
+						<div class="labelMenuTitle">Demonstration</div>
+						<div class="labelMenuSubTitle">.msp files etc.</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Download</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Tutorial</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row contensMenu">
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="https://systemsomicslab.github.io/mtbinfo.github.io/MS-FINDER/tutorial"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf518;</span>
+						</div>
+						<div class="labelMenuTitle">Tutorial</div>
+						<div class="labelMenuSubTitle">
+							<span class="iconAwesome">&#xf360;</span>mtbinfo-team.github.io
+						</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link</div>
+					</div>
+				</div>
+			</div>
+			<div class="col span_8">
+				<div class="boxMain">
+					<div class="boxContents-Main">
+						<a href="consoleapp.html"></a>
+						<div class="labelMenuIcon">
+							<span class="iconAwesome-Menu">&#xf120;</span>
+						</div>
+						<div class="labelMenuTitle">Console App</div>
+						<div class="labelMenuSubTitle">Terminal operation page</div>
+						<div class="labelMenuItem"></div>
+						<div class="labelButton">Link</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="Templates">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Data templates</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxTemplates">
+						<div class="labelTempName">MSP format as query file.</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/templates/msfinder msp template.msp"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxTemplates">
+						<div class="labelTempName">MAT format as query file.</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/templates/msfinder mat template.mat"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxTemplates">
+						<div class="labelTempName">MAT format file including elements-fix information (the same format is used in MSP).</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/templates/msfinder element fixed file template.mat"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxTemplates">
+						<div class="labelTempName">User defined structure library.</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/templates/msfinder user-defined structure db template.txt"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxTemplates">
+						<div class="labelTempName">Retention time library (InChIKey and RT pairs).</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/templates/msfinder_inchikey_rt_reftemplate.txt"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxTemplates">
+						<div class="labelTempName">CCS library (InChIKey, Adduct, and CCS pairs).</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/templates/msfinder_inchikey_adduct_ccs_reftemplate.txt"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+					<div class="boxTemplates">
+						<div class="labelTempName">Retention time and structure data for retention time prediction.</div>
+						<div class="labelDownloadIcon">
+							<a href="./download/templates/msfinder rt prediction library template.txt"><span class="iconAwesome">&#xf56d;</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">Acknowledgement</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							This project was mainly supported <br>by NSF-JST Strategic International Collaborative Research Program (SICORP) for JP-US Metabolomics.
+						</div>
+						<div class="labelSubLine">
+							MS-FINDER is mainly developed between UC Davis Prof.<br>Oliver Fiehn team and RIKEN CSRS (and NIG) Prof. Masanori Arita team.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<!-- Footer -->
+	<div id="sectionFooter">
+		<div id="areaLogo-RIKEN">
+			<a href="http://www.yokohama.riken.jp/english/"><img id="imageLogo-RIKEN" alt="RIKEN" src="../static/images/logoRIKEN.gif"></a>
+		</div>
+		<div id="areaLogo-CSRS">
+			<a href="http://www.csrs.riken.jp/en/"><img id="imageLogo-CSRS" alt="CSRS" src="../static/images/logoCSRS.png"></a>
+		</div>
+		<div id="areaLogo-PRIMe">
+			<a href="http://prime.psc.riken.jp/"><img id="imageLogo-PRIMe" alt="PRIMe" src="../static/images/logoPRIMe.png"></a>
+		</div>
+		<div>
+			<div>RIKEN Center for Sustainable Resource Science : Metabolome Informatics Research Team</div>
+			<address>1-7-22 Suehiro-cho, Tsurumi-ku, Yokohama City, Kanagawa, 230-0045, Japan</address>
+		</div>
+		<div>
+			<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img id="imageLogo-CCL" alt="Creative Commons License" src="../static/images/88x31.png"></a>
+		</div>
+	</div>
+
+</body>
+</html>
