@@ -2,5 +2,5 @@
   "latestVersion": "MS-DIAL ver. 4.9.221218",
   "changeLog": "We changed the following:\n- Introduced version update notification service\n- Bug fixes",
   "datePublished": "Dec. 23th, 2022",
-  "downloadUri": "http://prime.psc.riken.jp/compms/msdial/main.html"
+  "downloadUri": "https://systemsomicslab.github.io/compms/msdial/main.html"
 }
