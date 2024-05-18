@@ -2,5 +2,5 @@
   "latestVersion": "MRMPROBS ver. 2.60",
   "changeLog": "We changed the following:\n- Introduced version update notification service\n- Bug fixes",
   "datePublished": "Nov. 1, 2020",
-  "downloadUri": "http://prime.psc.riken.jp/compms/mrmprobs/main.html"
+  "downloadUri": "https://systemsomicslab.github.io/compms/mrmprobs/main.html"
 }
