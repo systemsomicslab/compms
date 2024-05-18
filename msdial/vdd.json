@@ -1,6 +1,6 @@
 {
-  "latestVersion": "MS-DIAL ver. 4.9.221218",
+  "latestVersion": "MS-DIAL v5.2.240424.3",
   "changeLog": "We changed the following:\n- Introduced version update notification service\n- Bug fixes",
-  "datePublished": "Dec. 23th, 2022",
+  "datePublished": "May. 18th, 2024",
   "downloadUri": "https://systemsomicslab.github.io/compms/msdial/main.html"
 }
