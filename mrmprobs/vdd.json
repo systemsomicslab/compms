@@ -1,6 +1,6 @@
 {
-  "latestVersion": "MRMPROBS ver. 3.61",
+  "latestVersion": "MRMPROBS ver. 3.62",
   "changeLog": "We changed the following:\n- Introduced version update notification service\n- Bug fixes",
-  "datePublished": "May 18th, 2024",
+  "datePublished": "May. 20th, 2024",
   "downloadUri": "https://systemsomicslab.github.io/compms/mrmprobs/main.html"
 }
