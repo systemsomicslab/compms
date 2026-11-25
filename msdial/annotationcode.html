@@ -119,6 +119,56 @@
 		<div class="container">
 			<div class="row contensDetail">
 				<div class="col span_24">
+					<div class="boxLine">
+						<div class="labelLineTitle">MS-DIAL versions</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							This page describes the code written by MS-DIAL 5.5.261105 and later. The code is written to the "Annotation tag (VS1.0)" column of the text exports and to the reliability column of mzTab-M (MS:1003032).
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							450 is new in MS-DIAL 5.5.261105: MS/MS matched to a spectrum from a library declared as predicted (in silico). It is never combined with RT or CCS and is not used in lipidomics projects.
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							Since MS-DIAL 5.5.261018, a reference without a retention time or retention index never gives an RT/RI match, and the RT/RI match uses the tolerance set by the user up to 2 min for RT, 150 for Kovats RI and 50,000 for Fiehn RI. Earlier MS-DIAL 5 releases could give an RT match (3x0, 520 or 340) for a reference without a retention time. 5.5.261018 was a console pre-release; the first full release with this change is 5.5.261105.
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							MS-DIAL 4 used 0.5 min for LC-MS, and 0.1 min, Kovats RI 20 and Fiehn RI 2000 for GC-MS.
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							In LC-MS/MS projects without ion mobility, an MSP-based search gives the RT match only when "Use retention time for scoring" is on.
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							520 and 530 (and 500 and 510) cover three cases: no MS/MS spectrum, an MS/MS comparison below the threshold, and an MS/MS comparison that explained nothing. The Evidence source column (PrecursorOnly, WeakSpectrumMatch, UnmatchedSpectrum) tells them apart.
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							999 is also written for a structure accepted from MS-FINDER in the graphical interface.
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							A detailed description, including the evidence each code rests on: <a href="https://github.com/systemsomicslab/msdial_spectrum_catalog/blob/annotation-framework-v0.1/docs/annotation_evidence_framework.md">Annotation evidence framework</a>.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row contensDetail">
+				<div class="col span_24">
 					<div class="boxLine-Double">
 						<div class="labelLineTitle">
 							LC-IM(ion mobility)-MS/MS, MSP-MS/MS based annotation,<br> lipidomics project
@@ -126,7 +176,12 @@
 					</div>
 					<div class="boxSubLine">
 						<div class="labelSubLine">
-							RT match should be equal to 0.5 min or less. <br>If less than 0.5 min is used for the RT tolerance, the tolerance is used for level 1 annotation.
+							RT match: the RT tolerance is used, up to 2 min (0.5 min in MS-DIAL 4).
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							CCS match: the CCS tolerance is used as set.
 						</div>
 					</div>
 				</div>
@@ -604,7 +659,17 @@
 					</div>
 					<div class="boxSubLine">
 						<div class="labelSubLine">
-							RT match should be equal to 0.5 min or less.<br>If less than 0.5 min is used for the RT tolerance, the tolerance is used for level 1 annotation.
+							RT match: the RT tolerance is used, up to 2 min (0.5 min in MS-DIAL 4).
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							CCS match: the CCS tolerance is used as set.
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							450: MS/MS matched to a predicted (in silico) spectrum (MS-DIAL 5.5.261105 and later).
 						</div>
 					</div>
 				</div>
@@ -706,6 +771,27 @@
 					<div class="boxCode">
 						<div class="labelCodeName">
 							<div class="iconCodeType-4">430</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-4">450</div>
 						</div>
 						<div class="labelMatch">
 							<div></div>
@@ -841,7 +927,7 @@
 					</div>
 					<div class="boxSubLine">
 						<div class="labelSubLine">
-							RT match should be equal to 0.5 min or less.<br> If less than 0.5 min is used for the RT tolerance, the tolerance is used for level 1 annotation.
+							RT match: the RT tolerance is used, up to 2 min (0.5 min in MS-DIAL 4).
 						</div>
 					</div>
 					<div class="boxSubLine">
@@ -1084,7 +1170,12 @@
 					</div>
 					<div class="boxSubLine">
 						<div class="labelSubLine">
-							RT match should be equal to 0.5 min or less.<br> If less than 0.5 min is used for the RT tolerance, the tolerance is used for level 1 annotation.
+							RT match: the RT tolerance is used, up to 2 min (0.5 min in MS-DIAL 4).
+						</div>
+					</div>
+					<div class="boxSubLine">
+						<div class="labelSubLine">
+							450: MS/MS matched to a predicted (in silico) spectrum (MS-DIAL 5.5.261105 and later).
 						</div>
 					</div>
 				</div>
@@ -1132,6 +1223,24 @@
 					<div class="boxCode">
 						<div class="labelCodeName">
 							<div class="iconCodeType-4">430</div>
+						</div>
+						<div class="labelMatch">
+							<div></div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+						<div class="labelMatch">
+							<div>
+								<span class="iconAwesome">&#xf00c;</span>
+							</div>
+						</div>
+					</div>
+					<div class="boxCode">
+						<div class="labelCodeName">
+							<div class="iconCodeType-4">450</div>
 						</div>
 						<div class="labelMatch">
 							<div></div>
@@ -1227,17 +1336,17 @@
 					</div>
 					<div class="boxSubLine">
 						<div class="labelSubLine">
-							RT match should be equal to 0.1 min or less.<br>If less than 0.1 min is used for the RT tolerance, the tolerance is used for level 1 annotation.
+							RT match: the RT tolerance is used, up to 2 min (0.1 min in MS-DIAL 4).
 						</div>
 					</div>
 					<div class="boxSubLine">
 						<div class="labelSubLine">
-							Kovats RI match should be equal to 20 or less.<br> If less than 20 is used for the Kovats RI tolerance, the tolerance is used for level 1 annotation.
+							Kovats RI match: the RI tolerance is used, up to 150 (20 in MS-DIAL 4).
 						</div>
 					</div>
 					<div class="boxSubLine">
 						<div class="labelSubLine">
-							Fiehn RI match should be equal to 2000 or less.<br> If less than 2000 is used for the Fiehn RI tolerance, the tolerance is used for level 1 annotation.
+							Fiehn RI match: the RI tolerance is used, up to 50,000 (2000 in MS-DIAL 4).
 						</div>
 					</div>
 				</div>
